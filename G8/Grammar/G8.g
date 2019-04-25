@@ -1,66 +1,48 @@
 grammar G8;
 
-begin	: G8
-	;
-
-drawLine:	LINE
-	;
-
-drawTriangle:	TRIANGLE
-	;
-
-drawRectangle:	RECTANGLE
-	;
-
-drawCurve:	CURVE
-	;
-
-drawCircle:	CIRCLE
-	;
-
-drawEllipse:	ELLIPSE
-	;
-
-G8 	:	'TITLE' TEXT 'DRAWSPACE WIDTH' FLOAT 'DRAWSPACE HEIGTH' FLOAT (LIST)*
-    ; 
+begin	:	'TITLE' TEXT 'DRAWSPACE WIDTH' FLOAT 'DRAWSPACE HEIGTH' FLOAT (list)*
+    	; 
 	
-LIST	:	('LINE' LINE | 'TRIANGLE' TRIANGLE | 'RECT' RECTANGLE | 'CURV' CURVE | 'CIRC' CIRCLE | 'ELLIPS' ELLIPSE)
+list	:	('LINE:' line | 'TRIANGLE:' triangle | 'RECT:' rectangle | 'CURV:' curve | 'CIRC:' circle | 'ELLIPS:' ellipse)
 	;
 
-LINE 	:	 'XSTARTL' FLOAT 'YSTARTL' FLOAT 'XENDL' FLOAT 'YENDL' FLOAT ('COLOR' RGB)? ('WIDTH' FLOAT)? 
+line 	:	 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ('COLOR' RGB)? ('WIDTH' FLOAT)? 
 	;
 
-TRIANGLE 	:	 'XA' FLOAT 'YA' FLOAT 'XB' FLOAT 'YB' FLOAT 'XC' FLOAT 'YC' FLOAT ('COLORBORDER' RGB)? ('WIDTHBORDER' FLOAT)? ('COLORBODY' RGB)?
+triangle 	:	 'XA' FLOAT 'YA' FLOAT 'XB' FLOAT 'YB' FLOAT 'XC' FLOAT 'YC' FLOAT ('COLOR' RGB)? ('WIDTH' FLOAT)? ('COLORBODY' RGB)?
 	;
 
-RECTANGLE 	:	 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ('COLORBORDER' RGB)? ('WIDTHBORDER' FLOAT)? ('COLORBODY' RGB)?
+rectangle 	:	 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ('COLOR' RGB)? ('WIDTH' FLOAT)? ('COLORBODY' RGB)?
 	;
 
-CURVE 	:	 'XSTARTC' FLOAT 'YSTARTC' FLOAT 'XENDC' FLOAT 'YENDC' FLOAT ('COLORBORDER' RGB)? ('WIDTHBORDER' FLOAT)? ('COLORBODY' RGB)?
+curve 	:	 'XSTART' FLOAT 'YSTART' FLOAT 'XMIDDLE' FLOAT 'YMIDDLE' FLOAT 'XEND' FLOAT 'YEND' FLOAT ('COLOR' RGB)? ('WIDTH' FLOAT)? ('COLORBODY' RGB)?
 	;
 
-CIRCLE 	:	 'XCENTER' FLOAT 'YCENTER' FLOAT 'RADIUS' FLOAT ('COLORBORDER' RGB)? ('WIDTHBORDER' FLOAT)? ('COLORBODY' RGB)?
+circle 	:	 'XCENTER' FLOAT 'YCENTER' FLOAT 'RADIUS' FLOAT ('STARTANGLE' FLOAT)? ('ENDANGLE' FLOAT)? ('COLOR' RGB)? ('WIDTH' FLOAT)? ('COLORBODY' RGB)?
 	;
 
-ELLIPSE 	:	 'XCENTERE' FLOAT 'YCENTERE' FLOAT 'SEMIN' FLOAT 'SEMAX' FLOAT ('COLORBORDER' RGB)? ('WIDTHBORDER' FLOAT)? ('COLORBODY' RGB)?
+ellipse 	:	 'XCENTER' FLOAT 'YCENTER' FLOAT 'SEMIN' FLOAT 'SEMAX' FLOAT ('STARTANGLE' FLOAT)? ('ENDANGLE' FLOAT)? ('ROTATION' ROTATION)? ('COLOR' RGB)? ('WIDTH' FLOAT)? ('COLORBODY' RGB)?
 	;
 
-RGB	:	('0'..'9' | 'A'..'F' )+
+RGB	:	'#' ('0'..'9' | 'A'..'F' )+
 	;
 
 TEXT	:	('a'..'z' | 'A'..'Z' | '0'..'9')+
 	;
 
-FLOAT
-    :   ('0'..'9')+ '.' ('0'..'9')* '.' ('0'..'9')*
-    |   ('0'..'9')+ 
+FLOAT	:   ('0'..'9')+ '.' ('0'..'9')*
+    |	('0'..'9')+
     ;
 
-COMMENT
-    :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
+ROTATION	:	'-' ('0'..'9')+ '.' ('0'..'9')*
+    |	('0'..'9')+ '.' ('0'..'9')*
+    |	'-' ('0'..'9')+
+    |	('0'..'9')+
+	;
+
+COMMENT	:   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
     |   '/*' ( options {greedy=false;} : . )* '*/' {$channel=HIDDEN;}
     ;
     
-WS  
-    :   (' ' | '\t' | '\r'| '\n') {$channel=HIDDEN;}
+WS	:   (' ' | '\t' | '\r'| '\n') {$channel=HIDDEN;}
     ;

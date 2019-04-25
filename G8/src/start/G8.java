@@ -2,13 +2,14 @@ package start;
 
 import org.antlr.runtime.ANTLRStringStream;
 import org.antlr.runtime.CommonTokenStream;
+import org.antlr.runtime.RecognitionException;
 
 import lexer.G8Lexer;
 import parser.G8Parser;
 
 public class G8 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws RecognitionException {
 		 ANTLRStringStream in = new ANTLRStringStream("12*(5-6)");
 	     G8Lexer lexer = new G8Lexer(in);
 	     CommonTokenStream tokens = new CommonTokenStream(lexer);

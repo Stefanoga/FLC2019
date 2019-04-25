@@ -1,6 +1,6 @@
 package lexer;
 
-// $ANTLR 3.5.1 D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g 2019-04-25 19:54:25
+// $ANTLR 3.5.1 D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g 2019-04-25 22:21:30
 
 import org.antlr.runtime.*;
 import java.util.Stack;

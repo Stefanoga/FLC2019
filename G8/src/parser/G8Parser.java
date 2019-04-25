@@ -1,6 +1,6 @@
 package parser;
 
-// $ANTLR 3.5.1 D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g 2019-04-25 19:54:25
+// $ANTLR 3.5.1 D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g 2019-04-25 22:21:30
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -132,13 +132,10 @@ public class G8Parser extends Parser {
 
 
 	// $ANTLR start "list"
-	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:1: list : ( 'LINE:' line | 'TRIANGLE:' triangle | 'RECT:' rectangle | 'CURV:' curve | 'CIRC:' circle | 'ELLIPS:' ellipse ) ;
+	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:1: list : ( line | triangle | rectangle | curve | circle | ellipse );
 	public final void list() throws RecognitionException {
 		try {
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:6: ( ( 'LINE:' line | 'TRIANGLE:' triangle | 'RECT:' rectangle | 'CURV:' curve | 'CIRC:' circle | 'ELLIPS:' ellipse ) )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:8: ( 'LINE:' line | 'TRIANGLE:' triangle | 'RECT:' rectangle | 'CURV:' curve | 'CIRC:' circle | 'ELLIPS:' ellipse )
-			{
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:8: ( 'LINE:' line | 'TRIANGLE:' triangle | 'RECT:' rectangle | 'CURV:' curve | 'CIRC:' circle | 'ELLIPS:' ellipse )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:6: ( line | triangle | rectangle | curve | circle | ellipse )
 			int alt2=6;
 			switch ( input.LA(1) ) {
 			case 18:
@@ -178,60 +175,54 @@ public class G8Parser extends Parser {
 			}
 			switch (alt2) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:9: 'LINE:' line
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:8: line
 					{
-					match(input,18,FOLLOW_18_in_list42); 
-					pushFollow(FOLLOW_line_in_list44);
+					pushFollow(FOLLOW_line_in_list41);
 					line();
 					state._fsp--;
 
 					}
 					break;
 				case 2 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:24: 'TRIANGLE:' triangle
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:16: triangle
 					{
-					match(input,26,FOLLOW_26_in_list48); 
-					pushFollow(FOLLOW_triangle_in_list50);
+					pushFollow(FOLLOW_triangle_in_list46);
 					triangle();
 					state._fsp--;
 
 					}
 					break;
 				case 3 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:47: 'RECT:' rectangle
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:28: rectangle
 					{
-					match(input,20,FOLLOW_20_in_list54); 
-					pushFollow(FOLLOW_rectangle_in_list56);
+					pushFollow(FOLLOW_rectangle_in_list51);
 					rectangle();
 					state._fsp--;
 
 					}
 					break;
 				case 4 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:67: 'CURV:' curve
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:41: curve
 					{
-					match(input,13,FOLLOW_13_in_list60); 
-					pushFollow(FOLLOW_curve_in_list62);
+					pushFollow(FOLLOW_curve_in_list56);
 					curve();
 					state._fsp--;
 
 					}
 					break;
 				case 5 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:83: 'CIRC:' circle
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:50: circle
 					{
-					match(input,10,FOLLOW_10_in_list66); 
-					pushFollow(FOLLOW_circle_in_list68);
+					pushFollow(FOLLOW_circle_in_list61);
 					circle();
 					state._fsp--;
 
 					}
 					break;
 				case 6 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:100: 'ELLIPS:' ellipse
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:60: ellipse
 					{
-					match(input,16,FOLLOW_16_in_list72); 
-					pushFollow(FOLLOW_ellipse_in_list74);
+					pushFollow(FOLLOW_ellipse_in_list66);
 					ellipse();
 					state._fsp--;
 
@@ -239,9 +230,6 @@ public class G8Parser extends Parser {
 					break;
 
 			}
-
-			}
-
 		}
 		catch (RecognitionException re) {
 			reportError(re);
@@ -256,21 +244,22 @@ public class G8Parser extends Parser {
 
 
 	// $ANTLR start "line"
-	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:1: line : 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ;
+	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:1: line : 'LINE:' 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ;
 	public final void line() throws RecognitionException {
 		try {
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:7: ( 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:10: 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:7: ( 'LINE:' 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:11: 'LINE:' 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )?
 			{
-			match(input,34,FOLLOW_34_in_line87); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_line89); 
-			match(input,41,FOLLOW_41_in_line91); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_line93); 
-			match(input,32,FOLLOW_32_in_line95); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_line97); 
-			match(input,39,FOLLOW_39_in_line99); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_line101); 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:66: ( 'COLOR' RGB )?
+			match(input,18,FOLLOW_18_in_line79); 
+			match(input,34,FOLLOW_34_in_line81); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_line83); 
+			match(input,41,FOLLOW_41_in_line85); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_line87); 
+			match(input,32,FOLLOW_32_in_line89); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_line91); 
+			match(input,39,FOLLOW_39_in_line93); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_line95); 
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:75: ( 'COLOR' RGB )?
 			int alt3=2;
 			int LA3_0 = input.LA(1);
 			if ( (LA3_0==11) ) {
@@ -278,16 +267,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt3) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:67: 'COLOR' RGB
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:76: 'COLOR' RGB
 					{
-					match(input,11,FOLLOW_11_in_line104); 
-					match(input,RGB,FOLLOW_RGB_in_line106); 
+					match(input,11,FOLLOW_11_in_line98); 
+					match(input,RGB,FOLLOW_RGB_in_line100); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:81: ( 'WIDTH' FLOAT )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:90: ( 'WIDTH' FLOAT )?
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0==27) ) {
@@ -295,10 +284,10 @@ public class G8Parser extends Parser {
 			}
 			switch (alt4) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:82: 'WIDTH' FLOAT
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:9:91: 'WIDTH' FLOAT
 					{
-					match(input,27,FOLLOW_27_in_line111); 
-					match(input,FLOAT,FOLLOW_FLOAT_in_line113); 
+					match(input,27,FOLLOW_27_in_line105); 
+					match(input,FLOAT,FOLLOW_FLOAT_in_line107); 
 					}
 					break;
 
@@ -320,25 +309,26 @@ public class G8Parser extends Parser {
 
 
 	// $ANTLR start "triangle"
-	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:1: triangle : 'XA' FLOAT 'YA' FLOAT 'XB' FLOAT 'YB' FLOAT 'XC' FLOAT 'YC' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? ;
+	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:1: triangle : 'TRIANGLE:' 'XA' FLOAT 'YA' FLOAT 'XB' FLOAT 'YB' FLOAT 'XC' FLOAT 'YC' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? ;
 	public final void triangle() throws RecognitionException {
 		try {
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:11: ( 'XA' FLOAT 'YA' FLOAT 'XB' FLOAT 'YB' FLOAT 'XC' FLOAT 'YC' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:14: 'XA' FLOAT 'YA' FLOAT 'XB' FLOAT 'YB' FLOAT 'XC' FLOAT 'YC' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:11: ( 'TRIANGLE:' 'XA' FLOAT 'YA' FLOAT 'XB' FLOAT 'YB' FLOAT 'XC' FLOAT 'YC' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:13: 'TRIANGLE:' 'XA' FLOAT 'YA' FLOAT 'XB' FLOAT 'YB' FLOAT 'XC' FLOAT 'YC' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )?
 			{
-			match(input,28,FOLLOW_28_in_triangle128); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_triangle130); 
-			match(input,35,FOLLOW_35_in_triangle132); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_triangle134); 
-			match(input,29,FOLLOW_29_in_triangle136); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_triangle138); 
-			match(input,36,FOLLOW_36_in_triangle140); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_triangle142); 
-			match(input,30,FOLLOW_30_in_triangle144); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_triangle146); 
-			match(input,37,FOLLOW_37_in_triangle148); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_triangle150); 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:80: ( 'COLOR' RGB )?
+			match(input,26,FOLLOW_26_in_triangle121); 
+			match(input,28,FOLLOW_28_in_triangle123); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_triangle125); 
+			match(input,35,FOLLOW_35_in_triangle127); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_triangle129); 
+			match(input,29,FOLLOW_29_in_triangle131); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_triangle133); 
+			match(input,36,FOLLOW_36_in_triangle135); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_triangle137); 
+			match(input,30,FOLLOW_30_in_triangle139); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_triangle141); 
+			match(input,37,FOLLOW_37_in_triangle143); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_triangle145); 
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:91: ( 'COLOR' RGB )?
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( (LA5_0==11) ) {
@@ -346,16 +336,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt5) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:81: 'COLOR' RGB
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:92: 'COLOR' RGB
 					{
-					match(input,11,FOLLOW_11_in_triangle153); 
-					match(input,RGB,FOLLOW_RGB_in_triangle155); 
+					match(input,11,FOLLOW_11_in_triangle148); 
+					match(input,RGB,FOLLOW_RGB_in_triangle150); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:95: ( 'WIDTH' FLOAT )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:106: ( 'WIDTH' FLOAT )?
 			int alt6=2;
 			int LA6_0 = input.LA(1);
 			if ( (LA6_0==27) ) {
@@ -363,16 +353,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt6) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:96: 'WIDTH' FLOAT
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:107: 'WIDTH' FLOAT
 					{
-					match(input,27,FOLLOW_27_in_triangle160); 
-					match(input,FLOAT,FOLLOW_FLOAT_in_triangle162); 
+					match(input,27,FOLLOW_27_in_triangle155); 
+					match(input,FLOAT,FOLLOW_FLOAT_in_triangle157); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:112: ( 'COLORBODY' RGB )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:123: ( 'COLORBODY' RGB )?
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( (LA7_0==12) ) {
@@ -380,10 +370,10 @@ public class G8Parser extends Parser {
 			}
 			switch (alt7) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:113: 'COLORBODY' RGB
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:124: 'COLORBODY' RGB
 					{
-					match(input,12,FOLLOW_12_in_triangle167); 
-					match(input,RGB,FOLLOW_RGB_in_triangle169); 
+					match(input,12,FOLLOW_12_in_triangle162); 
+					match(input,RGB,FOLLOW_RGB_in_triangle164); 
 					}
 					break;
 
@@ -405,21 +395,22 @@ public class G8Parser extends Parser {
 
 
 	// $ANTLR start "rectangle"
-	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:1: rectangle : 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? ;
+	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:1: rectangle : 'RECT:' 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? ;
 	public final void rectangle() throws RecognitionException {
 		try {
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:12: ( 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:15: 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:12: ( 'RECT:' 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:14: 'RECT:' 'XSTART' FLOAT 'YSTART' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )?
 			{
-			match(input,34,FOLLOW_34_in_rectangle183); 
+			match(input,20,FOLLOW_20_in_rectangle177); 
+			match(input,34,FOLLOW_34_in_rectangle179); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_rectangle181); 
+			match(input,41,FOLLOW_41_in_rectangle183); 
 			match(input,FLOAT,FOLLOW_FLOAT_in_rectangle185); 
-			match(input,41,FOLLOW_41_in_rectangle187); 
+			match(input,32,FOLLOW_32_in_rectangle187); 
 			match(input,FLOAT,FOLLOW_FLOAT_in_rectangle189); 
-			match(input,32,FOLLOW_32_in_rectangle191); 
+			match(input,39,FOLLOW_39_in_rectangle191); 
 			match(input,FLOAT,FOLLOW_FLOAT_in_rectangle193); 
-			match(input,39,FOLLOW_39_in_rectangle195); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_rectangle197); 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:71: ( 'COLOR' RGB )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:78: ( 'COLOR' RGB )?
 			int alt8=2;
 			int LA8_0 = input.LA(1);
 			if ( (LA8_0==11) ) {
@@ -427,16 +418,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt8) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:72: 'COLOR' RGB
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:79: 'COLOR' RGB
 					{
-					match(input,11,FOLLOW_11_in_rectangle200); 
-					match(input,RGB,FOLLOW_RGB_in_rectangle202); 
+					match(input,11,FOLLOW_11_in_rectangle196); 
+					match(input,RGB,FOLLOW_RGB_in_rectangle198); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:86: ( 'WIDTH' FLOAT )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:93: ( 'WIDTH' FLOAT )?
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0==27) ) {
@@ -444,16 +435,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt9) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:87: 'WIDTH' FLOAT
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:94: 'WIDTH' FLOAT
 					{
-					match(input,27,FOLLOW_27_in_rectangle207); 
-					match(input,FLOAT,FOLLOW_FLOAT_in_rectangle209); 
+					match(input,27,FOLLOW_27_in_rectangle203); 
+					match(input,FLOAT,FOLLOW_FLOAT_in_rectangle205); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:103: ( 'COLORBODY' RGB )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:110: ( 'COLORBODY' RGB )?
 			int alt10=2;
 			int LA10_0 = input.LA(1);
 			if ( (LA10_0==12) ) {
@@ -461,10 +452,10 @@ public class G8Parser extends Parser {
 			}
 			switch (alt10) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:104: 'COLORBODY' RGB
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:15:111: 'COLORBODY' RGB
 					{
-					match(input,12,FOLLOW_12_in_rectangle214); 
-					match(input,RGB,FOLLOW_RGB_in_rectangle216); 
+					match(input,12,FOLLOW_12_in_rectangle210); 
+					match(input,RGB,FOLLOW_RGB_in_rectangle212); 
 					}
 					break;
 
@@ -486,25 +477,26 @@ public class G8Parser extends Parser {
 
 
 	// $ANTLR start "curve"
-	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:1: curve : 'XSTART' FLOAT 'YSTART' FLOAT 'XMIDDLE' FLOAT 'YMIDDLE' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? ;
+	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:1: curve : 'CURV:' 'XSTART' FLOAT 'YSTART' FLOAT 'XMIDDLE' FLOAT 'YMIDDLE' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? ;
 	public final void curve() throws RecognitionException {
 		try {
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:8: ( 'XSTART' FLOAT 'YSTART' FLOAT 'XMIDDLE' FLOAT 'YMIDDLE' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:11: 'XSTART' FLOAT 'YSTART' FLOAT 'XMIDDLE' FLOAT 'YMIDDLE' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:8: ( 'CURV:' 'XSTART' FLOAT 'YSTART' FLOAT 'XMIDDLE' FLOAT 'YMIDDLE' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:10: 'CURV:' 'XSTART' FLOAT 'YSTART' FLOAT 'XMIDDLE' FLOAT 'YMIDDLE' FLOAT 'XEND' FLOAT 'YEND' FLOAT ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )?
 			{
-			match(input,34,FOLLOW_34_in_curve230); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_curve232); 
-			match(input,41,FOLLOW_41_in_curve234); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_curve236); 
-			match(input,33,FOLLOW_33_in_curve238); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_curve240); 
-			match(input,40,FOLLOW_40_in_curve242); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_curve244); 
-			match(input,32,FOLLOW_32_in_curve246); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_curve248); 
-			match(input,39,FOLLOW_39_in_curve250); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_curve252); 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:99: ( 'COLOR' RGB )?
+			match(input,13,FOLLOW_13_in_curve225); 
+			match(input,34,FOLLOW_34_in_curve227); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_curve229); 
+			match(input,41,FOLLOW_41_in_curve231); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_curve233); 
+			match(input,33,FOLLOW_33_in_curve235); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_curve237); 
+			match(input,40,FOLLOW_40_in_curve239); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_curve241); 
+			match(input,32,FOLLOW_32_in_curve243); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_curve245); 
+			match(input,39,FOLLOW_39_in_curve247); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_curve249); 
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:106: ( 'COLOR' RGB )?
 			int alt11=2;
 			int LA11_0 = input.LA(1);
 			if ( (LA11_0==11) ) {
@@ -512,16 +504,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt11) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:100: 'COLOR' RGB
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:107: 'COLOR' RGB
 					{
-					match(input,11,FOLLOW_11_in_curve255); 
-					match(input,RGB,FOLLOW_RGB_in_curve257); 
+					match(input,11,FOLLOW_11_in_curve252); 
+					match(input,RGB,FOLLOW_RGB_in_curve254); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:114: ( 'WIDTH' FLOAT )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:121: ( 'WIDTH' FLOAT )?
 			int alt12=2;
 			int LA12_0 = input.LA(1);
 			if ( (LA12_0==27) ) {
@@ -529,16 +521,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt12) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:115: 'WIDTH' FLOAT
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:122: 'WIDTH' FLOAT
 					{
-					match(input,27,FOLLOW_27_in_curve262); 
-					match(input,FLOAT,FOLLOW_FLOAT_in_curve264); 
+					match(input,27,FOLLOW_27_in_curve259); 
+					match(input,FLOAT,FOLLOW_FLOAT_in_curve261); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:131: ( 'COLORBODY' RGB )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:138: ( 'COLORBODY' RGB )?
 			int alt13=2;
 			int LA13_0 = input.LA(1);
 			if ( (LA13_0==12) ) {
@@ -546,10 +538,10 @@ public class G8Parser extends Parser {
 			}
 			switch (alt13) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:132: 'COLORBODY' RGB
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:139: 'COLORBODY' RGB
 					{
-					match(input,12,FOLLOW_12_in_curve269); 
-					match(input,RGB,FOLLOW_RGB_in_curve271); 
+					match(input,12,FOLLOW_12_in_curve266); 
+					match(input,RGB,FOLLOW_RGB_in_curve268); 
 					}
 					break;
 
@@ -571,19 +563,20 @@ public class G8Parser extends Parser {
 
 
 	// $ANTLR start "circle"
-	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:1: circle : 'XCENTER' FLOAT 'YCENTER' FLOAT 'RADIUS' FLOAT ( 'STARTANGLE' FLOAT )? ( 'ENDANGLE' FLOAT )? ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? ;
+	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:1: circle : 'CIRC:' 'XCENTER' FLOAT 'YCENTER' FLOAT 'RADIUS' FLOAT ( 'STARTANGLE' FLOAT )? ( 'ENDANGLE' FLOAT )? ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? ;
 	public final void circle() throws RecognitionException {
 		try {
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:9: ( 'XCENTER' FLOAT 'YCENTER' FLOAT 'RADIUS' FLOAT ( 'STARTANGLE' FLOAT )? ( 'ENDANGLE' FLOAT )? ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:12: 'XCENTER' FLOAT 'YCENTER' FLOAT 'RADIUS' FLOAT ( 'STARTANGLE' FLOAT )? ( 'ENDANGLE' FLOAT )? ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:9: ( 'CIRC:' 'XCENTER' FLOAT 'YCENTER' FLOAT 'RADIUS' FLOAT ( 'STARTANGLE' FLOAT )? ( 'ENDANGLE' FLOAT )? ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:11: 'CIRC:' 'XCENTER' FLOAT 'YCENTER' FLOAT 'RADIUS' FLOAT ( 'STARTANGLE' FLOAT )? ( 'ENDANGLE' FLOAT )? ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )?
 			{
-			match(input,31,FOLLOW_31_in_circle285); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_circle287); 
-			match(input,38,FOLLOW_38_in_circle289); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_circle291); 
-			match(input,19,FOLLOW_19_in_circle293); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_circle295); 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:59: ( 'STARTANGLE' FLOAT )?
+			match(input,10,FOLLOW_10_in_circle281); 
+			match(input,31,FOLLOW_31_in_circle283); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_circle285); 
+			match(input,38,FOLLOW_38_in_circle287); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_circle289); 
+			match(input,19,FOLLOW_19_in_circle291); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_circle293); 
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:66: ( 'STARTANGLE' FLOAT )?
 			int alt14=2;
 			int LA14_0 = input.LA(1);
 			if ( (LA14_0==24) ) {
@@ -591,16 +584,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt14) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:60: 'STARTANGLE' FLOAT
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:67: 'STARTANGLE' FLOAT
 					{
-					match(input,24,FOLLOW_24_in_circle298); 
-					match(input,FLOAT,FOLLOW_FLOAT_in_circle300); 
+					match(input,24,FOLLOW_24_in_circle296); 
+					match(input,FLOAT,FOLLOW_FLOAT_in_circle298); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:81: ( 'ENDANGLE' FLOAT )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:88: ( 'ENDANGLE' FLOAT )?
 			int alt15=2;
 			int LA15_0 = input.LA(1);
 			if ( (LA15_0==17) ) {
@@ -608,16 +601,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt15) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:82: 'ENDANGLE' FLOAT
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:89: 'ENDANGLE' FLOAT
 					{
-					match(input,17,FOLLOW_17_in_circle305); 
-					match(input,FLOAT,FOLLOW_FLOAT_in_circle307); 
+					match(input,17,FOLLOW_17_in_circle303); 
+					match(input,FLOAT,FOLLOW_FLOAT_in_circle305); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:101: ( 'COLOR' RGB )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:108: ( 'COLOR' RGB )?
 			int alt16=2;
 			int LA16_0 = input.LA(1);
 			if ( (LA16_0==11) ) {
@@ -625,16 +618,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt16) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:102: 'COLOR' RGB
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:109: 'COLOR' RGB
 					{
-					match(input,11,FOLLOW_11_in_circle312); 
-					match(input,RGB,FOLLOW_RGB_in_circle314); 
+					match(input,11,FOLLOW_11_in_circle310); 
+					match(input,RGB,FOLLOW_RGB_in_circle312); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:116: ( 'WIDTH' FLOAT )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:123: ( 'WIDTH' FLOAT )?
 			int alt17=2;
 			int LA17_0 = input.LA(1);
 			if ( (LA17_0==27) ) {
@@ -642,16 +635,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt17) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:117: 'WIDTH' FLOAT
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:124: 'WIDTH' FLOAT
 					{
-					match(input,27,FOLLOW_27_in_circle319); 
-					match(input,FLOAT,FOLLOW_FLOAT_in_circle321); 
+					match(input,27,FOLLOW_27_in_circle317); 
+					match(input,FLOAT,FOLLOW_FLOAT_in_circle319); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:133: ( 'COLORBODY' RGB )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:140: ( 'COLORBODY' RGB )?
 			int alt18=2;
 			int LA18_0 = input.LA(1);
 			if ( (LA18_0==12) ) {
@@ -659,10 +652,10 @@ public class G8Parser extends Parser {
 			}
 			switch (alt18) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:134: 'COLORBODY' RGB
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:21:141: 'COLORBODY' RGB
 					{
-					match(input,12,FOLLOW_12_in_circle326); 
-					match(input,RGB,FOLLOW_RGB_in_circle328); 
+					match(input,12,FOLLOW_12_in_circle324); 
+					match(input,RGB,FOLLOW_RGB_in_circle326); 
 					}
 					break;
 
@@ -684,21 +677,22 @@ public class G8Parser extends Parser {
 
 
 	// $ANTLR start "ellipse"
-	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:1: ellipse : 'XCENTER' FLOAT 'YCENTER' FLOAT 'SEMIN' FLOAT 'SEMAX' FLOAT ( 'STARTANGLE' FLOAT )? ( 'ENDANGLE' FLOAT )? ( 'ROTATION' ROTATION )? ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? ;
+	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:1: ellipse : 'ELLIPS:' 'XCENTER' FLOAT 'YCENTER' FLOAT 'SEMIN' FLOAT 'SEMAX' FLOAT ( 'STARTANGLE' FLOAT )? ( 'ENDANGLE' FLOAT )? ( 'ROTATION' ROTATION )? ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? ;
 	public final void ellipse() throws RecognitionException {
 		try {
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:10: ( 'XCENTER' FLOAT 'YCENTER' FLOAT 'SEMIN' FLOAT 'SEMAX' FLOAT ( 'STARTANGLE' FLOAT )? ( 'ENDANGLE' FLOAT )? ( 'ROTATION' ROTATION )? ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:13: 'XCENTER' FLOAT 'YCENTER' FLOAT 'SEMIN' FLOAT 'SEMAX' FLOAT ( 'STARTANGLE' FLOAT )? ( 'ENDANGLE' FLOAT )? ( 'ROTATION' ROTATION )? ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:10: ( 'ELLIPS:' 'XCENTER' FLOAT 'YCENTER' FLOAT 'SEMIN' FLOAT 'SEMAX' FLOAT ( 'STARTANGLE' FLOAT )? ( 'ENDANGLE' FLOAT )? ( 'ROTATION' ROTATION )? ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )? )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:12: 'ELLIPS:' 'XCENTER' FLOAT 'YCENTER' FLOAT 'SEMIN' FLOAT 'SEMAX' FLOAT ( 'STARTANGLE' FLOAT )? ( 'ENDANGLE' FLOAT )? ( 'ROTATION' ROTATION )? ( 'COLOR' RGB )? ( 'WIDTH' FLOAT )? ( 'COLORBODY' RGB )?
 			{
-			match(input,31,FOLLOW_31_in_ellipse342); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_ellipse344); 
-			match(input,38,FOLLOW_38_in_ellipse346); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_ellipse348); 
-			match(input,23,FOLLOW_23_in_ellipse350); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_ellipse352); 
-			match(input,22,FOLLOW_22_in_ellipse354); 
-			match(input,FLOAT,FOLLOW_FLOAT_in_ellipse356); 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:73: ( 'STARTANGLE' FLOAT )?
+			match(input,16,FOLLOW_16_in_ellipse339); 
+			match(input,31,FOLLOW_31_in_ellipse341); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_ellipse343); 
+			match(input,38,FOLLOW_38_in_ellipse345); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_ellipse347); 
+			match(input,23,FOLLOW_23_in_ellipse349); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_ellipse351); 
+			match(input,22,FOLLOW_22_in_ellipse353); 
+			match(input,FLOAT,FOLLOW_FLOAT_in_ellipse355); 
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:82: ( 'STARTANGLE' FLOAT )?
 			int alt19=2;
 			int LA19_0 = input.LA(1);
 			if ( (LA19_0==24) ) {
@@ -706,16 +700,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt19) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:74: 'STARTANGLE' FLOAT
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:83: 'STARTANGLE' FLOAT
 					{
-					match(input,24,FOLLOW_24_in_ellipse359); 
-					match(input,FLOAT,FOLLOW_FLOAT_in_ellipse361); 
+					match(input,24,FOLLOW_24_in_ellipse358); 
+					match(input,FLOAT,FOLLOW_FLOAT_in_ellipse360); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:95: ( 'ENDANGLE' FLOAT )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:104: ( 'ENDANGLE' FLOAT )?
 			int alt20=2;
 			int LA20_0 = input.LA(1);
 			if ( (LA20_0==17) ) {
@@ -723,16 +717,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt20) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:96: 'ENDANGLE' FLOAT
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:105: 'ENDANGLE' FLOAT
 					{
-					match(input,17,FOLLOW_17_in_ellipse366); 
-					match(input,FLOAT,FOLLOW_FLOAT_in_ellipse368); 
+					match(input,17,FOLLOW_17_in_ellipse365); 
+					match(input,FLOAT,FOLLOW_FLOAT_in_ellipse367); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:115: ( 'ROTATION' ROTATION )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:124: ( 'ROTATION' ROTATION )?
 			int alt21=2;
 			int LA21_0 = input.LA(1);
 			if ( (LA21_0==21) ) {
@@ -740,16 +734,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt21) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:116: 'ROTATION' ROTATION
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:125: 'ROTATION' ROTATION
 					{
-					match(input,21,FOLLOW_21_in_ellipse373); 
-					match(input,ROTATION,FOLLOW_ROTATION_in_ellipse375); 
+					match(input,21,FOLLOW_21_in_ellipse372); 
+					match(input,ROTATION,FOLLOW_ROTATION_in_ellipse374); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:138: ( 'COLOR' RGB )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:147: ( 'COLOR' RGB )?
 			int alt22=2;
 			int LA22_0 = input.LA(1);
 			if ( (LA22_0==11) ) {
@@ -757,16 +751,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt22) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:139: 'COLOR' RGB
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:148: 'COLOR' RGB
 					{
-					match(input,11,FOLLOW_11_in_ellipse380); 
-					match(input,RGB,FOLLOW_RGB_in_ellipse382); 
+					match(input,11,FOLLOW_11_in_ellipse379); 
+					match(input,RGB,FOLLOW_RGB_in_ellipse381); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:153: ( 'WIDTH' FLOAT )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:162: ( 'WIDTH' FLOAT )?
 			int alt23=2;
 			int LA23_0 = input.LA(1);
 			if ( (LA23_0==27) ) {
@@ -774,16 +768,16 @@ public class G8Parser extends Parser {
 			}
 			switch (alt23) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:154: 'WIDTH' FLOAT
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:163: 'WIDTH' FLOAT
 					{
-					match(input,27,FOLLOW_27_in_ellipse387); 
-					match(input,FLOAT,FOLLOW_FLOAT_in_ellipse389); 
+					match(input,27,FOLLOW_27_in_ellipse386); 
+					match(input,FLOAT,FOLLOW_FLOAT_in_ellipse388); 
 					}
 					break;
 
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:170: ( 'COLORBODY' RGB )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:179: ( 'COLORBODY' RGB )?
 			int alt24=2;
 			int LA24_0 = input.LA(1);
 			if ( (LA24_0==12) ) {
@@ -791,10 +785,10 @@ public class G8Parser extends Parser {
 			}
 			switch (alt24) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:171: 'COLORBODY' RGB
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:24:180: 'COLORBODY' RGB
 					{
-					match(input,12,FOLLOW_12_in_ellipse394); 
-					match(input,RGB,FOLLOW_RGB_in_ellipse396); 
+					match(input,12,FOLLOW_12_in_ellipse393); 
+					match(input,RGB,FOLLOW_RGB_in_ellipse395); 
 					}
 					break;
 
@@ -824,114 +818,114 @@ public class G8Parser extends Parser {
 	public static final BitSet FOLLOW_14_in_begin18 = new BitSet(new long[]{0x0000000000000020L});
 	public static final BitSet FOLLOW_FLOAT_in_begin20 = new BitSet(new long[]{0x0000000004152402L});
 	public static final BitSet FOLLOW_list_in_begin23 = new BitSet(new long[]{0x0000000004152402L});
-	public static final BitSet FOLLOW_18_in_list42 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_line_in_list44 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_26_in_list48 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_triangle_in_list50 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_20_in_list54 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_rectangle_in_list56 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_13_in_list60 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_curve_in_list62 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_10_in_list66 = new BitSet(new long[]{0x0000000080000000L});
-	public static final BitSet FOLLOW_circle_in_list68 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_16_in_list72 = new BitSet(new long[]{0x0000000080000000L});
-	public static final BitSet FOLLOW_ellipse_in_list74 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_34_in_line87 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_line89 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_41_in_line91 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_line93 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_32_in_line95 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_line97 = new BitSet(new long[]{0x0000008000000000L});
-	public static final BitSet FOLLOW_39_in_line99 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_line101 = new BitSet(new long[]{0x0000000008000802L});
-	public static final BitSet FOLLOW_11_in_line104 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_RGB_in_line106 = new BitSet(new long[]{0x0000000008000002L});
-	public static final BitSet FOLLOW_27_in_line111 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_line113 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_28_in_triangle128 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_triangle130 = new BitSet(new long[]{0x0000000800000000L});
-	public static final BitSet FOLLOW_35_in_triangle132 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_triangle134 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_29_in_triangle136 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_triangle138 = new BitSet(new long[]{0x0000001000000000L});
-	public static final BitSet FOLLOW_36_in_triangle140 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_triangle142 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_30_in_triangle144 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_triangle146 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_37_in_triangle148 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_triangle150 = new BitSet(new long[]{0x0000000008001802L});
-	public static final BitSet FOLLOW_11_in_triangle153 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_RGB_in_triangle155 = new BitSet(new long[]{0x0000000008001002L});
-	public static final BitSet FOLLOW_27_in_triangle160 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_triangle162 = new BitSet(new long[]{0x0000000000001002L});
-	public static final BitSet FOLLOW_12_in_triangle167 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_RGB_in_triangle169 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_34_in_rectangle183 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_rectangle185 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_41_in_rectangle187 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_rectangle189 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_32_in_rectangle191 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_rectangle193 = new BitSet(new long[]{0x0000008000000000L});
-	public static final BitSet FOLLOW_39_in_rectangle195 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_rectangle197 = new BitSet(new long[]{0x0000000008001802L});
-	public static final BitSet FOLLOW_11_in_rectangle200 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_RGB_in_rectangle202 = new BitSet(new long[]{0x0000000008001002L});
-	public static final BitSet FOLLOW_27_in_rectangle207 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_rectangle209 = new BitSet(new long[]{0x0000000000001002L});
-	public static final BitSet FOLLOW_12_in_rectangle214 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_RGB_in_rectangle216 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_34_in_curve230 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_curve232 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_41_in_curve234 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_curve236 = new BitSet(new long[]{0x0000000200000000L});
-	public static final BitSet FOLLOW_33_in_curve238 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_curve240 = new BitSet(new long[]{0x0000010000000000L});
-	public static final BitSet FOLLOW_40_in_curve242 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_curve244 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_32_in_curve246 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_curve248 = new BitSet(new long[]{0x0000008000000000L});
-	public static final BitSet FOLLOW_39_in_curve250 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_curve252 = new BitSet(new long[]{0x0000000008001802L});
-	public static final BitSet FOLLOW_11_in_curve255 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_RGB_in_curve257 = new BitSet(new long[]{0x0000000008001002L});
-	public static final BitSet FOLLOW_27_in_curve262 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_curve264 = new BitSet(new long[]{0x0000000000001002L});
-	public static final BitSet FOLLOW_12_in_curve269 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_RGB_in_curve271 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_31_in_circle285 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_circle287 = new BitSet(new long[]{0x0000004000000000L});
-	public static final BitSet FOLLOW_38_in_circle289 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_circle291 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_19_in_circle293 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_circle295 = new BitSet(new long[]{0x0000000009021802L});
-	public static final BitSet FOLLOW_24_in_circle298 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_circle300 = new BitSet(new long[]{0x0000000008021802L});
-	public static final BitSet FOLLOW_17_in_circle305 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_circle307 = new BitSet(new long[]{0x0000000008001802L});
-	public static final BitSet FOLLOW_11_in_circle312 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_RGB_in_circle314 = new BitSet(new long[]{0x0000000008001002L});
-	public static final BitSet FOLLOW_27_in_circle319 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_circle321 = new BitSet(new long[]{0x0000000000001002L});
-	public static final BitSet FOLLOW_12_in_circle326 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_RGB_in_circle328 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_31_in_ellipse342 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_ellipse344 = new BitSet(new long[]{0x0000004000000000L});
-	public static final BitSet FOLLOW_38_in_ellipse346 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_ellipse348 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_23_in_ellipse350 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_ellipse352 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_22_in_ellipse354 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_ellipse356 = new BitSet(new long[]{0x0000000009221802L});
-	public static final BitSet FOLLOW_24_in_ellipse359 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_ellipse361 = new BitSet(new long[]{0x0000000008221802L});
-	public static final BitSet FOLLOW_17_in_ellipse366 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_ellipse368 = new BitSet(new long[]{0x0000000008201802L});
-	public static final BitSet FOLLOW_21_in_ellipse373 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_ROTATION_in_ellipse375 = new BitSet(new long[]{0x0000000008001802L});
-	public static final BitSet FOLLOW_11_in_ellipse380 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_RGB_in_ellipse382 = new BitSet(new long[]{0x0000000008001002L});
-	public static final BitSet FOLLOW_27_in_ellipse387 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_FLOAT_in_ellipse389 = new BitSet(new long[]{0x0000000000001002L});
-	public static final BitSet FOLLOW_12_in_ellipse394 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_RGB_in_ellipse396 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_line_in_list41 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_triangle_in_list46 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_rectangle_in_list51 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_curve_in_list56 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_circle_in_list61 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ellipse_in_list66 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_18_in_line79 = new BitSet(new long[]{0x0000000400000000L});
+	public static final BitSet FOLLOW_34_in_line81 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_line83 = new BitSet(new long[]{0x0000020000000000L});
+	public static final BitSet FOLLOW_41_in_line85 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_line87 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_32_in_line89 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_line91 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_39_in_line93 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_line95 = new BitSet(new long[]{0x0000000008000802L});
+	public static final BitSet FOLLOW_11_in_line98 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_RGB_in_line100 = new BitSet(new long[]{0x0000000008000002L});
+	public static final BitSet FOLLOW_27_in_line105 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_line107 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_26_in_triangle121 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_triangle123 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_triangle125 = new BitSet(new long[]{0x0000000800000000L});
+	public static final BitSet FOLLOW_35_in_triangle127 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_triangle129 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_triangle131 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_triangle133 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_36_in_triangle135 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_triangle137 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_30_in_triangle139 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_triangle141 = new BitSet(new long[]{0x0000002000000000L});
+	public static final BitSet FOLLOW_37_in_triangle143 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_triangle145 = new BitSet(new long[]{0x0000000008001802L});
+	public static final BitSet FOLLOW_11_in_triangle148 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_RGB_in_triangle150 = new BitSet(new long[]{0x0000000008001002L});
+	public static final BitSet FOLLOW_27_in_triangle155 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_triangle157 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_12_in_triangle162 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_RGB_in_triangle164 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_20_in_rectangle177 = new BitSet(new long[]{0x0000000400000000L});
+	public static final BitSet FOLLOW_34_in_rectangle179 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_rectangle181 = new BitSet(new long[]{0x0000020000000000L});
+	public static final BitSet FOLLOW_41_in_rectangle183 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_rectangle185 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_32_in_rectangle187 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_rectangle189 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_39_in_rectangle191 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_rectangle193 = new BitSet(new long[]{0x0000000008001802L});
+	public static final BitSet FOLLOW_11_in_rectangle196 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_RGB_in_rectangle198 = new BitSet(new long[]{0x0000000008001002L});
+	public static final BitSet FOLLOW_27_in_rectangle203 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_rectangle205 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_12_in_rectangle210 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_RGB_in_rectangle212 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_13_in_curve225 = new BitSet(new long[]{0x0000000400000000L});
+	public static final BitSet FOLLOW_34_in_curve227 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_curve229 = new BitSet(new long[]{0x0000020000000000L});
+	public static final BitSet FOLLOW_41_in_curve231 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_curve233 = new BitSet(new long[]{0x0000000200000000L});
+	public static final BitSet FOLLOW_33_in_curve235 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_curve237 = new BitSet(new long[]{0x0000010000000000L});
+	public static final BitSet FOLLOW_40_in_curve239 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_curve241 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_32_in_curve243 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_curve245 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_39_in_curve247 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_curve249 = new BitSet(new long[]{0x0000000008001802L});
+	public static final BitSet FOLLOW_11_in_curve252 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_RGB_in_curve254 = new BitSet(new long[]{0x0000000008001002L});
+	public static final BitSet FOLLOW_27_in_curve259 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_curve261 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_12_in_curve266 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_RGB_in_curve268 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_10_in_circle281 = new BitSet(new long[]{0x0000000080000000L});
+	public static final BitSet FOLLOW_31_in_circle283 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_circle285 = new BitSet(new long[]{0x0000004000000000L});
+	public static final BitSet FOLLOW_38_in_circle287 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_circle289 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_19_in_circle291 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_circle293 = new BitSet(new long[]{0x0000000009021802L});
+	public static final BitSet FOLLOW_24_in_circle296 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_circle298 = new BitSet(new long[]{0x0000000008021802L});
+	public static final BitSet FOLLOW_17_in_circle303 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_circle305 = new BitSet(new long[]{0x0000000008001802L});
+	public static final BitSet FOLLOW_11_in_circle310 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_RGB_in_circle312 = new BitSet(new long[]{0x0000000008001002L});
+	public static final BitSet FOLLOW_27_in_circle317 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_circle319 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_12_in_circle324 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_RGB_in_circle326 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_16_in_ellipse339 = new BitSet(new long[]{0x0000000080000000L});
+	public static final BitSet FOLLOW_31_in_ellipse341 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_ellipse343 = new BitSet(new long[]{0x0000004000000000L});
+	public static final BitSet FOLLOW_38_in_ellipse345 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_ellipse347 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_23_in_ellipse349 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_ellipse351 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_22_in_ellipse353 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_ellipse355 = new BitSet(new long[]{0x0000000009221802L});
+	public static final BitSet FOLLOW_24_in_ellipse358 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_ellipse360 = new BitSet(new long[]{0x0000000008221802L});
+	public static final BitSet FOLLOW_17_in_ellipse365 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_ellipse367 = new BitSet(new long[]{0x0000000008201802L});
+	public static final BitSet FOLLOW_21_in_ellipse372 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_ROTATION_in_ellipse374 = new BitSet(new long[]{0x0000000008001802L});
+	public static final BitSet FOLLOW_11_in_ellipse379 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_RGB_in_ellipse381 = new BitSet(new long[]{0x0000000008001002L});
+	public static final BitSet FOLLOW_27_in_ellipse386 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_FLOAT_in_ellipse388 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_12_in_ellipse393 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_RGB_in_ellipse395 = new BitSet(new long[]{0x0000000000000002L});
 }

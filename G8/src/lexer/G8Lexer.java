@@ -1,6 +1,6 @@
 package lexer;
 
-// $ANTLR 3.5.1 D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g 2019-04-25 22:21:30
+// $ANTLR 3.5.1 D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g 2019-04-25 22:40:08
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -741,11 +741,11 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = RGB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:27:5: ( '#' ( '0' .. '9' | 'A' .. 'F' )+ )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:27:7: '#' ( '0' .. '9' | 'A' .. 'F' )+
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:28:2: ( '#' ( '0' .. '9' | 'A' .. 'F' )+ )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:28:4: '#' ( '0' .. '9' | 'A' .. 'F' )+
 			{
 			match('#'); 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:27:11: ( '0' .. '9' | 'A' .. 'F' )+
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:28:8: ( '0' .. '9' | 'A' .. 'F' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -794,10 +794,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = TEXT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:8: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:32:2: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:32:4: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
 			{
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:8: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:32:4: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -846,14 +846,20 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:7: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* | ( '0' .. '9' )+ )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:2: ( ( ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* ) ) | ( '0' .. '9' )+ ) )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:6: ( ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* ) ) | ( '0' .. '9' )+ )
+			{
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:6: ( ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* ) ) | ( '0' .. '9' )+ )
 			int alt6=2;
 			alt6 = dfa6.predict(input);
 			switch (alt6) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:11: ( '0' .. '9' )+ '.' ( '0' .. '9' )*
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:7: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* ) )
 					{
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:11: ( '0' .. '9' )+
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:7: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* ) )
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:8: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* )
+					{
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:8: ( '0' .. '9' )+
 					int cnt3=0;
 					loop3:
 					while (true) {
@@ -886,8 +892,11 @@ public class G8Lexer extends Lexer {
 						cnt3++;
 					}
 
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:20: ( '.' ( '0' .. '9' )* )
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:21: '.' ( '0' .. '9' )*
+					{
 					match('.'); 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:27: ( '0' .. '9' )*
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:25: ( '0' .. '9' )*
 					loop4:
 					while (true) {
 						int alt4=2;
@@ -917,11 +926,15 @@ public class G8Lexer extends Lexer {
 					}
 
 					}
+
+					}
+
+					}
 					break;
 				case 2 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:34:7: ( '0' .. '9' )+
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:41: ( '0' .. '9' )+
 					{
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:34:7: ( '0' .. '9' )+
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:41: ( '0' .. '9' )+
 					int cnt5=0;
 					loop5:
 					while (true) {
@@ -958,6 +971,9 @@ public class G8Lexer extends Lexer {
 					break;
 
 			}
+
+			}
+
 			state.type = _type;
 			state.channel = _channel;
 		}
@@ -972,15 +988,15 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = ROTATION;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:37:10: ( '-' ( '0' .. '9' )+ '.' ( '0' .. '9' )* | ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '-' ( '0' .. '9' )+ | ( '0' .. '9' )+ )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:40:2: ( '-' ( '0' .. '9' )+ '.' ( '0' .. '9' )* | ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '-' ( '0' .. '9' )+ | ( '0' .. '9' )+ )
 			int alt13=4;
 			alt13 = dfa13.predict(input);
 			switch (alt13) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:37:12: '-' ( '0' .. '9' )+ '.' ( '0' .. '9' )*
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:40:4: '-' ( '0' .. '9' )+ '.' ( '0' .. '9' )*
 					{
 					match('-'); 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:37:16: ( '0' .. '9' )+
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:40:8: ( '0' .. '9' )+
 					int cnt7=0;
 					loop7:
 					while (true) {
@@ -1014,7 +1030,7 @@ public class G8Lexer extends Lexer {
 					}
 
 					match('.'); 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:37:32: ( '0' .. '9' )*
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:40:24: ( '0' .. '9' )*
 					loop8:
 					while (true) {
 						int alt8=2;
@@ -1046,9 +1062,9 @@ public class G8Lexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:38:7: ( '0' .. '9' )+ '.' ( '0' .. '9' )*
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:41:7: ( '0' .. '9' )+ '.' ( '0' .. '9' )*
 					{
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:38:7: ( '0' .. '9' )+
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:41:7: ( '0' .. '9' )+
 					int cnt9=0;
 					loop9:
 					while (true) {
@@ -1082,7 +1098,7 @@ public class G8Lexer extends Lexer {
 					}
 
 					match('.'); 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:38:23: ( '0' .. '9' )*
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:41:23: ( '0' .. '9' )*
 					loop10:
 					while (true) {
 						int alt10=2;
@@ -1114,10 +1130,10 @@ public class G8Lexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:39:7: '-' ( '0' .. '9' )+
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:42:7: '-' ( '0' .. '9' )+
 					{
 					match('-'); 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:39:11: ( '0' .. '9' )+
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:42:11: ( '0' .. '9' )+
 					int cnt11=0;
 					loop11:
 					while (true) {
@@ -1153,9 +1169,9 @@ public class G8Lexer extends Lexer {
 					}
 					break;
 				case 4 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:40:7: ( '0' .. '9' )+
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:43:7: ( '0' .. '9' )+
 					{
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:40:7: ( '0' .. '9' )+
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:43:7: ( '0' .. '9' )+
 					int cnt12=0;
 					loop12:
 					while (true) {
@@ -1206,7 +1222,7 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:43:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:47:2: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
 			int alt17=2;
 			int LA17_0 = input.LA(1);
 			if ( (LA17_0=='/') ) {
@@ -1240,11 +1256,11 @@ public class G8Lexer extends Lexer {
 
 			switch (alt17) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:43:13: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:47:6: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 					{
 					match("//"); 
 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:43:18: (~ ( '\\n' | '\\r' ) )*
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:47:11: (~ ( '\\n' | '\\r' ) )*
 					loop14:
 					while (true) {
 						int alt14=2;
@@ -1273,7 +1289,7 @@ public class G8Lexer extends Lexer {
 						}
 					}
 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:43:32: ( '\\r' )?
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:47:25: ( '\\r' )?
 					int alt15=2;
 					int LA15_0 = input.LA(1);
 					if ( (LA15_0=='\r') ) {
@@ -1281,7 +1297,7 @@ public class G8Lexer extends Lexer {
 					}
 					switch (alt15) {
 						case 1 :
-							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:43:32: '\\r'
+							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:47:25: '\\r'
 							{
 							match('\r'); 
 							}
@@ -1294,11 +1310,11 @@ public class G8Lexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:44:9: '/*' ( options {greedy=false; } : . )* '*/'
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:48:9: '/*' ( options {greedy=false; } : . )* '*/'
 					{
 					match("/*"); 
 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:44:14: ( options {greedy=false; } : . )*
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:48:14: ( options {greedy=false; } : . )*
 					loop16:
 					while (true) {
 						int alt16=2;
@@ -1319,7 +1335,7 @@ public class G8Lexer extends Lexer {
 
 						switch (alt16) {
 						case 1 :
-							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:44:42: .
+							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:48:42: .
 							{
 							matchAny(); 
 							}
@@ -1351,8 +1367,8 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:47:4: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:47:8: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:51:4: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:51:8: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
 			if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 				input.consume();
@@ -1704,7 +1720,7 @@ public class G8Lexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "33:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* | ( '0' .. '9' )+ );";
+			return "36:6: ( ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* ) ) | ( '0' .. '9' )+ )";
 		}
 	}
 
@@ -1762,7 +1778,7 @@ public class G8Lexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "37:1: ROTATION : ( '-' ( '0' .. '9' )+ '.' ( '0' .. '9' )* | ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '-' ( '0' .. '9' )+ | ( '0' .. '9' )+ );";
+			return "39:1: ROTATION : ( '-' ( '0' .. '9' )+ '.' ( '0' .. '9' )* | ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '-' ( '0' .. '9' )+ | ( '0' .. '9' )+ );";
 		}
 	}
 

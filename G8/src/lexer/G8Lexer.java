@@ -1,6 +1,6 @@
 package lexer;
 
-// $ANTLR 3.5.1 D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g 2019-04-25 22:40:08
+// $ANTLR 3.5.1 D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g 2019-04-25 22:48:19
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -69,10 +69,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = T__10;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:2:7: ( 'CIRC:' )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:2:9: 'CIRC:'
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:2:7: ( 'CIRC' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:2:9: 'CIRC'
 			{
-			match("CIRC:"); 
+			match("CIRC"); 
 
 			}
 
@@ -132,10 +132,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:5:7: ( 'CURV:' )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:5:9: 'CURV:'
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:5:7: ( 'CURV' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:5:9: 'CURV'
 			{
-			match("CURV:"); 
+			match("CURV"); 
 
 			}
 
@@ -195,10 +195,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:8:7: ( 'ELLIPS:' )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:8:9: 'ELLIPS:'
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:8:7: ( 'ELLIPS' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:8:9: 'ELLIPS'
 			{
-			match("ELLIPS:"); 
+			match("ELLIPS"); 
 
 			}
 
@@ -237,10 +237,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:10:7: ( 'LINE:' )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:10:9: 'LINE:'
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:10:7: ( 'LINE' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:10:9: 'LINE'
 			{
-			match("LINE:"); 
+			match("LINE"); 
 
 			}
 
@@ -279,10 +279,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = T__20;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:7: ( 'RECT:' )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:9: 'RECT:'
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:7: ( 'RECT' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:9: 'RECT'
 			{
-			match("RECT:"); 
+			match("RECT"); 
 
 			}
 
@@ -405,10 +405,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = T__26;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:7: ( 'TRIANGLE:' )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:9: 'TRIANGLE:'
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:7: ( 'TRIANGLE' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:9: 'TRIANGLE'
 			{
-			match("TRIANGLE:"); 
+			match("TRIANGLE"); 
 
 			}
 
@@ -741,11 +741,11 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = RGB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:28:2: ( '#' ( '0' .. '9' | 'A' .. 'F' )+ )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:28:4: '#' ( '0' .. '9' | 'A' .. 'F' )+
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:27:5: ( '#' ( '0' .. '9' | 'A' .. 'F' )+ )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:27:7: '#' ( '0' .. '9' | 'A' .. 'F' )+
 			{
 			match('#'); 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:28:8: ( '0' .. '9' | 'A' .. 'F' )+
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:27:11: ( '0' .. '9' | 'A' .. 'F' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -794,10 +794,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = TEXT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:32:2: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:32:4: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:8: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
 			{
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:32:4: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:8: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -846,57 +846,55 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:2: ( ( ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* ) ) | ( '0' .. '9' )+ ) )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:6: ( ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* ) ) | ( '0' .. '9' )+ )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:7: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:11: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
 			{
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:6: ( ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* ) ) | ( '0' .. '9' )+ )
-			int alt6=2;
-			alt6 = dfa6.predict(input);
-			switch (alt6) {
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:11: ( '0' .. '9' )+
+			int cnt3=0;
+			loop3:
+			while (true) {
+				int alt3=2;
+				int LA3_0 = input.LA(1);
+				if ( ((LA3_0 >= '0' && LA3_0 <= '9')) ) {
+					alt3=1;
+				}
+
+				switch (alt3) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:7: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* ) )
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:
 					{
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:7: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* ) )
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:8: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* )
-					{
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:8: ( '0' .. '9' )+
-					int cnt3=0;
-					loop3:
-					while (true) {
-						int alt3=2;
-						int LA3_0 = input.LA(1);
-						if ( ((LA3_0 >= '0' && LA3_0 <= '9')) ) {
-							alt3=1;
-						}
-
-						switch (alt3) {
-						case 1 :
-							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:
-							{
-							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
-								input.consume();
-							}
-							else {
-								MismatchedSetException mse = new MismatchedSetException(null,input);
-								recover(mse);
-								throw mse;
-							}
-							}
-							break;
-
-						default :
-							if ( cnt3 >= 1 ) break loop3;
-							EarlyExitException eee = new EarlyExitException(3, input);
-							throw eee;
-						}
-						cnt3++;
+					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+						input.consume();
 					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:20: ( '.' ( '0' .. '9' )* )
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:21: '.' ( '0' .. '9' )*
+				default :
+					if ( cnt3 >= 1 ) break loop3;
+					EarlyExitException eee = new EarlyExitException(3, input);
+					throw eee;
+				}
+				cnt3++;
+			}
+
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:23: ( '.' ( '0' .. '9' )+ )?
+			int alt5=2;
+			int LA5_0 = input.LA(1);
+			if ( (LA5_0=='.') ) {
+				alt5=1;
+			}
+			switch (alt5) {
+				case 1 :
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:24: '.' ( '0' .. '9' )+
 					{
 					match('.'); 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:25: ( '0' .. '9' )*
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:28: ( '0' .. '9' )+
+					int cnt4=0;
 					loop4:
 					while (true) {
 						int alt4=2;
@@ -921,50 +919,11 @@ public class G8Lexer extends Lexer {
 							break;
 
 						default :
-							break loop4;
-						}
-					}
-
-					}
-
-					}
-
-					}
-					break;
-				case 2 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:41: ( '0' .. '9' )+
-					{
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:41: ( '0' .. '9' )+
-					int cnt5=0;
-					loop5:
-					while (true) {
-						int alt5=2;
-						int LA5_0 = input.LA(1);
-						if ( ((LA5_0 >= '0' && LA5_0 <= '9')) ) {
-							alt5=1;
-						}
-
-						switch (alt5) {
-						case 1 :
-							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:
-							{
-							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
-								input.consume();
-							}
-							else {
-								MismatchedSetException mse = new MismatchedSetException(null,input);
-								recover(mse);
-								throw mse;
-							}
-							}
-							break;
-
-						default :
-							if ( cnt5 >= 1 ) break loop5;
-							EarlyExitException eee = new EarlyExitException(5, input);
+							if ( cnt4 >= 1 ) break loop4;
+							EarlyExitException eee = new EarlyExitException(4, input);
 							throw eee;
 						}
-						cnt5++;
+						cnt4++;
 					}
 
 					}
@@ -988,16 +947,49 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = ROTATION;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:40:2: ( '-' ( '0' .. '9' )+ '.' ( '0' .. '9' )* | ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '-' ( '0' .. '9' )+ | ( '0' .. '9' )+ )
-			int alt13=4;
-			alt13 = dfa13.predict(input);
-			switch (alt13) {
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:10: ( '-' ( '0' .. '9' )+ '.' ( '0' .. '9' )* | ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '-' ( '0' .. '9' )+ | ( '0' .. '9' )+ )
+			int alt12=4;
+			alt12 = dfa12.predict(input);
+			switch (alt12) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:40:4: '-' ( '0' .. '9' )+ '.' ( '0' .. '9' )*
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:12: '-' ( '0' .. '9' )+ '.' ( '0' .. '9' )*
 					{
 					match('-'); 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:40:8: ( '0' .. '9' )+
-					int cnt7=0;
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:16: ( '0' .. '9' )+
+					int cnt6=0;
+					loop6:
+					while (true) {
+						int alt6=2;
+						int LA6_0 = input.LA(1);
+						if ( ((LA6_0 >= '0' && LA6_0 <= '9')) ) {
+							alt6=1;
+						}
+
+						switch (alt6) {
+						case 1 :
+							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:
+							{
+							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+								input.consume();
+							}
+							else {
+								MismatchedSetException mse = new MismatchedSetException(null,input);
+								recover(mse);
+								throw mse;
+							}
+							}
+							break;
+
+						default :
+							if ( cnt6 >= 1 ) break loop6;
+							EarlyExitException eee = new EarlyExitException(6, input);
+							throw eee;
+						}
+						cnt6++;
+					}
+
+					match('.'); 
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:36:32: ( '0' .. '9' )*
 					loop7:
 					while (true) {
 						int alt7=2;
@@ -1022,15 +1014,17 @@ public class G8Lexer extends Lexer {
 							break;
 
 						default :
-							if ( cnt7 >= 1 ) break loop7;
-							EarlyExitException eee = new EarlyExitException(7, input);
-							throw eee;
+							break loop7;
 						}
-						cnt7++;
 					}
 
-					match('.'); 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:40:24: ( '0' .. '9' )*
+					}
+					break;
+				case 2 :
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:37:7: ( '0' .. '9' )+ '.' ( '0' .. '9' )*
+					{
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:37:7: ( '0' .. '9' )+
+					int cnt8=0;
 					loop8:
 					while (true) {
 						int alt8=2;
@@ -1055,17 +1049,15 @@ public class G8Lexer extends Lexer {
 							break;
 
 						default :
-							break loop8;
+							if ( cnt8 >= 1 ) break loop8;
+							EarlyExitException eee = new EarlyExitException(8, input);
+							throw eee;
 						}
+						cnt8++;
 					}
 
-					}
-					break;
-				case 2 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:41:7: ( '0' .. '9' )+ '.' ( '0' .. '9' )*
-					{
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:41:7: ( '0' .. '9' )+
-					int cnt9=0;
+					match('.'); 
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:37:23: ( '0' .. '9' )*
 					loop9:
 					while (true) {
 						int alt9=2;
@@ -1090,15 +1082,18 @@ public class G8Lexer extends Lexer {
 							break;
 
 						default :
-							if ( cnt9 >= 1 ) break loop9;
-							EarlyExitException eee = new EarlyExitException(9, input);
-							throw eee;
+							break loop9;
 						}
-						cnt9++;
 					}
 
-					match('.'); 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:41:23: ( '0' .. '9' )*
+					}
+					break;
+				case 3 :
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:38:7: '-' ( '0' .. '9' )+
+					{
+					match('-'); 
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:38:11: ( '0' .. '9' )+
+					int cnt10=0;
 					loop10:
 					while (true) {
 						int alt10=2;
@@ -1123,17 +1118,19 @@ public class G8Lexer extends Lexer {
 							break;
 
 						default :
-							break loop10;
+							if ( cnt10 >= 1 ) break loop10;
+							EarlyExitException eee = new EarlyExitException(10, input);
+							throw eee;
 						}
+						cnt10++;
 					}
 
 					}
 					break;
-				case 3 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:42:7: '-' ( '0' .. '9' )+
+				case 4 :
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:39:7: ( '0' .. '9' )+
 					{
-					match('-'); 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:42:11: ( '0' .. '9' )+
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:39:7: ( '0' .. '9' )+
 					int cnt11=0;
 					loop11:
 					while (true) {
@@ -1168,44 +1165,6 @@ public class G8Lexer extends Lexer {
 
 					}
 					break;
-				case 4 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:43:7: ( '0' .. '9' )+
-					{
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:43:7: ( '0' .. '9' )+
-					int cnt12=0;
-					loop12:
-					while (true) {
-						int alt12=2;
-						int LA12_0 = input.LA(1);
-						if ( ((LA12_0 >= '0' && LA12_0 <= '9')) ) {
-							alt12=1;
-						}
-
-						switch (alt12) {
-						case 1 :
-							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:
-							{
-							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
-								input.consume();
-							}
-							else {
-								MismatchedSetException mse = new MismatchedSetException(null,input);
-								recover(mse);
-								throw mse;
-							}
-							}
-							break;
-
-						default :
-							if ( cnt12 >= 1 ) break loop12;
-							EarlyExitException eee = new EarlyExitException(12, input);
-							throw eee;
-						}
-						cnt12++;
-					}
-
-					}
-					break;
 
 			}
 			state.type = _type;
@@ -1222,16 +1181,16 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:47:2: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
-			int alt17=2;
-			int LA17_0 = input.LA(1);
-			if ( (LA17_0=='/') ) {
-				int LA17_1 = input.LA(2);
-				if ( (LA17_1=='/') ) {
-					alt17=1;
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:42:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+			int alt16=2;
+			int LA16_0 = input.LA(1);
+			if ( (LA16_0=='/') ) {
+				int LA16_1 = input.LA(2);
+				if ( (LA16_1=='/') ) {
+					alt16=1;
 				}
-				else if ( (LA17_1=='*') ) {
-					alt17=2;
+				else if ( (LA16_1=='*') ) {
+					alt16=2;
 				}
 
 				else {
@@ -1239,7 +1198,7 @@ public class G8Lexer extends Lexer {
 					try {
 						input.consume();
 						NoViableAltException nvae =
-							new NoViableAltException("", 17, 1, input);
+							new NoViableAltException("", 16, 1, input);
 						throw nvae;
 					} finally {
 						input.rewind(nvaeMark);
@@ -1250,26 +1209,26 @@ public class G8Lexer extends Lexer {
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 17, 0, input);
+					new NoViableAltException("", 16, 0, input);
 				throw nvae;
 			}
 
-			switch (alt17) {
+			switch (alt16) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:47:6: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:42:13: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 					{
 					match("//"); 
 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:47:11: (~ ( '\\n' | '\\r' ) )*
-					loop14:
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:42:18: (~ ( '\\n' | '\\r' ) )*
+					loop13:
 					while (true) {
-						int alt14=2;
-						int LA14_0 = input.LA(1);
-						if ( ((LA14_0 >= '\u0000' && LA14_0 <= '\t')||(LA14_0 >= '\u000B' && LA14_0 <= '\f')||(LA14_0 >= '\u000E' && LA14_0 <= '\uFFFF')) ) {
-							alt14=1;
+						int alt13=2;
+						int LA13_0 = input.LA(1);
+						if ( ((LA13_0 >= '\u0000' && LA13_0 <= '\t')||(LA13_0 >= '\u000B' && LA13_0 <= '\f')||(LA13_0 >= '\u000E' && LA13_0 <= '\uFFFF')) ) {
+							alt13=1;
 						}
 
-						switch (alt14) {
+						switch (alt13) {
 						case 1 :
 							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:
 							{
@@ -1285,19 +1244,19 @@ public class G8Lexer extends Lexer {
 							break;
 
 						default :
-							break loop14;
+							break loop13;
 						}
 					}
 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:47:25: ( '\\r' )?
-					int alt15=2;
-					int LA15_0 = input.LA(1);
-					if ( (LA15_0=='\r') ) {
-						alt15=1;
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:42:32: ( '\\r' )?
+					int alt14=2;
+					int LA14_0 = input.LA(1);
+					if ( (LA14_0=='\r') ) {
+						alt14=1;
 					}
-					switch (alt15) {
+					switch (alt14) {
 						case 1 :
-							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:47:25: '\\r'
+							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:42:32: '\\r'
 							{
 							match('\r'); 
 							}
@@ -1310,39 +1269,39 @@ public class G8Lexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:48:9: '/*' ( options {greedy=false; } : . )* '*/'
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:43:9: '/*' ( options {greedy=false; } : . )* '*/'
 					{
 					match("/*"); 
 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:48:14: ( options {greedy=false; } : . )*
-					loop16:
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:43:14: ( options {greedy=false; } : . )*
+					loop15:
 					while (true) {
-						int alt16=2;
-						int LA16_0 = input.LA(1);
-						if ( (LA16_0=='*') ) {
-							int LA16_1 = input.LA(2);
-							if ( (LA16_1=='/') ) {
-								alt16=2;
+						int alt15=2;
+						int LA15_0 = input.LA(1);
+						if ( (LA15_0=='*') ) {
+							int LA15_1 = input.LA(2);
+							if ( (LA15_1=='/') ) {
+								alt15=2;
 							}
-							else if ( ((LA16_1 >= '\u0000' && LA16_1 <= '.')||(LA16_1 >= '0' && LA16_1 <= '\uFFFF')) ) {
-								alt16=1;
+							else if ( ((LA15_1 >= '\u0000' && LA15_1 <= '.')||(LA15_1 >= '0' && LA15_1 <= '\uFFFF')) ) {
+								alt15=1;
 							}
 
 						}
-						else if ( ((LA16_0 >= '\u0000' && LA16_0 <= ')')||(LA16_0 >= '+' && LA16_0 <= '\uFFFF')) ) {
-							alt16=1;
+						else if ( ((LA15_0 >= '\u0000' && LA15_0 <= ')')||(LA15_0 >= '+' && LA15_0 <= '\uFFFF')) ) {
+							alt15=1;
 						}
 
-						switch (alt16) {
+						switch (alt15) {
 						case 1 :
-							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:48:42: .
+							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:43:42: .
 							{
 							matchAny(); 
 							}
 							break;
 
 						default :
-							break loop16;
+							break loop15;
 						}
 					}
 
@@ -1367,8 +1326,8 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:51:4: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:51:8: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:46:4: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:46:8: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
 			if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 				input.consume();
@@ -1393,9 +1352,9 @@ public class G8Lexer extends Lexer {
 	@Override
 	public void mTokens() throws RecognitionException {
 		// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:1:8: ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | RGB | TEXT | FLOAT | ROTATION | COMMENT | WS )
-		int alt18=38;
-		alt18 = dfa18.predict(input);
-		switch (alt18) {
+		int alt17=38;
+		alt17 = dfa17.predict(input);
+		switch (alt17) {
 			case 1 :
 				// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:1:10: T__10
 				{
@@ -1667,76 +1626,21 @@ public class G8Lexer extends Lexer {
 	}
 
 
-	protected DFA6 dfa6 = new DFA6(this);
-	protected DFA13 dfa13 = new DFA13(this);
-	protected DFA18 dfa18 = new DFA18(this);
-	static final String DFA6_eotS =
-		"\1\uffff\1\3\2\uffff";
-	static final String DFA6_eofS =
-		"\4\uffff";
-	static final String DFA6_minS =
-		"\1\60\1\56\2\uffff";
-	static final String DFA6_maxS =
-		"\2\71\2\uffff";
-	static final String DFA6_acceptS =
-		"\2\uffff\1\1\1\2";
-	static final String DFA6_specialS =
-		"\4\uffff}>";
-	static final String[] DFA6_transitionS = {
-			"\12\1",
-			"\1\2\1\uffff\12\1",
-			"",
-			""
-	};
-
-	static final short[] DFA6_eot = DFA.unpackEncodedString(DFA6_eotS);
-	static final short[] DFA6_eof = DFA.unpackEncodedString(DFA6_eofS);
-	static final char[] DFA6_min = DFA.unpackEncodedStringToUnsignedChars(DFA6_minS);
-	static final char[] DFA6_max = DFA.unpackEncodedStringToUnsignedChars(DFA6_maxS);
-	static final short[] DFA6_accept = DFA.unpackEncodedString(DFA6_acceptS);
-	static final short[] DFA6_special = DFA.unpackEncodedString(DFA6_specialS);
-	static final short[][] DFA6_transition;
-
-	static {
-		int numStates = DFA6_transitionS.length;
-		DFA6_transition = new short[numStates][];
-		for (int i=0; i<numStates; i++) {
-			DFA6_transition[i] = DFA.unpackEncodedString(DFA6_transitionS[i]);
-		}
-	}
-
-	protected class DFA6 extends DFA {
-
-		public DFA6(BaseRecognizer recognizer) {
-			this.recognizer = recognizer;
-			this.decisionNumber = 6;
-			this.eot = DFA6_eot;
-			this.eof = DFA6_eof;
-			this.min = DFA6_min;
-			this.max = DFA6_max;
-			this.accept = DFA6_accept;
-			this.special = DFA6_special;
-			this.transition = DFA6_transition;
-		}
-		@Override
-		public String getDescription() {
-			return "36:6: ( ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* ) ) | ( '0' .. '9' )+ )";
-		}
-	}
-
-	static final String DFA13_eotS =
+	protected DFA12 dfa12 = new DFA12(this);
+	protected DFA17 dfa17 = new DFA17(this);
+	static final String DFA12_eotS =
 		"\2\uffff\1\5\1\7\4\uffff";
-	static final String DFA13_eofS =
+	static final String DFA12_eofS =
 		"\10\uffff";
-	static final String DFA13_minS =
+	static final String DFA12_minS =
 		"\1\55\1\60\2\56\4\uffff";
-	static final String DFA13_maxS =
+	static final String DFA12_maxS =
 		"\4\71\4\uffff";
-	static final String DFA13_acceptS =
+	static final String DFA12_acceptS =
 		"\4\uffff\1\2\1\4\1\1\1\3";
-	static final String DFA13_specialS =
+	static final String DFA12_specialS =
 		"\10\uffff}>";
-	static final String[] DFA13_transitionS = {
+	static final String[] DFA12_transitionS = {
 			"\1\1\2\uffff\12\2",
 			"\12\3",
 			"\1\4\1\uffff\12\2",
@@ -1747,92 +1651,93 @@ public class G8Lexer extends Lexer {
 			""
 	};
 
-	static final short[] DFA13_eot = DFA.unpackEncodedString(DFA13_eotS);
-	static final short[] DFA13_eof = DFA.unpackEncodedString(DFA13_eofS);
-	static final char[] DFA13_min = DFA.unpackEncodedStringToUnsignedChars(DFA13_minS);
-	static final char[] DFA13_max = DFA.unpackEncodedStringToUnsignedChars(DFA13_maxS);
-	static final short[] DFA13_accept = DFA.unpackEncodedString(DFA13_acceptS);
-	static final short[] DFA13_special = DFA.unpackEncodedString(DFA13_specialS);
-	static final short[][] DFA13_transition;
+	static final short[] DFA12_eot = DFA.unpackEncodedString(DFA12_eotS);
+	static final short[] DFA12_eof = DFA.unpackEncodedString(DFA12_eofS);
+	static final char[] DFA12_min = DFA.unpackEncodedStringToUnsignedChars(DFA12_minS);
+	static final char[] DFA12_max = DFA.unpackEncodedStringToUnsignedChars(DFA12_maxS);
+	static final short[] DFA12_accept = DFA.unpackEncodedString(DFA12_acceptS);
+	static final short[] DFA12_special = DFA.unpackEncodedString(DFA12_specialS);
+	static final short[][] DFA12_transition;
 
 	static {
-		int numStates = DFA13_transitionS.length;
-		DFA13_transition = new short[numStates][];
+		int numStates = DFA12_transitionS.length;
+		DFA12_transition = new short[numStates][];
 		for (int i=0; i<numStates; i++) {
-			DFA13_transition[i] = DFA.unpackEncodedString(DFA13_transitionS[i]);
+			DFA12_transition[i] = DFA.unpackEncodedString(DFA12_transitionS[i]);
 		}
 	}
 
-	protected class DFA13 extends DFA {
+	protected class DFA12 extends DFA {
 
-		public DFA13(BaseRecognizer recognizer) {
+		public DFA12(BaseRecognizer recognizer) {
 			this.recognizer = recognizer;
-			this.decisionNumber = 13;
-			this.eot = DFA13_eot;
-			this.eof = DFA13_eof;
-			this.min = DFA13_min;
-			this.max = DFA13_max;
-			this.accept = DFA13_accept;
-			this.special = DFA13_special;
-			this.transition = DFA13_transition;
+			this.decisionNumber = 12;
+			this.eot = DFA12_eot;
+			this.eof = DFA12_eof;
+			this.min = DFA12_min;
+			this.max = DFA12_max;
+			this.accept = DFA12_accept;
+			this.special = DFA12_special;
+			this.transition = DFA12_transition;
 		}
 		@Override
 		public String getDescription() {
-			return "39:1: ROTATION : ( '-' ( '0' .. '9' )+ '.' ( '0' .. '9' )* | ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '-' ( '0' .. '9' )+ | ( '0' .. '9' )+ );";
+			return "36:1: ROTATION : ( '-' ( '0' .. '9' )+ '.' ( '0' .. '9' )* | ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '-' ( '0' .. '9' )+ | ( '0' .. '9' )+ );";
 		}
 	}
 
-	static final String DFA18_eotS =
+	static final String DFA17_eotS =
 		"\1\uffff\12\15\1\uffff\1\15\4\uffff\17\15\1\74\1\75\1\77\3\15\1\103\1"+
-		"\104\1\106\3\15\1\113\17\15\2\uffff\1\15\1\uffff\3\15\2\uffff\1\15\1\uffff"+
-		"\3\15\1\113\1\uffff\21\15\1\165\3\15\1\171\2\15\1\uffff\1\175\1\uffff"+
-		"\3\15\1\uffff\1\15\1\uffff\1\15\1\u0083\1\u0084\1\15\1\u0086\1\15\1\u0088"+
-		"\1\15\1\uffff\3\15\1\uffff\3\15\1\uffff\3\15\1\u0093\1\15\2\uffff\1\15"+
-		"\1\uffff\1\15\1\uffff\2\15\1\u0099\2\15\1\u009c\2\15\1\uffff\1\15\1\uffff"+
-		"\3\15\1\u00a3\1\u00a4\1\uffff\1\u00a5\1\u00a6\1\uffff\2\15\1\u00a9\1\u00aa"+
-		"\2\15\4\uffff\1\u00ad\1\15\2\uffff\1\15\3\uffff\1\u00b2\3\uffff";
-	static final String DFA18_eofS =
+		"\104\1\106\3\15\1\16\17\15\2\uffff\1\15\1\uffff\3\15\2\uffff\1\15\1\uffff"+
+		"\3\15\1\143\1\144\1\15\1\146\3\15\1\152\1\15\1\154\10\15\1\165\3\15\1"+
+		"\171\2\15\2\uffff\1\175\1\uffff\3\15\1\uffff\1\15\1\uffff\1\15\1\u0083"+
+		"\1\u0084\1\15\1\u0086\1\15\1\u0088\1\15\1\uffff\3\15\1\uffff\3\15\1\uffff"+
+		"\1\15\1\u0091\1\15\1\u0093\1\15\2\uffff\1\15\1\uffff\1\15\1\uffff\2\15"+
+		"\1\u0099\2\15\1\u009c\2\15\1\uffff\1\15\1\uffff\3\15\1\u00a3\1\u00a4\1"+
+		"\uffff\1\u00a5\1\u00a6\1\uffff\2\15\1\u00a9\1\u00aa\1\15\1\u00ac\4\uffff"+
+		"\1\u00ad\1\15\2\uffff\1\15\3\uffff\1\u00b2\3\uffff";
+	static final String DFA17_eofS =
 		"\u00b3\uffff";
-	static final String DFA18_minS =
+	static final String DFA17_minS =
 		"\1\11\1\111\1\122\1\114\1\111\1\101\1\105\2\111\2\101\1\uffff\1\56\4\uffff"+
 		"\1\122\1\114\1\122\1\101\1\114\1\104\1\116\1\104\1\103\1\124\1\115\1\101"+
 		"\1\124\1\111\1\104\3\60\1\116\1\111\1\124\3\60\1\116\1\111\1\124\1\60"+
 		"\1\103\1\117\1\126\1\127\1\111\1\101\1\105\1\111\1\124\2\101\1\122\1\114"+
 		"\1\101\1\124\2\uffff\1\116\1\uffff\2\104\1\101\2\uffff\1\116\1\uffff\2"+
-		"\104\1\101\1\60\1\uffff\1\72\1\122\1\72\1\123\1\120\1\116\1\72\1\125\1"+
-		"\72\1\124\1\130\1\116\1\124\1\105\1\116\1\110\1\124\1\60\1\104\1\122\1"+
-		"\124\1\60\1\104\1\122\1\uffff\1\60\1\uffff\1\120\1\123\1\107\1\uffff\1"+
-		"\123\1\uffff\1\111\2\60\1\101\1\60\1\107\1\60\1\105\1\uffff\1\114\1\124"+
-		"\1\105\1\uffff\1\114\1\124\1\117\1\uffff\1\101\1\72\1\114\1\60\1\117\2"+
-		"\uffff\1\116\1\uffff\1\114\1\uffff\1\122\1\105\1\60\1\122\1\105\1\60\1"+
-		"\104\1\103\1\uffff\1\105\1\uffff\1\116\1\107\1\105\2\60\1\uffff\2\60\1"+
-		"\uffff\1\131\1\105\2\60\1\114\1\72\4\uffff\1\60\1\40\2\uffff\1\105\2\uffff"+
-		"\1\110\1\60\3\uffff";
-	static final String DFA18_maxS =
+		"\104\1\101\2\60\1\122\1\60\1\123\1\120\1\116\1\60\1\125\1\60\1\124\1\130"+
+		"\1\116\1\124\1\105\1\116\1\110\1\124\1\60\1\104\1\122\1\124\1\60\1\104"+
+		"\1\122\2\uffff\1\60\1\uffff\1\120\1\123\1\107\1\uffff\1\123\1\uffff\1"+
+		"\111\2\60\1\101\1\60\1\107\1\60\1\105\1\uffff\1\114\1\124\1\105\1\uffff"+
+		"\1\114\1\124\1\117\1\uffff\1\101\1\60\1\114\1\60\1\117\2\uffff\1\116\1"+
+		"\uffff\1\114\1\uffff\1\122\1\105\1\60\1\122\1\105\1\60\1\104\1\103\1\uffff"+
+		"\1\105\1\uffff\1\116\1\107\1\105\2\60\1\uffff\2\60\1\uffff\1\131\1\105"+
+		"\2\60\1\114\1\60\4\uffff\1\60\1\40\2\uffff\1\105\2\uffff\1\110\1\60\3"+
+		"\uffff";
+	static final String DFA17_maxS =
 		"\1\172\1\125\1\122\1\116\1\111\1\117\1\124\1\122\1\111\2\123\1\uffff\1"+
 		"\71\4\uffff\1\122\1\114\1\122\1\101\1\114\1\104\1\116\1\104\1\103\1\124"+
 		"\1\115\1\101\1\124\1\111\1\104\3\172\1\116\1\111\1\124\3\172\1\116\1\111"+
 		"\1\124\1\71\1\103\1\117\1\126\1\127\1\111\1\101\1\105\1\111\1\124\1\101"+
 		"\1\111\1\122\1\114\1\101\1\124\2\uffff\1\116\1\uffff\2\104\1\101\2\uffff"+
-		"\1\116\1\uffff\2\104\1\101\1\71\1\uffff\1\72\1\122\1\72\1\123\1\120\1"+
-		"\116\1\72\1\125\1\72\1\124\1\130\1\116\1\124\1\105\1\116\1\110\1\124\1"+
-		"\172\1\104\1\122\1\124\1\172\1\104\1\122\1\uffff\1\172\1\uffff\1\120\1"+
-		"\123\1\107\1\uffff\1\123\1\uffff\1\111\2\172\1\101\1\172\1\107\1\172\1"+
-		"\105\1\uffff\1\114\1\124\1\105\1\uffff\1\114\1\124\1\117\1\uffff\1\101"+
-		"\1\72\1\114\1\172\1\117\2\uffff\1\116\1\uffff\1\114\1\uffff\1\122\1\105"+
-		"\1\172\1\122\1\105\1\172\1\104\1\103\1\uffff\1\105\1\uffff\1\116\1\107"+
-		"\1\105\2\172\1\uffff\2\172\1\uffff\1\131\1\105\2\172\1\114\1\72\4\uffff"+
-		"\1\172\1\40\2\uffff\1\105\2\uffff\1\127\1\172\3\uffff";
-	static final String DFA18_acceptS =
+		"\1\116\1\uffff\2\104\1\101\1\71\1\172\1\122\1\172\1\123\1\120\1\116\1"+
+		"\172\1\125\1\172\1\124\1\130\1\116\1\124\1\105\1\116\1\110\1\124\1\172"+
+		"\1\104\1\122\1\124\1\172\1\104\1\122\2\uffff\1\172\1\uffff\1\120\1\123"+
+		"\1\107\1\uffff\1\123\1\uffff\1\111\2\172\1\101\1\172\1\107\1\172\1\105"+
+		"\1\uffff\1\114\1\124\1\105\1\uffff\1\114\1\124\1\117\1\uffff\1\101\1\172"+
+		"\1\114\1\172\1\117\2\uffff\1\116\1\uffff\1\114\1\uffff\1\122\1\105\1\172"+
+		"\1\122\1\105\1\172\1\104\1\103\1\uffff\1\105\1\uffff\1\116\1\107\1\105"+
+		"\2\172\1\uffff\2\172\1\uffff\1\131\1\105\2\172\1\114\1\172\4\uffff\1\172"+
+		"\1\40\2\uffff\1\105\2\uffff\1\127\1\172\3\uffff";
+	static final String DFA17_acceptS =
 		"\13\uffff\1\41\1\uffff\1\42\1\44\1\45\1\46\53\uffff\1\23\1\24\1\uffff"+
-		"\1\25\3\uffff\1\32\1\33\1\uffff\1\34\4\uffff\1\43\30\uffff\1\1\1\uffff"+
-		"\1\4\3\uffff\1\11\1\uffff\1\13\10\uffff\1\27\3\uffff\1\36\3\uffff\1\2"+
-		"\5\uffff\1\15\1\16\1\uffff\1\20\1\uffff\1\22\10\uffff\1\7\1\uffff\1\12"+
-		"\5\uffff\1\31\2\uffff\1\40\6\uffff\1\26\1\30\1\35\1\37\2\uffff\1\10\1"+
-		"\14\1\uffff\1\21\1\3\2\uffff\1\5\1\6\1\17";
-	static final String DFA18_specialS =
+		"\1\25\3\uffff\1\32\1\33\1\uffff\1\34\34\uffff\1\43\1\1\1\uffff\1\4\3\uffff"+
+		"\1\11\1\uffff\1\13\10\uffff\1\27\3\uffff\1\36\3\uffff\1\2\5\uffff\1\15"+
+		"\1\16\1\uffff\1\20\1\uffff\1\22\10\uffff\1\7\1\uffff\1\12\5\uffff\1\31"+
+		"\2\uffff\1\40\6\uffff\1\26\1\30\1\35\1\37\2\uffff\1\10\1\14\1\uffff\1"+
+		"\21\1\3\2\uffff\1\5\1\6\1\17";
+	static final String DFA17_specialS =
 		"\u00b3\uffff}>";
-	static final String[] DFA18_transitionS = {
+	static final String[] DFA17_transitionS = {
 			"\2\20\2\uffff\1\20\22\uffff\1\20\2\uffff\1\13\11\uffff\1\16\1\uffff\1"+
 			"\17\12\14\7\uffff\2\15\1\1\1\2\1\3\6\15\1\4\5\15\1\5\1\6\1\7\2\15\1\10"+
 			"\1\11\1\12\1\15\6\uffff\32\15",
@@ -1880,6 +1785,7 @@ public class G8Lexer extends Lexer {
 			"\1\110",
 			"\1\111",
 			"\12\112",
+			"\1\113",
 			"\1\114",
 			"\1\115",
 			"\1\116",
@@ -1889,37 +1795,35 @@ public class G8Lexer extends Lexer {
 			"\1\122",
 			"\1\123",
 			"\1\124",
-			"\1\125",
-			"\1\126\7\uffff\1\127",
+			"\1\125\7\uffff\1\126",
+			"\1\127",
 			"\1\130",
 			"\1\131",
 			"\1\132",
+			"",
+			"",
 			"\1\133",
 			"",
-			"",
 			"\1\134",
-			"",
 			"\1\135",
 			"\1\136",
+			"",
+			"",
 			"\1\137",
 			"",
-			"",
 			"\1\140",
-			"",
 			"\1\141",
 			"\1\142",
-			"\1\143",
 			"\12\112",
-			"",
-			"\1\144",
+			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\1\145",
-			"\1\146",
+			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\1\147",
 			"\1\150",
 			"\1\151",
-			"\1\152",
+			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\1\153",
-			"\1\154",
+			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\1\155",
 			"\1\156",
 			"\1\157",
@@ -1935,6 +1839,7 @@ public class G8Lexer extends Lexer {
 			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\1\172",
 			"\1\173",
+			"",
 			"",
 			"\12\15\7\uffff\1\15\1\174\30\15\6\uffff\32\15",
 			"",
@@ -1962,7 +1867,7 @@ public class G8Lexer extends Lexer {
 			"\1\u008f",
 			"",
 			"\1\u0090",
-			"\1\u0091",
+			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\1\u0092",
 			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\1\u0094",
@@ -1997,7 +1902,7 @@ public class G8Lexer extends Lexer {
 			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\1\u00ab",
-			"\1\u00ac",
+			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"",
 			"",
 			"",
@@ -2016,34 +1921,34 @@ public class G8Lexer extends Lexer {
 			""
 	};
 
-	static final short[] DFA18_eot = DFA.unpackEncodedString(DFA18_eotS);
-	static final short[] DFA18_eof = DFA.unpackEncodedString(DFA18_eofS);
-	static final char[] DFA18_min = DFA.unpackEncodedStringToUnsignedChars(DFA18_minS);
-	static final char[] DFA18_max = DFA.unpackEncodedStringToUnsignedChars(DFA18_maxS);
-	static final short[] DFA18_accept = DFA.unpackEncodedString(DFA18_acceptS);
-	static final short[] DFA18_special = DFA.unpackEncodedString(DFA18_specialS);
-	static final short[][] DFA18_transition;
+	static final short[] DFA17_eot = DFA.unpackEncodedString(DFA17_eotS);
+	static final short[] DFA17_eof = DFA.unpackEncodedString(DFA17_eofS);
+	static final char[] DFA17_min = DFA.unpackEncodedStringToUnsignedChars(DFA17_minS);
+	static final char[] DFA17_max = DFA.unpackEncodedStringToUnsignedChars(DFA17_maxS);
+	static final short[] DFA17_accept = DFA.unpackEncodedString(DFA17_acceptS);
+	static final short[] DFA17_special = DFA.unpackEncodedString(DFA17_specialS);
+	static final short[][] DFA17_transition;
 
 	static {
-		int numStates = DFA18_transitionS.length;
-		DFA18_transition = new short[numStates][];
+		int numStates = DFA17_transitionS.length;
+		DFA17_transition = new short[numStates][];
 		for (int i=0; i<numStates; i++) {
-			DFA18_transition[i] = DFA.unpackEncodedString(DFA18_transitionS[i]);
+			DFA17_transition[i] = DFA.unpackEncodedString(DFA17_transitionS[i]);
 		}
 	}
 
-	protected class DFA18 extends DFA {
+	protected class DFA17 extends DFA {
 
-		public DFA18(BaseRecognizer recognizer) {
+		public DFA17(BaseRecognizer recognizer) {
 			this.recognizer = recognizer;
-			this.decisionNumber = 18;
-			this.eot = DFA18_eot;
-			this.eof = DFA18_eof;
-			this.min = DFA18_min;
-			this.max = DFA18_max;
-			this.accept = DFA18_accept;
-			this.special = DFA18_special;
-			this.transition = DFA18_transition;
+			this.decisionNumber = 17;
+			this.eot = DFA17_eot;
+			this.eof = DFA17_eof;
+			this.min = DFA17_min;
+			this.max = DFA17_max;
+			this.accept = DFA17_accept;
+			this.special = DFA17_special;
+			this.transition = DFA17_transition;
 		}
 		@Override
 		public String getDescription() {

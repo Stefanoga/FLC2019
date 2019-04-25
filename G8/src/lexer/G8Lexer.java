@@ -1,6 +1,6 @@
 package lexer;
 
-// $ANTLR 3.5.1 D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g 2019-04-25 22:48:19
+// $ANTLR 3.5.1 D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g 2019-04-25 22:55:08
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -69,10 +69,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = T__10;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:2:7: ( 'CIRC' )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:2:9: 'CIRC'
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:2:7: ( 'CIRC:' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:2:9: 'CIRC:'
 			{
-			match("CIRC"); 
+			match("CIRC:"); 
 
 			}
 
@@ -132,10 +132,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:5:7: ( 'CURV' )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:5:9: 'CURV'
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:5:7: ( 'CURV:' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:5:9: 'CURV:'
 			{
-			match("CURV"); 
+			match("CURV:"); 
 
 			}
 
@@ -195,10 +195,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:8:7: ( 'ELLIPS' )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:8:9: 'ELLIPS'
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:8:7: ( 'ELLIPS:' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:8:9: 'ELLIPS:'
 			{
-			match("ELLIPS"); 
+			match("ELLIPS:"); 
 
 			}
 
@@ -237,10 +237,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:10:7: ( 'LINE' )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:10:9: 'LINE'
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:10:7: ( 'LINE:' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:10:9: 'LINE:'
 			{
-			match("LINE"); 
+			match("LINE:"); 
 
 			}
 
@@ -279,10 +279,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = T__20;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:7: ( 'RECT' )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:9: 'RECT'
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:7: ( 'RECT:' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:12:9: 'RECT:'
 			{
-			match("RECT"); 
+			match("RECT:"); 
 
 			}
 
@@ -405,10 +405,10 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = T__26;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:7: ( 'TRIANGLE' )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:9: 'TRIANGLE'
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:7: ( 'TRIANGLE:' )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:18:9: 'TRIANGLE:'
 			{
-			match("TRIANGLE"); 
+			match("TRIANGLE:"); 
 
 			}
 
@@ -846,8 +846,8 @@ public class G8Lexer extends Lexer {
 		try {
 			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:7: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:11: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:7: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* )? )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:11: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* )?
 			{
 			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:11: ( '0' .. '9' )+
 			int cnt3=0;
@@ -882,7 +882,7 @@ public class G8Lexer extends Lexer {
 				cnt3++;
 			}
 
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:23: ( '.' ( '0' .. '9' )+ )?
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:23: ( '.' ( '0' .. '9' )* )?
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( (LA5_0=='.') ) {
@@ -890,11 +890,10 @@ public class G8Lexer extends Lexer {
 			}
 			switch (alt5) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:24: '.' ( '0' .. '9' )+
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:24: '.' ( '0' .. '9' )*
 					{
 					match('.'); 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:28: ( '0' .. '9' )+
-					int cnt4=0;
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:27: ( '0' .. '9' )*
 					loop4:
 					while (true) {
 						int alt4=2;
@@ -919,11 +918,8 @@ public class G8Lexer extends Lexer {
 							break;
 
 						default :
-							if ( cnt4 >= 1 ) break loop4;
-							EarlyExitException eee = new EarlyExitException(4, input);
-							throw eee;
+							break loop4;
 						}
-						cnt4++;
 					}
 
 					}
@@ -1688,14 +1684,13 @@ public class G8Lexer extends Lexer {
 
 	static final String DFA17_eotS =
 		"\1\uffff\12\15\1\uffff\1\15\4\uffff\17\15\1\74\1\75\1\77\3\15\1\103\1"+
-		"\104\1\106\3\15\1\16\17\15\2\uffff\1\15\1\uffff\3\15\2\uffff\1\15\1\uffff"+
-		"\3\15\1\143\1\144\1\15\1\146\3\15\1\152\1\15\1\154\10\15\1\165\3\15\1"+
-		"\171\2\15\2\uffff\1\175\1\uffff\3\15\1\uffff\1\15\1\uffff\1\15\1\u0083"+
-		"\1\u0084\1\15\1\u0086\1\15\1\u0088\1\15\1\uffff\3\15\1\uffff\3\15\1\uffff"+
-		"\1\15\1\u0091\1\15\1\u0093\1\15\2\uffff\1\15\1\uffff\1\15\1\uffff\2\15"+
-		"\1\u0099\2\15\1\u009c\2\15\1\uffff\1\15\1\uffff\3\15\1\u00a3\1\u00a4\1"+
-		"\uffff\1\u00a5\1\u00a6\1\uffff\2\15\1\u00a9\1\u00aa\1\15\1\u00ac\4\uffff"+
-		"\1\u00ad\1\15\2\uffff\1\15\3\uffff\1\u00b2\3\uffff";
+		"\104\1\106\3\15\1\113\17\15\2\uffff\1\15\1\uffff\3\15\2\uffff\1\15\1\uffff"+
+		"\3\15\1\113\1\uffff\21\15\1\165\3\15\1\171\2\15\1\uffff\1\175\1\uffff"+
+		"\3\15\1\uffff\1\15\1\uffff\1\15\1\u0083\1\u0084\1\15\1\u0086\1\15\1\u0088"+
+		"\1\15\1\uffff\3\15\1\uffff\3\15\1\uffff\3\15\1\u0093\1\15\2\uffff\1\15"+
+		"\1\uffff\1\15\1\uffff\2\15\1\u0099\2\15\1\u009c\2\15\1\uffff\1\15\1\uffff"+
+		"\3\15\1\u00a3\1\u00a4\1\uffff\1\u00a5\1\u00a6\1\uffff\2\15\1\u00a9\1\u00aa"+
+		"\2\15\4\uffff\1\u00ad\1\15\2\uffff\1\15\3\uffff\1\u00b2\3\uffff";
 	static final String DFA17_eofS =
 		"\u00b3\uffff";
 	static final String DFA17_minS =
@@ -1704,37 +1699,37 @@ public class G8Lexer extends Lexer {
 		"\1\124\1\111\1\104\3\60\1\116\1\111\1\124\3\60\1\116\1\111\1\124\1\60"+
 		"\1\103\1\117\1\126\1\127\1\111\1\101\1\105\1\111\1\124\2\101\1\122\1\114"+
 		"\1\101\1\124\2\uffff\1\116\1\uffff\2\104\1\101\2\uffff\1\116\1\uffff\2"+
-		"\104\1\101\2\60\1\122\1\60\1\123\1\120\1\116\1\60\1\125\1\60\1\124\1\130"+
-		"\1\116\1\124\1\105\1\116\1\110\1\124\1\60\1\104\1\122\1\124\1\60\1\104"+
-		"\1\122\2\uffff\1\60\1\uffff\1\120\1\123\1\107\1\uffff\1\123\1\uffff\1"+
-		"\111\2\60\1\101\1\60\1\107\1\60\1\105\1\uffff\1\114\1\124\1\105\1\uffff"+
-		"\1\114\1\124\1\117\1\uffff\1\101\1\60\1\114\1\60\1\117\2\uffff\1\116\1"+
-		"\uffff\1\114\1\uffff\1\122\1\105\1\60\1\122\1\105\1\60\1\104\1\103\1\uffff"+
-		"\1\105\1\uffff\1\116\1\107\1\105\2\60\1\uffff\2\60\1\uffff\1\131\1\105"+
-		"\2\60\1\114\1\60\4\uffff\1\60\1\40\2\uffff\1\105\2\uffff\1\110\1\60\3"+
-		"\uffff";
+		"\104\1\101\1\60\1\uffff\1\72\1\122\1\72\1\123\1\120\1\116\1\72\1\125\1"+
+		"\72\1\124\1\130\1\116\1\124\1\105\1\116\1\110\1\124\1\60\1\104\1\122\1"+
+		"\124\1\60\1\104\1\122\1\uffff\1\60\1\uffff\1\120\1\123\1\107\1\uffff\1"+
+		"\123\1\uffff\1\111\2\60\1\101\1\60\1\107\1\60\1\105\1\uffff\1\114\1\124"+
+		"\1\105\1\uffff\1\114\1\124\1\117\1\uffff\1\101\1\72\1\114\1\60\1\117\2"+
+		"\uffff\1\116\1\uffff\1\114\1\uffff\1\122\1\105\1\60\1\122\1\105\1\60\1"+
+		"\104\1\103\1\uffff\1\105\1\uffff\1\116\1\107\1\105\2\60\1\uffff\2\60\1"+
+		"\uffff\1\131\1\105\2\60\1\114\1\72\4\uffff\1\60\1\40\2\uffff\1\105\2\uffff"+
+		"\1\110\1\60\3\uffff";
 	static final String DFA17_maxS =
 		"\1\172\1\125\1\122\1\116\1\111\1\117\1\124\1\122\1\111\2\123\1\uffff\1"+
 		"\71\4\uffff\1\122\1\114\1\122\1\101\1\114\1\104\1\116\1\104\1\103\1\124"+
 		"\1\115\1\101\1\124\1\111\1\104\3\172\1\116\1\111\1\124\3\172\1\116\1\111"+
 		"\1\124\1\71\1\103\1\117\1\126\1\127\1\111\1\101\1\105\1\111\1\124\1\101"+
 		"\1\111\1\122\1\114\1\101\1\124\2\uffff\1\116\1\uffff\2\104\1\101\2\uffff"+
-		"\1\116\1\uffff\2\104\1\101\1\71\1\172\1\122\1\172\1\123\1\120\1\116\1"+
-		"\172\1\125\1\172\1\124\1\130\1\116\1\124\1\105\1\116\1\110\1\124\1\172"+
-		"\1\104\1\122\1\124\1\172\1\104\1\122\2\uffff\1\172\1\uffff\1\120\1\123"+
-		"\1\107\1\uffff\1\123\1\uffff\1\111\2\172\1\101\1\172\1\107\1\172\1\105"+
-		"\1\uffff\1\114\1\124\1\105\1\uffff\1\114\1\124\1\117\1\uffff\1\101\1\172"+
-		"\1\114\1\172\1\117\2\uffff\1\116\1\uffff\1\114\1\uffff\1\122\1\105\1\172"+
-		"\1\122\1\105\1\172\1\104\1\103\1\uffff\1\105\1\uffff\1\116\1\107\1\105"+
-		"\2\172\1\uffff\2\172\1\uffff\1\131\1\105\2\172\1\114\1\172\4\uffff\1\172"+
-		"\1\40\2\uffff\1\105\2\uffff\1\127\1\172\3\uffff";
+		"\1\116\1\uffff\2\104\1\101\1\71\1\uffff\1\72\1\122\1\72\1\123\1\120\1"+
+		"\116\1\72\1\125\1\72\1\124\1\130\1\116\1\124\1\105\1\116\1\110\1\124\1"+
+		"\172\1\104\1\122\1\124\1\172\1\104\1\122\1\uffff\1\172\1\uffff\1\120\1"+
+		"\123\1\107\1\uffff\1\123\1\uffff\1\111\2\172\1\101\1\172\1\107\1\172\1"+
+		"\105\1\uffff\1\114\1\124\1\105\1\uffff\1\114\1\124\1\117\1\uffff\1\101"+
+		"\1\72\1\114\1\172\1\117\2\uffff\1\116\1\uffff\1\114\1\uffff\1\122\1\105"+
+		"\1\172\1\122\1\105\1\172\1\104\1\103\1\uffff\1\105\1\uffff\1\116\1\107"+
+		"\1\105\2\172\1\uffff\2\172\1\uffff\1\131\1\105\2\172\1\114\1\72\4\uffff"+
+		"\1\172\1\40\2\uffff\1\105\2\uffff\1\127\1\172\3\uffff";
 	static final String DFA17_acceptS =
 		"\13\uffff\1\41\1\uffff\1\42\1\44\1\45\1\46\53\uffff\1\23\1\24\1\uffff"+
-		"\1\25\3\uffff\1\32\1\33\1\uffff\1\34\34\uffff\1\43\1\1\1\uffff\1\4\3\uffff"+
-		"\1\11\1\uffff\1\13\10\uffff\1\27\3\uffff\1\36\3\uffff\1\2\5\uffff\1\15"+
-		"\1\16\1\uffff\1\20\1\uffff\1\22\10\uffff\1\7\1\uffff\1\12\5\uffff\1\31"+
-		"\2\uffff\1\40\6\uffff\1\26\1\30\1\35\1\37\2\uffff\1\10\1\14\1\uffff\1"+
-		"\21\1\3\2\uffff\1\5\1\6\1\17";
+		"\1\25\3\uffff\1\32\1\33\1\uffff\1\34\4\uffff\1\43\30\uffff\1\1\1\uffff"+
+		"\1\4\3\uffff\1\11\1\uffff\1\13\10\uffff\1\27\3\uffff\1\36\3\uffff\1\2"+
+		"\5\uffff\1\15\1\16\1\uffff\1\20\1\uffff\1\22\10\uffff\1\7\1\uffff\1\12"+
+		"\5\uffff\1\31\2\uffff\1\40\6\uffff\1\26\1\30\1\35\1\37\2\uffff\1\10\1"+
+		"\14\1\uffff\1\21\1\3\2\uffff\1\5\1\6\1\17";
 	static final String DFA17_specialS =
 		"\u00b3\uffff}>";
 	static final String[] DFA17_transitionS = {
@@ -1785,7 +1780,6 @@ public class G8Lexer extends Lexer {
 			"\1\110",
 			"\1\111",
 			"\12\112",
-			"\1\113",
 			"\1\114",
 			"\1\115",
 			"\1\116",
@@ -1795,35 +1789,37 @@ public class G8Lexer extends Lexer {
 			"\1\122",
 			"\1\123",
 			"\1\124",
-			"\1\125\7\uffff\1\126",
-			"\1\127",
+			"\1\125",
+			"\1\126\7\uffff\1\127",
 			"\1\130",
 			"\1\131",
 			"\1\132",
-			"",
-			"",
 			"\1\133",
 			"",
+			"",
 			"\1\134",
+			"",
 			"\1\135",
 			"\1\136",
-			"",
-			"",
 			"\1\137",
 			"",
+			"",
 			"\1\140",
+			"",
 			"\1\141",
 			"\1\142",
+			"\1\143",
 			"\12\112",
-			"\12\15\7\uffff\32\15\6\uffff\32\15",
+			"",
+			"\1\144",
 			"\1\145",
-			"\12\15\7\uffff\32\15\6\uffff\32\15",
+			"\1\146",
 			"\1\147",
 			"\1\150",
 			"\1\151",
-			"\12\15\7\uffff\32\15\6\uffff\32\15",
+			"\1\152",
 			"\1\153",
-			"\12\15\7\uffff\32\15\6\uffff\32\15",
+			"\1\154",
 			"\1\155",
 			"\1\156",
 			"\1\157",
@@ -1839,7 +1835,6 @@ public class G8Lexer extends Lexer {
 			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\1\172",
 			"\1\173",
-			"",
 			"",
 			"\12\15\7\uffff\1\15\1\174\30\15\6\uffff\32\15",
 			"",
@@ -1867,7 +1862,7 @@ public class G8Lexer extends Lexer {
 			"\1\u008f",
 			"",
 			"\1\u0090",
-			"\12\15\7\uffff\32\15\6\uffff\32\15",
+			"\1\u0091",
 			"\1\u0092",
 			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\1\u0094",
@@ -1902,7 +1897,7 @@ public class G8Lexer extends Lexer {
 			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\1\u00ab",
-			"\12\15\7\uffff\32\15\6\uffff\32\15",
+			"\1\u00ac",
 			"",
 			"",
 			"",

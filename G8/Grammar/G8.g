@@ -27,11 +27,11 @@ ellipse 	:	'ELLIPS:' 'XCENTER' FLOAT 'YCENTER' FLOAT 'SEMIN' FLOAT 'SEMAX' FLOAT
 RGB	:	'#' ('0'..'9' | 'A'..'F' )+
 	;
 
-TEXT	:	('a'..'z' | 'A'..'Z' | '0'..'9')+
-	;
-
 FLOAT	:   ('0'..'9')+ ('.'('0'..'9')*)?
     ;
+
+TEXT	:	('a'..'z' | 'A'..'Z' | '0'..'9')+
+	;
 
 ROTATION	:	'-' ('0'..'9')+ '.' ('0'..'9')*
     |	('0'..'9')+ '.' ('0'..'9')*

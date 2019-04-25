@@ -1,6 +1,6 @@
 package lexer;
 
-// $ANTLR 3.5.1 D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g 2019-04-25 22:55:08
+// $ANTLR 3.5.1 D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g 2019-04-25 23:05:29
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -789,21 +789,21 @@ public class G8Lexer extends Lexer {
 	}
 	// $ANTLR end "RGB"
 
-	// $ANTLR start "TEXT"
-	public final void mTEXT() throws RecognitionException {
+	// $ANTLR start "FLOAT"
+	public final void mFLOAT() throws RecognitionException {
 		try {
-			int _type = TEXT;
+			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:8: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:7: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* )? )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:11: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* )?
 			{
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:8: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:11: ( '0' .. '9' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
 				int alt2=2;
 				int LA2_0 = input.LA(1);
-				if ( ((LA2_0 >= '0' && LA2_0 <= '9')||(LA2_0 >= 'A' && LA2_0 <= 'Z')||(LA2_0 >= 'a' && LA2_0 <= 'z')) ) {
+				if ( ((LA2_0 >= '0' && LA2_0 <= '9')) ) {
 					alt2=1;
 				}
 
@@ -811,7 +811,7 @@ public class G8Lexer extends Lexer {
 				case 1 :
 					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:
 					{
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
 					}
 					else {
@@ -830,79 +830,27 @@ public class G8Lexer extends Lexer {
 				cnt2++;
 			}
 
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:23: ( '.' ( '0' .. '9' )* )?
+			int alt4=2;
+			int LA4_0 = input.LA(1);
+			if ( (LA4_0=='.') ) {
+				alt4=1;
 			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "TEXT"
-
-	// $ANTLR start "FLOAT"
-	public final void mFLOAT() throws RecognitionException {
-		try {
-			int _type = FLOAT;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:7: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* )? )
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:11: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* )?
-			{
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:11: ( '0' .. '9' )+
-			int cnt3=0;
-			loop3:
-			while (true) {
-				int alt3=2;
-				int LA3_0 = input.LA(1);
-				if ( ((LA3_0 >= '0' && LA3_0 <= '9')) ) {
-					alt3=1;
-				}
-
-				switch (alt3) {
+			switch (alt4) {
 				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:
-					{
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
-						input.consume();
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						recover(mse);
-						throw mse;
-					}
-					}
-					break;
-
-				default :
-					if ( cnt3 >= 1 ) break loop3;
-					EarlyExitException eee = new EarlyExitException(3, input);
-					throw eee;
-				}
-				cnt3++;
-			}
-
-			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:23: ( '.' ( '0' .. '9' )* )?
-			int alt5=2;
-			int LA5_0 = input.LA(1);
-			if ( (LA5_0=='.') ) {
-				alt5=1;
-			}
-			switch (alt5) {
-				case 1 :
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:24: '.' ( '0' .. '9' )*
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:24: '.' ( '0' .. '9' )*
 					{
 					match('.'); 
-					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:27: ( '0' .. '9' )*
-					loop4:
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:30:27: ( '0' .. '9' )*
+					loop3:
 					while (true) {
-						int alt4=2;
-						int LA4_0 = input.LA(1);
-						if ( ((LA4_0 >= '0' && LA4_0 <= '9')) ) {
-							alt4=1;
+						int alt3=2;
+						int LA3_0 = input.LA(1);
+						if ( ((LA3_0 >= '0' && LA3_0 <= '9')) ) {
+							alt3=1;
 						}
 
-						switch (alt4) {
+						switch (alt3) {
 						case 1 :
 							// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:
 							{
@@ -918,7 +866,7 @@ public class G8Lexer extends Lexer {
 							break;
 
 						default :
-							break loop4;
+							break loop3;
 						}
 					}
 
@@ -937,6 +885,58 @@ public class G8Lexer extends Lexer {
 		}
 	}
 	// $ANTLR end "FLOAT"
+
+	// $ANTLR start "TEXT"
+	public final void mTEXT() throws RecognitionException {
+		try {
+			int _type = TEXT;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:8: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+			{
+			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:33:8: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+			int cnt5=0;
+			loop5:
+			while (true) {
+				int alt5=2;
+				int LA5_0 = input.LA(1);
+				if ( ((LA5_0 >= '0' && LA5_0 <= '9')||(LA5_0 >= 'A' && LA5_0 <= 'Z')||(LA5_0 >= 'a' && LA5_0 <= 'z')) ) {
+					alt5=1;
+				}
+
+				switch (alt5) {
+				case 1 :
+					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:
+					{
+					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					if ( cnt5 >= 1 ) break loop5;
+					EarlyExitException eee = new EarlyExitException(5, input);
+					throw eee;
+				}
+				cnt5++;
+			}
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "TEXT"
 
 	// $ANTLR start "ROTATION"
 	public final void mROTATION() throws RecognitionException {
@@ -1347,7 +1347,7 @@ public class G8Lexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:1:8: ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | RGB | TEXT | FLOAT | ROTATION | COMMENT | WS )
+		// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:1:8: ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | RGB | FLOAT | TEXT | ROTATION | COMMENT | WS )
 		int alt17=38;
 		alt17 = dfa17.predict(input);
 		switch (alt17) {
@@ -1583,16 +1583,16 @@ public class G8Lexer extends Lexer {
 				}
 				break;
 			case 34 :
-				// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:1:206: TEXT
+				// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:1:206: FLOAT
 				{
-				mTEXT(); 
+				mFLOAT(); 
 
 				}
 				break;
 			case 35 :
-				// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:1:211: FLOAT
+				// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:1:212: TEXT
 				{
-				mFLOAT(); 
+				mTEXT(); 
 
 				}
 				break;
@@ -1683,9 +1683,9 @@ public class G8Lexer extends Lexer {
 	}
 
 	static final String DFA17_eotS =
-		"\1\uffff\12\15\1\uffff\1\15\4\uffff\17\15\1\74\1\75\1\77\3\15\1\103\1"+
-		"\104\1\106\3\15\1\113\17\15\2\uffff\1\15\1\uffff\3\15\2\uffff\1\15\1\uffff"+
-		"\3\15\1\113\1\uffff\21\15\1\165\3\15\1\171\2\15\1\uffff\1\175\1\uffff"+
+		"\1\uffff\12\15\1\uffff\1\55\4\uffff\17\15\1\75\1\76\1\100\3\15\1\104\1"+
+		"\105\1\107\3\15\1\55\1\uffff\17\15\2\uffff\1\15\1\uffff\3\15\2\uffff\1"+
+		"\15\1\uffff\3\15\1\55\21\15\1\165\3\15\1\171\2\15\1\uffff\1\175\1\uffff"+
 		"\3\15\1\uffff\1\15\1\uffff\1\15\1\u0083\1\u0084\1\15\1\u0086\1\15\1\u0088"+
 		"\1\15\1\uffff\3\15\1\uffff\3\15\1\uffff\3\15\1\u0093\1\15\2\uffff\1\15"+
 		"\1\uffff\1\15\1\uffff\2\15\1\u0099\2\15\1\u009c\2\15\1\uffff\1\15\1\uffff"+
@@ -1697,35 +1697,35 @@ public class G8Lexer extends Lexer {
 		"\1\11\1\111\1\122\1\114\1\111\1\101\1\105\2\111\2\101\1\uffff\1\56\4\uffff"+
 		"\1\122\1\114\1\122\1\101\1\114\1\104\1\116\1\104\1\103\1\124\1\115\1\101"+
 		"\1\124\1\111\1\104\3\60\1\116\1\111\1\124\3\60\1\116\1\111\1\124\1\60"+
-		"\1\103\1\117\1\126\1\127\1\111\1\101\1\105\1\111\1\124\2\101\1\122\1\114"+
-		"\1\101\1\124\2\uffff\1\116\1\uffff\2\104\1\101\2\uffff\1\116\1\uffff\2"+
-		"\104\1\101\1\60\1\uffff\1\72\1\122\1\72\1\123\1\120\1\116\1\72\1\125\1"+
-		"\72\1\124\1\130\1\116\1\124\1\105\1\116\1\110\1\124\1\60\1\104\1\122\1"+
-		"\124\1\60\1\104\1\122\1\uffff\1\60\1\uffff\1\120\1\123\1\107\1\uffff\1"+
-		"\123\1\uffff\1\111\2\60\1\101\1\60\1\107\1\60\1\105\1\uffff\1\114\1\124"+
-		"\1\105\1\uffff\1\114\1\124\1\117\1\uffff\1\101\1\72\1\114\1\60\1\117\2"+
-		"\uffff\1\116\1\uffff\1\114\1\uffff\1\122\1\105\1\60\1\122\1\105\1\60\1"+
-		"\104\1\103\1\uffff\1\105\1\uffff\1\116\1\107\1\105\2\60\1\uffff\2\60\1"+
-		"\uffff\1\131\1\105\2\60\1\114\1\72\4\uffff\1\60\1\40\2\uffff\1\105\2\uffff"+
-		"\1\110\1\60\3\uffff";
+		"\1\uffff\1\103\1\117\1\126\1\127\1\111\1\101\1\105\1\111\1\124\2\101\1"+
+		"\122\1\114\1\101\1\124\2\uffff\1\116\1\uffff\2\104\1\101\2\uffff\1\116"+
+		"\1\uffff\2\104\1\101\1\60\1\72\1\122\1\72\1\123\1\120\1\116\1\72\1\125"+
+		"\1\72\1\124\1\130\1\116\1\124\1\105\1\116\1\110\1\124\1\60\1\104\1\122"+
+		"\1\124\1\60\1\104\1\122\1\uffff\1\60\1\uffff\1\120\1\123\1\107\1\uffff"+
+		"\1\123\1\uffff\1\111\2\60\1\101\1\60\1\107\1\60\1\105\1\uffff\1\114\1"+
+		"\124\1\105\1\uffff\1\114\1\124\1\117\1\uffff\1\101\1\72\1\114\1\60\1\117"+
+		"\2\uffff\1\116\1\uffff\1\114\1\uffff\1\122\1\105\1\60\1\122\1\105\1\60"+
+		"\1\104\1\103\1\uffff\1\105\1\uffff\1\116\1\107\1\105\2\60\1\uffff\2\60"+
+		"\1\uffff\1\131\1\105\2\60\1\114\1\72\4\uffff\1\60\1\40\2\uffff\1\105\2"+
+		"\uffff\1\110\1\60\3\uffff";
 	static final String DFA17_maxS =
 		"\1\172\1\125\1\122\1\116\1\111\1\117\1\124\1\122\1\111\2\123\1\uffff\1"+
-		"\71\4\uffff\1\122\1\114\1\122\1\101\1\114\1\104\1\116\1\104\1\103\1\124"+
+		"\172\4\uffff\1\122\1\114\1\122\1\101\1\114\1\104\1\116\1\104\1\103\1\124"+
 		"\1\115\1\101\1\124\1\111\1\104\3\172\1\116\1\111\1\124\3\172\1\116\1\111"+
-		"\1\124\1\71\1\103\1\117\1\126\1\127\1\111\1\101\1\105\1\111\1\124\1\101"+
-		"\1\111\1\122\1\114\1\101\1\124\2\uffff\1\116\1\uffff\2\104\1\101\2\uffff"+
-		"\1\116\1\uffff\2\104\1\101\1\71\1\uffff\1\72\1\122\1\72\1\123\1\120\1"+
-		"\116\1\72\1\125\1\72\1\124\1\130\1\116\1\124\1\105\1\116\1\110\1\124\1"+
-		"\172\1\104\1\122\1\124\1\172\1\104\1\122\1\uffff\1\172\1\uffff\1\120\1"+
-		"\123\1\107\1\uffff\1\123\1\uffff\1\111\2\172\1\101\1\172\1\107\1\172\1"+
-		"\105\1\uffff\1\114\1\124\1\105\1\uffff\1\114\1\124\1\117\1\uffff\1\101"+
+		"\1\124\1\71\1\uffff\1\103\1\117\1\126\1\127\1\111\1\101\1\105\1\111\1"+
+		"\124\1\101\1\111\1\122\1\114\1\101\1\124\2\uffff\1\116\1\uffff\2\104\1"+
+		"\101\2\uffff\1\116\1\uffff\2\104\1\101\1\71\1\72\1\122\1\72\1\123\1\120"+
+		"\1\116\1\72\1\125\1\72\1\124\1\130\1\116\1\124\1\105\1\116\1\110\1\124"+
+		"\1\172\1\104\1\122\1\124\1\172\1\104\1\122\1\uffff\1\172\1\uffff\1\120"+
+		"\1\123\1\107\1\uffff\1\123\1\uffff\1\111\2\172\1\101\1\172\1\107\1\172"+
+		"\1\105\1\uffff\1\114\1\124\1\105\1\uffff\1\114\1\124\1\117\1\uffff\1\101"+
 		"\1\72\1\114\1\172\1\117\2\uffff\1\116\1\uffff\1\114\1\uffff\1\122\1\105"+
 		"\1\172\1\122\1\105\1\172\1\104\1\103\1\uffff\1\105\1\uffff\1\116\1\107"+
 		"\1\105\2\172\1\uffff\2\172\1\uffff\1\131\1\105\2\172\1\114\1\72\4\uffff"+
 		"\1\172\1\40\2\uffff\1\105\2\uffff\1\127\1\172\3\uffff";
 	static final String DFA17_acceptS =
-		"\13\uffff\1\41\1\uffff\1\42\1\44\1\45\1\46\53\uffff\1\23\1\24\1\uffff"+
-		"\1\25\3\uffff\1\32\1\33\1\uffff\1\34\4\uffff\1\43\30\uffff\1\1\1\uffff"+
+		"\13\uffff\1\41\1\uffff\1\43\1\44\1\45\1\46\34\uffff\1\42\17\uffff\1\23"+
+		"\1\24\1\uffff\1\25\3\uffff\1\32\1\33\1\uffff\1\34\34\uffff\1\1\1\uffff"+
 		"\1\4\3\uffff\1\11\1\uffff\1\13\10\uffff\1\27\3\uffff\1\36\3\uffff\1\2"+
 		"\5\uffff\1\15\1\16\1\uffff\1\20\1\uffff\1\22\10\uffff\1\7\1\uffff\1\12"+
 		"\5\uffff\1\31\2\uffff\1\40\6\uffff\1\26\1\30\1\35\1\37\2\uffff\1\10\1"+
@@ -1747,12 +1747,11 @@ public class G8Lexer extends Lexer {
 			"\1\40\1\41\1\42\1\uffff\1\43\7\uffff\1\44\5\uffff\1\45",
 			"\1\46\1\47\1\50\1\uffff\1\51\7\uffff\1\52\5\uffff\1\53",
 			"",
-			"\1\54\1\uffff\12\14",
+			"\1\54\1\uffff\12\14\7\uffff\32\15\6\uffff\32\15",
 			"",
 			"",
 			"",
 			"",
-			"\1\55",
 			"\1\56",
 			"\1\57",
 			"\1\60",
@@ -1767,19 +1766,21 @@ public class G8Lexer extends Lexer {
 			"\1\71",
 			"\1\72",
 			"\1\73",
+			"\1\74",
 			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\12\15\7\uffff\32\15\6\uffff\32\15",
-			"\12\15\7\uffff\4\15\1\76\25\15\6\uffff\32\15",
-			"\1\100",
+			"\12\15\7\uffff\4\15\1\77\25\15\6\uffff\32\15",
 			"\1\101",
 			"\1\102",
+			"\1\103",
 			"\12\15\7\uffff\32\15\6\uffff\32\15",
 			"\12\15\7\uffff\32\15\6\uffff\32\15",
-			"\12\15\7\uffff\4\15\1\105\25\15\6\uffff\32\15",
-			"\1\107",
+			"\12\15\7\uffff\4\15\1\106\25\15\6\uffff\32\15",
 			"\1\110",
 			"\1\111",
-			"\12\112",
+			"\1\112",
+			"\12\113",
+			"",
 			"\1\114",
 			"\1\115",
 			"\1\116",
@@ -1809,8 +1810,7 @@ public class G8Lexer extends Lexer {
 			"\1\141",
 			"\1\142",
 			"\1\143",
-			"\12\112",
-			"",
+			"\12\113",
 			"\1\144",
 			"\1\145",
 			"\1\146",
@@ -1947,7 +1947,7 @@ public class G8Lexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | RGB | TEXT | FLOAT | ROTATION | COMMENT | WS );";
+			return "1:1: Tokens : ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | RGB | FLOAT | TEXT | ROTATION | COMMENT | WS );";
 		}
 	}
 

@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,21 +20,32 @@ public class G8 {
 
 	public static void main(String[] args) throws RecognitionException, IOException {
 		
-		 String stringa = "TITLE prova DRAWSPACE WIDTH 6 DRAWSPACE HEIGTH 2.0 LINE: XSTART 3.0 YSTART 4.0 XEND 7.0 YEND 8.0";
+		 String stringa = readFile();
+		 
+		 //test to delete
+		 System.out.println(stringa);
+		 
 		 ANTLRStringStream in = new ANTLRStringStream(stringa);
 	     G8Lexer lexer = new G8Lexer(in);
 	     CommonTokenStream tokens = new CommonTokenStream(lexer);
 	     G8Parser parser = new G8Parser(tokens);
 	     parser.begin();
 	     
-	     //testfile
+	     //testOutputFile to delete
 	     testFile();
 	     
+	     //testLineMethod
+		 ANTLRStringStream in2 = new ANTLRStringStream("LINE: XSTART MERDA YSTART 4.0 XEND 7.0 YEND 8.0");
+	     G8Lexer lexer2 = new G8Lexer(in2);
+	     CommonTokenStream tokens2 = new CommonTokenStream(lexer2);
+	     G8Parser parser2 = new G8Parser(tokens2);
+	     parser2.line();
+
 	}
 	
-	public static void readFile() throws IOException {
+	public static String readFile() throws IOException {
 		
-		File inputFile = new File("C:\\Users\\matte\\git\\FLC2019\\G8\\file\\input.g8");
+		File inputFile = new File("C:\\Users\\matte\\git\\FLC2019\\G8\\files\\input.g8");
 		
 		InputStream is = new FileInputStream(inputFile); 
 		BufferedReader buf = new BufferedReader(new InputStreamReader(is)); 
@@ -44,19 +54,20 @@ public class G8 {
 		StringBuilder sb = new StringBuilder();
 		
 		while(line != null){
-			sb.append(line).append(" "); 
+			sb.append(line).append(""); 
 			line = buf.readLine(); 
 		} 
 		
 		String fileAsString = sb.toString();
 		
-		System.out.println("Input : " + fileAsString);
 		buf.close();
+		
+		return fileAsString;
 	}
 	
 	public static void writeFile(String toWrite) throws IOException {
 		
-		File outputFile = new File("C:\\Users\\matte\\git\\FLC2019\\G8\\file\\output.html");
+		File outputFile = new File("C:\\Users\\matte\\git\\FLC2019\\G8\\files\\output.html");
 		
 		FileWriter out = new FileWriter(outputFile, true);
 		BufferedWriter buf  = new BufferedWriter(out);
@@ -69,7 +80,6 @@ public class G8 {
 	
 	public static void testFile() throws IOException {
 
-	     readFile();
 	     writeFile("<!DOCTYPE HTML>\r\n" + 
 	     		"\r\n" + 
 	     		"<html>\r\n" + 

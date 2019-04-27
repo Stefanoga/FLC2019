@@ -134,6 +134,7 @@ public class G8Parser extends Parser {
 	// $ANTLR start "list"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:1: list : ( line | triangle | rectangle | curve | circle | ellipse );
 	public final void list() throws RecognitionException {
+		boolean success = false;
 		try {
 			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8.g:6:6: ( line | triangle | rectangle | curve | circle | ellipse )
 			int alt2=6;
@@ -230,6 +231,7 @@ public class G8Parser extends Parser {
 					break;
 
 			}
+			success = true;
 		}
 		catch (RecognitionException re) {
 			reportError(re);
@@ -237,6 +239,9 @@ public class G8Parser extends Parser {
 		}
 		finally {
 			// do for sure before leaving
+		}
+		if (success) {
+		    System.out.println("NESSUN PROBLEMA NELLA LINEA");
 		}
 	}
 	// $ANTLR end "list"

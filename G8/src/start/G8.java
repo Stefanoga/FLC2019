@@ -28,22 +28,8 @@ public class G8 {
 	     G8Parser parser = new G8Parser(tokens);
 	     parser.begin();
 	     
-	     //test file
-	     readFile();
-	     writeFile("<!DOCTYPE HTML>\r\n" + 
-	     		"\r\n" + 
-	     		"<html>\r\n" + 
-	     		"   <head>\r\n" + 
-	     		"   \r\n" + 
-	     		"      <style>\r\n" + 
-	     		"         #mycanvas{border:1px solid red;}\r\n" + 
-	     		"      </style>\r\n" + 
-	     		"   </head>\r\n" + 
-	     		"   \r\n" + 
-	     		"   <body>\r\n" + 
-	     		"      <canvas id = \"mycanvas\" width = \"100\" height = \"100\"></canvas>\r\n" + 
-	     		"   </body>\r\n" + 
-	     		"</html>");
+	     //testfile
+	     testFile();
 	     
 	}
 	
@@ -79,6 +65,25 @@ public class G8 {
 		
 		out.close();
 		
+	}
+	
+	public static void testFile() throws IOException {
+
+	     readFile();
+	     writeFile("<!DOCTYPE HTML>\r\n" + 
+	     		"\r\n" + 
+	     		"<html>\r\n" + 
+	     		"   <head>\r\n" + 
+	     		"   \r\n" + 
+	     		"      <style>\r\n" + 
+	     		"         #mycanvas{border:1px solid red;}\r\n" + 
+	     		"      </style>\r\n" + 
+	     		"   </head>\r\n" + 
+	     		"   \r\n" + 
+	     		"   <body>\r\n" + 
+	     		"      <canvas id = \"mycanvas\" width = \"100\" height = \"100\"></canvas>\r\n" + 
+	     		"   </body>\r\n" + 
+	     		"</html>");
 	}
 
 }

@@ -1,4 +1,4 @@
-package culoprova;
+package lexer;
 
 import org.antlr.runtime.*;
 import java.util.Stack;

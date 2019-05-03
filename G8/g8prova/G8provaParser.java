@@ -1,4 +1,4 @@
-package culoprova;
+package parser;
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -102,6 +102,17 @@ public class G8provaParser extends Parser {
 			match(input,14,FOLLOW_14_in_begin26); 
 			b3=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_begin30); 
 			DrawspaceHeigth=Float.valueOf((b3!=null?b3.getText():null));
+			
+			System.out.println("<!doctype html>");
+			 System.out.println("<html>");
+			 System.out.println("<head>");
+			 System.out.println("<title> " + Titolo + " </title>");
+			 System.out.println("<style> canvas {border: 1px #000 dotted;} </style>");
+			 System.out.println("<script>");
+			 System.out.println("window.onload = function () {");
+	 		 	System.out.println("var canvas = document.getElementById('" + Titolo + "');");
+			 	System.out.println("var context = canvas.getContext('2d');");
+			
 			// D:\\Università\\Linguaggi formali e compilatori\\Progetto\\G8\\G8prova.g:3:154: ( list )*
 			loop1:
 			while (true) {
@@ -130,16 +141,6 @@ public class G8provaParser extends Parser {
 			pushFollow(FOLLOW_end_in_begin39);
 			end();
 			state._fsp--;
-
-			System.out.println("<!doctype html>");
-					 System.out.println("<html>");
-					 System.out.println("<head>");
-					 System.out.println("<title> " + Titolo + " </title>");
-					 System.out.println("<style> canvas {border: 1px #000 dotted;} </style>");
-					 System.out.println("<script>");
-					 System.out.println("window.onload = function () {");
-			 		 	System.out.println("var canvas = document.getElementById('" + Titolo + "');");
-					 	System.out.println("var context = canvas.getContext('2d');");
 					
 			}
 

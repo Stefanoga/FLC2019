@@ -35,7 +35,10 @@ public class G8 {
 	     testFile();
 	     
 	     //testLineMethod
-		 ANTLRStringStream in2 = new ANTLRStringStream("LINE: XSTART MERDA YSTART 4.0 XEND 7.0 YEND 8.0");
+		 ANTLRStringStream in2 = new ANTLRStringStream("TITLE culoprova DRAWSPACE WIDTH 500 DRAWSPACE HEIGTH 500 " +
+					"LINE: XSTART 300 YSTART 300 XEND 400 YEND 400 WIDTH 5 " + 
+					"TRIANGLE: XA 1 YA 1 XB 1 YB 200 XC 200 YC 200 WIDTH 5 " +
+					"END");
 	     G8Lexer lexer2 = new G8Lexer(in2);
 	     CommonTokenStream tokens2 = new CommonTokenStream(lexer2);
 	     G8Parser parser2 = new G8Parser(tokens2);
@@ -45,7 +48,7 @@ public class G8 {
 	
 	public static String readFile() throws IOException {
 		
-		File inputFile = new File("C:\\Users\\matte\\git\\FLC2019\\G8\\files\\input.g8");
+		File inputFile = new File("D:\\Users\\stefano\\git\\repository\\G8\\files\\input.g8");
 		
 		InputStream is = new FileInputStream(inputFile); 
 		BufferedReader buf = new BufferedReader(new InputStreamReader(is)); 
@@ -67,7 +70,7 @@ public class G8 {
 	
 	public static void writeFile(String toWrite) throws IOException {
 		
-		File outputFile = new File("C:\\Users\\matte\\git\\FLC2019\\G8\\files\\output.html");
+		File outputFile = new File("D:\\Users\\stefano\\git\\repository\\G8\\files\\output.html");
 		
 		FileWriter out = new FileWriter(outputFile, true);
 		BufferedWriter buf  = new BufferedWriter(out);

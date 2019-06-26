@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 @SuppressWarnings("all")
-public class G8newLexer extends Lexer {
+public class G8Lexer extends Lexer {
 	public static final int EOF=-1;
 	public static final int T__10=10;
 	public static final int T__11=11;
@@ -56,11 +56,11 @@ public class G8newLexer extends Lexer {
 		return new Lexer[] {};
 	}
 
-	public G8newLexer() {} 
-	public G8newLexer(CharStream input) {
+	public G8Lexer() {} 
+	public G8Lexer(CharStream input) {
 		this(input, new RecognizerSharedState());
 	}
-	public G8newLexer(CharStream input, RecognizerSharedState state) {
+	public G8Lexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
 	@Override public String getGrammarFileName() { return "D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g"; }

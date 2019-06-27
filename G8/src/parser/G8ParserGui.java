@@ -400,7 +400,7 @@ public class G8ParserGui extends Parser {
 				G8.writeHTML("	//" + Name, name, dir);
 				G8.writeHTML("	context.beginPath();", name, dir);
 				G8.writeHTML("	context.lineWidth = " + width + ";", name, dir);
-				G8.writeHTML("	context.strokeStyle = " + color + ";", name, dir);
+				G8.writeHTML("	context.strokeStyle = '" + color + "';", name, dir);
 				G8.writeHTML("	context.moveTo( " + xstart + ", " + ystart + ");", name, dir);
 				G8.writeHTML("	context.lineTo( " + xend + ", " + yend + ");", name, dir);
 				G8.writeHTML("	context.stroke();", name, dir);
@@ -537,7 +537,9 @@ public class G8ParserGui extends Parser {
 
 			}
 
+				if (colorbody==null) {
 				colorbody = "'#FFFFFF'";
+				}
 				if (Name==null || Name=="No Name") {
 					Name="No name";
 				}else {
@@ -555,13 +557,13 @@ public class G8ParserGui extends Parser {
 				G8.writeHTML("	//" + Name, name, dir);
 				G8.writeHTML("	context.beginPath();", name, dir);
 				G8.writeHTML("	context.lineWidth = " + width + ";", name, dir);
-				G8.writeHTML("	context.strokeStyle = " + color + ";", name, dir);
+				G8.writeHTML("	context.strokeStyle = '" + color + "';", name, dir);
 				G8.writeHTML("	context.moveTo(" + xa + ", " + ya + ");", name, dir);
 				G8.writeHTML("	context.lineTo(" + xb + ", " + yb + ");", name, dir);
 				G8.writeHTML("	context.lineTo(" + xc + ", " + yc + ");", name, dir);
 				G8.writeHTML("	context.lineTo(" + xa + ", " + ya + ");", name, dir);
 				G8.writeHTML("	context.stroke();", name, dir);
-				G8.writeHTML("	context.fillStyle= " + colorbody + ";", name, dir);
+				G8.writeHTML("	context.fillStyle= '" + colorbody + "';", name, dir);
 				G8.writeHTML("	context.fill();", name, dir);
 				G8.writeHTML("	context.closePath();\n", name, dir);
 				Name="No Name";
@@ -688,7 +690,10 @@ public class G8ParserGui extends Parser {
 
 			}
 				
+				if (colorbody==null) {
 				colorbody = "'#FFFFFF'";
+				}
+				
 				float heigth=yend-ystart;
 				float breadth=xend-xstart;
 				if (Name==null || Name=="No Name") {
@@ -708,10 +713,10 @@ public class G8ParserGui extends Parser {
 				G8.writeHTML("	//" + Name, name, dir);
 				G8.writeHTML("	context.beginPath();", name, dir);
 				G8.writeHTML("	context.lineWidth = " + width + ";", name, dir);
-				G8.writeHTML("	context.strokeStyle = " + color + ";", name, dir);
+				G8.writeHTML("	context.strokeStyle = '" + color + "';", name, dir);
 				G8.writeHTML("	context.rect( " + xstart + ", " + ystart + ", " + heigth + ", " + breadth + ");", name, dir);
 				G8.writeHTML("	context.stroke();", name, dir);
-				G8.writeHTML("	context.fillStyle= " + colorbody + ";", name, dir);
+				G8.writeHTML("	context.fillStyle= '" + colorbody + "';", name, dir);
 				G8.writeHTML("	context.fill();", name, dir);
 				G8.writeHTML("	context.closePath();\n", name, dir);
 				Name="No Name";
@@ -846,7 +851,9 @@ public class G8ParserGui extends Parser {
 
 			}
 				
+				if (colorbody==null) {
 				colorbody = "'#FFFFFF'";
+				}
 				if (Name==null || Name=="No Name") {
 					Name="No name";
 				}else {
@@ -864,11 +871,11 @@ public class G8ParserGui extends Parser {
 				G8.writeHTML("	//" + Name, name, dir);
 				G8.writeHTML("	context.beginPath();", name, dir);
 				G8.writeHTML("	context.lineWidth = " + width + ";", name, dir);
-				G8.writeHTML("	context.strokeStyle = " + color + ";", name, dir);
+				G8.writeHTML("	context.strokeStyle = '" + color + "';", name, dir);
 				G8.writeHTML("	context.moveTo( " + xstart + ", " + ystart + ");", name, dir);
 				G8.writeHTML("	context.quadraticCurveTo( " + xmiddle + ", " + ymiddle + ", " + xend + ", " + yend + ");", name, dir);
 				G8.writeHTML("	context.stroke();", name, dir);
-				G8.writeHTML("	context.fillStyle = " + colorbody + ";", name, dir);
+				G8.writeHTML("	context.fillStyle = '" + colorbody + "';", name, dir);
 				G8.writeHTML("	context.fill();", name, dir);
 				G8.writeHTML("	context.closePath();\n", name, dir);
 				Name="No Name";
@@ -1033,7 +1040,9 @@ public class G8ParserGui extends Parser {
 
 			}
 				
+				if (colorbody==null) {
 				colorbody = "'#FFFFFF'";
+				}
 				if(endangle==0) {
 					endangle = 360;
 				}
@@ -1060,9 +1069,9 @@ public class G8ParserGui extends Parser {
 				G8.writeHTML("	var endAngle = " + endangle + "* Math.PI/180;", name, dir);
 				G8.writeHTML("	context.arc (centerX, centerY, radius, startAngle, endAngle);", name, dir);
 				G8.writeHTML("	context.lineWidth = " + width + ";", name, dir);
-				G8.writeHTML("	context.strokeStyle= " + color + ";", name, dir);
+				G8.writeHTML("	context.strokeStyle= '" + color + "';", name, dir);
 				G8.writeHTML("	context.stroke();", name, dir);
-				G8.writeHTML("	context.fillStyle= " + colorbody + ";", name, dir);
+				G8.writeHTML("	context.fillStyle= '" + colorbody + "';", name, dir);
 				G8.writeHTML("	context.fill();", name, dir);
 				G8.writeHTML("	context.closePath();\n", name, dir);
 				Name="No Name";
@@ -1252,7 +1261,9 @@ public class G8ParserGui extends Parser {
 
 			}
 				
+				if (colorbody==null) {
 				colorbody = "'#FFFFFF'";
+				}
 				if(endangle==0) {
 					endangle = 360;
 				}
@@ -1282,9 +1293,9 @@ public class G8ParserGui extends Parser {
 				G8.writeHTML("	var endAngle=" + endangle + "*Math.PI/180;", name, dir);
 				G8.writeHTML("	context.ellipse(centerX, centerY, radiusMax, radiusMin, rotation, startAngle, endAngle);", name, dir);
 				G8.writeHTML("	context.lineWidth = " + width + ";", name, dir);
-				G8.writeHTML("	context.strokeStyle= " + color + ";", name, dir);
+				G8.writeHTML("	context.strokeStyle= '" + color + "';", name, dir);
 				G8.writeHTML("	context.stroke();", name, dir);
-				G8.writeHTML("	context.fillStyle= " + colorbody + ";", name, dir);
+				G8.writeHTML("	context.fillStyle= '" + colorbody + "';", name, dir);
 				G8.writeHTML("	context.fill();", name, dir);
 				G8.writeHTML("	context.closePath();\n", name, dir);
 				Name="No Name";

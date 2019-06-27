@@ -17,10 +17,11 @@ import gui.Ide;
 import lexer.G8Lexer;
 import parser.G8Parser;
 import parser.G8Parser.SameNameError;
+import parser.G8Parser.ShapeLayoutError;
 
 public class G8 {
 
-	public static void main(String[] args) throws RecognitionException, IOException, SameNameError {
+	public static void main(String[] args) throws RecognitionException, IOException, SameNameError, ShapeLayoutError {
 		
 		 String stringa = readFile();
 		 

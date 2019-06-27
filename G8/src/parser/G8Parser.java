@@ -24,7 +24,15 @@ public class G8Parser extends Parser {
 		  {
 		    super("Attention, you have inserted the same name for more than one figure");
 		  }
-		}
+	}
+	
+	public class ShapeLayoutError extends Exception {
+
+		ShapeLayoutError()
+		  {
+		    super("Attention, coordinates of a figure are incorrect");
+		  }
+	}
 	
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "COMMENT", "FLOAT", "RGB", "ROTATION", 
@@ -99,7 +107,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "begin"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:3:1: begin : 'TITLE' b1= TEXT 'DRAWSPACE WIDTH' b2= FLOAT 'DRAWSPACE HEIGTH' b3= FLOAT ( list )* end ;
-	public final void begin() throws RecognitionException, IOException, SameNameError {
+	public final void begin() throws RecognitionException, IOException, SameNameError, ShapeLayoutError {
 		Token b1=null;
 		Token b2=null;
 		Token b3=null;
@@ -174,7 +182,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "list"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:16:1: list : ( line | triangle | rectangle | curve | circle | ellipse );
-	public final void list() throws RecognitionException, IOException, SameNameError {
+	public final void list() throws RecognitionException, IOException, SameNameError, ShapeLayoutError {
 		try {
 			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:16:6: ( line | triangle | rectangle | curve | circle | ellipse )
 			int alt2=6;
@@ -286,7 +294,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "line"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:19:1: line : 'LINE:' ( 'NAME' n= TEXT )? 'XSTART' l1= FLOAT 'YSTART' l2= FLOAT 'XEND' l3= FLOAT 'YEND' l4= FLOAT ( 'COLOR' l5= RGB )? ( 'WIDTH' l6= FLOAT )? ;
-	public final void line() throws RecognitionException, IOException, SameNameError {
+	public final void line() throws RecognitionException, IOException, SameNameError, ShapeLayoutError {
 		Token n=null;
 		Token l1=null;
 		Token l2=null;
@@ -370,7 +378,8 @@ public class G8Parser extends Parser {
 					break;
 
 			}
-				if (Name==null || Name=="No Name") {
+				
+			if (Name==null || Name=="No Name") {
 					Name="No name";
 				}else {
 					if(names.contains(Name)) {
@@ -379,6 +388,11 @@ public class G8Parser extends Parser {
 						names.add(Name);
 					}
 				}
+				
+			if (xstart==xend && ystart==yend) {
+				throw new ShapeLayoutError();
+			}
+			
 				G8.writeFile("	//" + Name);
 				G8.writeFile("	context.beginPath();");
 				G8.writeFile("	context.lineWidth = " + width + ";");
@@ -406,7 +420,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "triangle"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:31:1: triangle : 'TRIANGLE:' ( 'NAME' n= TEXT )? 'XA' t1= FLOAT 'YA' t2= FLOAT 'XB' t3= FLOAT 'YB' t4= FLOAT 'XC' t5= FLOAT 'YC' t6= FLOAT ( 'COLOR' t7= RGB )? ( 'WIDTH' t8= FLOAT )? ( 'COLORBODY' t9= RGB )? ;
-	public final void triangle() throws RecognitionException, IOException, SameNameError {
+	public final void triangle() throws RecognitionException, IOException, SameNameError, ShapeLayoutError {
 		Token n=null;
 		Token t1=null;
 		Token t2=null;
@@ -529,6 +543,11 @@ public class G8Parser extends Parser {
 						names.add(Name);
 					}
 				}
+				
+				if ((xa==xb && ya==yb)||(xb==xc && yb==yc)||(xa==xc && ya==yc)||(xa==xb && xb==xc)||(ya==yb && yb==yc)) {
+						throw new ShapeLayoutError();
+				}
+				
 				G8.writeFile("	//" + Name);
 				G8.writeFile("	context.beginPath();");
 				G8.writeFile("	context.lineWidth = " + width + ";");
@@ -560,7 +579,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "rectangle"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:46:1: rectangle : 'RECT:' ( 'NAME' n= TEXT )? 'XSTART' r1= FLOAT 'YSTART' r2= FLOAT 'XEND' r3= FLOAT 'YEND' r4= FLOAT ( 'COLOR' r5= RGB )? ( 'WIDTH' r6= FLOAT )? ( 'COLORBODY' r7= RGB )? ;
-	public final void rectangle() throws RecognitionException, IOException, SameNameError {
+	public final void rectangle() throws RecognitionException, IOException, SameNameError, ShapeLayoutError {
 		Token n=null;
 		Token r1=null;
 		Token r2=null;
@@ -678,6 +697,10 @@ public class G8Parser extends Parser {
 					}
 				}
 				
+				if ((heigth==0)||(breadth==0)) {
+					throw new ShapeLayoutError();
+				}
+				
 				G8.writeFile("	//" + Name);
 				G8.writeFile("	context.beginPath();");
 				G8.writeFile("	context.lineWidth = " + width + ";");
@@ -706,7 +729,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "curve"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:61:1: curve : 'CURV:' ( 'NAME' n= TEXT )? 'XSTART' cu1= FLOAT 'YSTART' cu2= FLOAT 'XMIDDLE' cu3= FLOAT 'YMIDDLE' cu4= FLOAT 'XEND' cu5= FLOAT 'YEND' cu6= FLOAT ( 'COLOR' cu7= RGB )? ( 'WIDTH' cu8= FLOAT )? ( 'COLORBODY' cu9= RGB )? ;
-	public final void curve() throws RecognitionException, IOException, SameNameError {
+	public final void curve() throws RecognitionException, IOException, SameNameError, ShapeLayoutError {
 		Token n=null;
 		Token cu1=null;
 		Token cu2=null;
@@ -829,6 +852,11 @@ public class G8Parser extends Parser {
 						names.add(Name);
 					}
 				}
+				
+				if ((xstart==xmiddle && ystart==ymiddle)||(xmiddle==xend && ymiddle==yend)||(xstart==xend && ystart==yend)||(xstart==xmiddle && xmiddle==xend)||(ystart==ymiddle && ymiddle==yend)) {
+					throw new ShapeLayoutError();
+				}
+				
 				G8.writeFile("	//" + Name);
 				G8.writeFile("	context.beginPath();");
 				G8.writeFile("	context.lineWidth = " + width + ";");
@@ -1014,6 +1042,7 @@ public class G8Parser extends Parser {
 						names.add(Name);
 					}
 				}
+				
 				G8.writeFile("	//" + Name);
 				G8.writeFile("	context.beginPath();");
 				G8.writeFile("	var centerX = " + xcenter + ";");
@@ -1047,7 +1076,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "ellipse"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:93:1: ellipse : 'ELLIPS:' ( 'NAME' n= TEXT )? 'XCENTER' e1= FLOAT 'YCENTER' e2= FLOAT 'SEMIN' e3= FLOAT 'SEMAX' e4= FLOAT ( 'STARTANGLE' e5= FLOAT )? ( 'ENDANGLE' e6= FLOAT )? ( 'ROTATION' e7= ROTATION )? ( 'COLOR' e8= RGB )? ( 'WIDTH' e9= FLOAT )? ( 'COLORBODY' e10= RGB )? ;
-	public final void ellipse() throws RecognitionException, IOException, SameNameError {
+	public final void ellipse() throws RecognitionException, IOException, SameNameError, ShapeLayoutError {
 		Token n=null;
 		Token e1=null;
 		Token e2=null;
@@ -1229,6 +1258,11 @@ public class G8Parser extends Parser {
 						names.add(Name);
 					}
 				}
+				
+				if ((semax==0)||(semin==0)||(semax<semin)) {
+					throw new ShapeLayoutError();
+				}
+				
 				G8.writeFile("	//" + Name);
 				G8.writeFile("	context.beginPath();");
 				G8.writeFile("	var centerX = " + xcenter + ";");

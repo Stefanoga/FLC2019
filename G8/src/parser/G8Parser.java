@@ -886,7 +886,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "circle"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:75:1: circle : 'CIRC:' ( 'NAME' n= TEXT )? 'XCENTER' ci1= FLOAT 'YCENTER' ci2= FLOAT 'RADIUS' ci3= FLOAT ( 'STARTANGLE' ci4= FLOAT )? ( 'ENDANGLE' ci5= FLOAT )? ( 'COLOR' ci6= RGB )? ( 'WIDTH' ci7= FLOAT )? ( 'COLORBODY' ci8= RGB )? ;
-	public final void circle() throws RecognitionException, IOException, SameNameError {
+	public final void circle() throws RecognitionException, IOException, SameNameError, ShapeLayoutError {
 		Token n=null;
 		Token ci1=null;
 		Token ci2=null;
@@ -1041,6 +1041,10 @@ public class G8Parser extends Parser {
 					}else {
 						names.add(Name);
 					}
+				}
+				
+				if (startangle==endangle) {
+					throw new ShapeLayoutError();
 				}
 				
 				G8.writeFile("	//" + Name);
@@ -1259,7 +1263,7 @@ public class G8Parser extends Parser {
 					}
 				}
 				
-				if ((semax==0)||(semin==0)||(semax<semin)) {
+				if ((semax==0)||(semin==0)||(semax<semin)||(startangle==endangle)) {
 					throw new ShapeLayoutError();
 				}
 				

@@ -396,7 +396,7 @@ public class G8Parser extends Parser {
 				G8.writeFile("	//" + Name);
 				G8.writeFile("	context.beginPath();");
 				G8.writeFile("	context.lineWidth = " + width + ";");
-				G8.writeFile("	context.strokeStyle = " + color + ";");
+				G8.writeFile("	context.strokeStyle = '" + color + "';");
 				G8.writeFile("	context.moveTo( " + xstart + ", " + ystart + ");");
 				G8.writeFile("	context.lineTo( " + xend + ", " + yend + ");");
 				G8.writeFile("	context.stroke();");
@@ -532,8 +532,9 @@ public class G8Parser extends Parser {
 					break;
 
 			}
-
+				if (colorbody==null) {
 				colorbody = "'#FFFFFF'";
+				}
 				if (Name==null || Name=="No Name") {
 					Name="No name";
 				}else {
@@ -551,13 +552,13 @@ public class G8Parser extends Parser {
 				G8.writeFile("	//" + Name);
 				G8.writeFile("	context.beginPath();");
 				G8.writeFile("	context.lineWidth = " + width + ";");
-				G8.writeFile("	context.strokeStyle = " + color + ";");
+				G8.writeFile("	context.strokeStyle = '" + color + "';");
 				G8.writeFile("	context.moveTo(" + xa + ", " + ya + ");");
 				G8.writeFile("	context.lineTo(" + xb + ", " + yb + ");");
 				G8.writeFile("	context.lineTo(" + xc + ", " + yc + ");");
 				G8.writeFile("	context.lineTo(" + xa + ", " + ya + ");");
 				G8.writeFile("	context.stroke();");
-				G8.writeFile("	context.fillStyle= " + colorbody + ";");
+				G8.writeFile("	context.fillStyle= '" + colorbody + "';");
 				G8.writeFile("	context.fill();");
 				G8.writeFile("	context.closePath();\n");
 				Name="No Name";
@@ -684,7 +685,10 @@ public class G8Parser extends Parser {
 
 			}
 				
+				if (colorbody==null) {
 				colorbody = "'#FFFFFF'";
+				}
+			
 				float heigth=yend-ystart;
 				float breadth=xend-xstart;
 				if (Name==null || Name=="No Name") {
@@ -704,10 +708,10 @@ public class G8Parser extends Parser {
 				G8.writeFile("	//" + Name);
 				G8.writeFile("	context.beginPath();");
 				G8.writeFile("	context.lineWidth = " + width + ";");
-				G8.writeFile("	context.strokeStyle = " + color + ";");
+				G8.writeFile("	context.strokeStyle = '" + color + "';");
 				G8.writeFile("	context.rect( " + xstart + ", " + ystart + ", " + heigth + ", " + breadth + ");");
 				G8.writeFile("	context.stroke();");
-				G8.writeFile("	context.fillStyle= " + colorbody + ";");
+				G8.writeFile("	context.fillStyle= '" + colorbody + "';");
 				G8.writeFile("	context.fill();");
 				G8.writeFile("	context.closePath();\n");
 				Name="No Name";
@@ -842,7 +846,10 @@ public class G8Parser extends Parser {
 
 			}
 				
+				if (colorbody==null) {
 				colorbody = "'#FFFFFF'";
+				}
+				
 				if (Name==null || Name=="No Name") {
 					Name="No name";
 				}else {
@@ -860,11 +867,11 @@ public class G8Parser extends Parser {
 				G8.writeFile("	//" + Name);
 				G8.writeFile("	context.beginPath();");
 				G8.writeFile("	context.lineWidth = " + width + ";");
-				G8.writeFile("	context.strokeStyle = " + color + ";");
+				G8.writeFile("	context.strokeStyle = '" + color + "';");
 				G8.writeFile("	context.moveTo( " + xstart + ", " + ystart + ");");
 				G8.writeFile("	context.quadraticCurveTo( " + xmiddle + ", " + ymiddle + ", " + xend + ", " + yend + ");");
 				G8.writeFile("	context.stroke();");
-				G8.writeFile("	context.fillStyle = " + colorbody + ";");
+				G8.writeFile("	context.fillStyle= '" + colorbody + "';");
 				G8.writeFile("	context.fill();");
 				G8.writeFile("	context.closePath();\n");
 				Name="No Name";
@@ -1029,7 +1036,10 @@ public class G8Parser extends Parser {
 
 			}
 				
+				if (colorbody==null) {
 				colorbody = "'#FFFFFF'";
+				}
+				
 				if(endangle==0) {
 					endangle = 360;
 				}
@@ -1056,9 +1066,9 @@ public class G8Parser extends Parser {
 				G8.writeFile("	var endAngle = " + endangle + "* Math.PI/180;");
 				G8.writeFile("	context.arc (centerX, centerY, radius, startAngle, endAngle);");
 				G8.writeFile("	context.lineWidth = " + width + ";");
-				G8.writeFile("	context.strokeStyle= " + color + ";");
+				G8.writeFile("	context.strokeStyle = '" + color + "';");
 				G8.writeFile("	context.stroke();");
-				G8.writeFile("	context.fillStyle= " + colorbody + ";");
+				G8.writeFile("	context.fillStyle= '" + colorbody + "';");
 				G8.writeFile("	context.fill();");
 				G8.writeFile("	context.closePath();\n");
 				Name="No Name";
@@ -1248,7 +1258,10 @@ public class G8Parser extends Parser {
 
 			}
 				
+				if (colorbody==null) {
 				colorbody = "'#FFFFFF'";
+				}
+				
 				if(endangle==0) {
 					endangle = 360;
 				}
@@ -1278,9 +1291,9 @@ public class G8Parser extends Parser {
 				G8.writeFile("	var endAngle=" + endangle + "*Math.PI/180;");
 				G8.writeFile("	context.ellipse(centerX, centerY, radiusMax, radiusMin, rotation, startAngle, endAngle);");
 				G8.writeFile("	context.lineWidth = " + width + ";");
-				G8.writeFile("	context.strokeStyle= " + color + ";");
+				G8.writeFile("	context.strokeStyle = '" + color + "';");
 				G8.writeFile("	context.stroke();");
-				G8.writeFile("	context.fillStyle= " + colorbody + ";");
+				G8.writeFile("	context.fillStyle= '" + colorbody + "';");
 				G8.writeFile("	context.fill();");
 				G8.writeFile("	context.closePath();\n");
 				Name="No Name";

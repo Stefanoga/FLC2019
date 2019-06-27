@@ -1,117 +1,79 @@
 <!doctype html>
 <html>
 <head>
-<title> prova </title>
+<title> Prova </title>
 <style> canvas {border: 1px #000 dotted;} </style>
 <script>
 window.onload = function () {
 
-	var canvas = document.getElementById('prova');
+	var canvas = document.getElementById('Prova');
 	var context = canvas.getContext('2d'); 
 
-	//linea1
+	//linea
 	context.beginPath();
-	context.lineWidth = 0.0;
-	context.strokeStyle = null;
-	context.moveTo( 0.0, 0.0);
-	context.lineTo( 0.0, 10.0);
+	context.lineWidth = 5.0;
+	context.strokeStyle = '#FF0000';
+	context.moveTo( 100.0, 100.0);
+	context.lineTo( 300.0, 300.0);
 	context.stroke();
 	context.closePath();
 
-	//linea2
+	//triangolo
 	context.beginPath();
-	context.lineWidth = 0.0;
-	context.strokeStyle = null;
-	context.moveTo( 0.0, 0.0);
-	context.lineTo( 0.0, 10.0);
-	context.stroke();
-	context.closePath();
-
-	//No name
-	context.beginPath();
-	context.lineWidth = 0.0;
-	context.strokeStyle = null;
-	context.moveTo(300.0, 300.0);
+	context.lineWidth = 4.0;
+	context.strokeStyle = '#0000FF';
+	context.moveTo(400.0, 400.0);
+	context.lineTo(400.0, 500.0);
 	context.lineTo(500.0, 500.0);
-	context.lineTo(300.0, 400.0);
-	context.lineTo(300.0, 300.0);
+	context.lineTo(400.0, 400.0);
 	context.stroke();
-	context.fillStyle= '#FFFFFF';
+	context.fillStyle= '#00FF00';
 	context.fill();
 	context.closePath();
 
-	//No name
+	//rettangolo1
 	context.beginPath();
-	context.lineWidth = 0.0;
-	context.strokeStyle = null;
-	context.rect( 600.0, 600.0, 100.0, 100.0);
+	context.lineWidth = 3.0;
+	context.strokeStyle = '#FF0000';
+	context.rect( 600.0, 600.0, 300.0, 200.0);
 	context.stroke();
-	context.fillStyle= '#FFFFFF';
+	context.fillStyle= '#FF0000';
 	context.fill();
 	context.closePath();
 
-	//curva1
+	//rettangolo2
 	context.beginPath();
-	context.lineWidth = 0.0;
-	context.strokeStyle = null;
-	context.moveTo( 900.0, 900.0);
-	context.quadraticCurveTo( 800.0, 800.0, 700.0, 700.0);
+	context.lineWidth = 3.0;
+	context.strokeStyle = '#FF0000';
+	context.rect( 200.0, 600.0, 200.0, 200.0);
 	context.stroke();
-	context.fillStyle = '#FFFFFF';
+	context.fillStyle= '#FF0000';
 	context.fill();
 	context.closePath();
 
-	//curva2
+	//curva
 	context.beginPath();
-	context.lineWidth = 0.0;
-	context.strokeStyle = null;
-	context.moveTo( 900.0, 900.0);
-	context.quadraticCurveTo( 800.0, 800.0, 100.0, 900.0);
+	context.lineWidth = 2.0;
+	context.strokeStyle = '#0000FF';
+	context.moveTo( 800.0, 100.0);
+	context.quadraticCurveTo( 900.0, 300.0, 1000.0, 200.0);
 	context.stroke();
-	context.fillStyle = '#FFFFFF';
+	context.fillStyle= '#0000FF';
 	context.fill();
 	context.closePath();
 
-	//curva3
+	//cerchio
 	context.beginPath();
-	context.lineWidth = 0.0;
-	context.strokeStyle = null;
-	context.moveTo( 900.0, 900.0);
-	context.quadraticCurveTo( 800.0, 800.0, 100.0, 900.0);
-	context.stroke();
-	context.fillStyle = '#FFFFFF';
-	context.fill();
-	context.closePath();
-
-	//No name
-	context.beginPath();
-	var centerX = 250.0;
-	var centerY = 250.0;
-	var radius = 0.0;
-	var startAngle = 20.0* Math.PI/180;
-	var endAngle = 10.0* Math.PI/180;
+	var centerX = 200.0;
+	var centerY = 200.0;
+	var radius = 50.0;
+	var startAngle = 0.0* Math.PI/180;
+	var endAngle = 180.0* Math.PI/180;
 	context.arc (centerX, centerY, radius, startAngle, endAngle);
-	context.lineWidth = 5.0;
-	context.strokeStyle= null;
+	context.lineWidth = 6.0;
+	context.strokeStyle = '#00FF00';
 	context.stroke();
-	context.fillStyle= '#FFFFFF';
-	context.fill();
-	context.closePath();
-
-	//ellisse
-	context.beginPath();
-	var centerX = 900.0;
-	var centerY = 100.0;
-	var radiusMax = 80.0;
-	var radiusMin= 70.0;
-	var rotation= 0.0*Math.PI/180;
-	var startAngle=20.0*Math.PI/180;
-	var endAngle=10.0*Math.PI/180;
-	context.ellipse(centerX, centerY, radiusMax, radiusMin, rotation, startAngle, endAngle);
-	context.lineWidth = 5.0;
-	context.strokeStyle= null;
-	context.stroke();
-	context.fillStyle= '#FFFFFF';
+	context.fillStyle= '#00FF00';
 	context.fill();
 	context.closePath();
 
@@ -119,6 +81,6 @@ window.onload = function () {
 </script>
 </head>
 <body>
-<canvas id='prova' width='1000.0' height='1000.0'></canvas>
+<canvas id='Prova' width='1000.0' height='1000.0'></canvas>
 </body>
 </html>

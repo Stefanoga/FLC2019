@@ -23,7 +23,7 @@ public class G8 {
 
 	public static void main(String[] args) throws RecognitionException, IOException, SameNameError, ShapeLayoutError {
 		
-		File outputFile = new File("C:\\\\Users\\\\matte\\\\git\\\\FLC2019\\\\G8\\\\files\\\\output.html");
+		File outputFile = new File("D:\\\\Users\\\\Stefano\\\\git\\\\repository\\\\G8\\\\files\\\\output.html");
 		outputFile.delete();
 		outputFile.createNewFile();
 		 String stringa = readFile();
@@ -42,7 +42,7 @@ public class G8 {
 	
 	public static String readFile() throws IOException {
 		
-		File inputFile = new File("C:\\\\Users\\\\matte\\\\git\\\\FLC2019\\\\G8\\\\files\\\\input.g8");
+		File inputFile = new File("D:\\\\Users\\\\Stefano\\\\git\\\\repository\\\\G8\\\\files\\\\input.g8");
 		
 		InputStream is = new FileInputStream(inputFile); 
 		BufferedReader buf = new BufferedReader(new InputStreamReader(is)); 
@@ -64,7 +64,7 @@ public class G8 {
 	
 	public static void writeFile(String toWrite) throws IOException {
 		
-		File outputFile = new File("C:\\\\Users\\\\matte\\\\git\\\\FLC2019\\\\G8\\\\files\\\\output.html");
+		File outputFile = new File("D:\\\\Users\\Stefano\\\\git\\\\repository\\\\G8\\\\files\\\\output.html");
 		
 		FileWriter out = new FileWriter(outputFile, true);
 		

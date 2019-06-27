@@ -24,7 +24,7 @@ line 	:	'LINE:' ('NAME' n=TEXT {Name=$n.text;})? 'XSTART' l1=FLOAT {float xstart
 		 System.out.println("context.moveTo( " + xstart + ", " + ystart + ");");
 		 System.out.println("context.lineTo( " + xend + ", " + yend + ");");
 		 System.out.println("context.stroke();");
-		 System.out.println("context.closePath(); <br>");
+		 System.out.println("context.closePath();");
 		}
 	;
 
@@ -36,10 +36,11 @@ triangle 	:	'TRIANGLE:' ('NAME' n=TEXT {Name=$n.text;})? 'XA' t1=FLOAT {float xa
 		 	 System.out.println("context.moveTo(" + xa + ", " + ya + ");");
 		 	 System.out.println("context.lineTo(" + xb + ", " + yb + ");");
 			 System.out.println("context.lineTo(" + xc + ", " + yc + ");");
+			 System.out.println("context.lineTo(" + xa + ", " + ya + ");");
 			 System.out.println("context.stroke();");
 			 System.out.println("context.fillStyle= " + colorbody + ";");
 			 System.out.println("context.fill();");
-			 System.out.println("context.closePath(); <br>");
+			 System.out.println("context.closePath();");
 			}
 	;
 
@@ -54,7 +55,7 @@ rectangle 	:	'RECT:' ('NAME' n=TEXT {Name=$n.text;})? 'XSTART' r1=FLOAT {float x
 			 System.out.println("context.stroke();");
 			 System.out.println("context.fillStyle= " + colorbody + ";");
 			 System.out.println("context.fill();");
-			 System.out.println("context.closePath(); <br>");
+			 System.out.println("context.closePath();");
 			}
 	;
 
@@ -68,7 +69,7 @@ curve 	:	'CURV:' ('NAME' n=TEXT {Name=$n.text;})? 'XSTART' cu1=FLOAT {float xsta
 		 System.out.println("context.stroke();");
 		 System.out.println("context.fillStyle = " + colorbody + ";");
 		 System.out.println("context.fill();");
-		 System.out.println("context.closePath(); <br>");
+		 System.out.println("context.closePath();");
 		}
 	;
 
@@ -78,15 +79,15 @@ circle 	:	'CIRC:' ('NAME' n=TEXT {Name=$n.text;})? 'XCENTER' ci1=FLOAT {float xc
 		 System.out.println("var centerX = " + xcenter + ";");
 		 System.out.println("var centerY = " + ycenter + ";");
 		 System.out.println("var radius = " + radius + ";");
-		 System.out.println("var startAngle = " + startangle + "* Math.PI;");
-		 System.out.println("var endAngle = " + endangle + "* Math.PI;");
+		 System.out.println("var startAngle = " + startangle + "* Math.PI/180;");
+		 System.out.println("var endAngle = " + endangle + "* Math.PI/180;");
 		 System.out.println("context.arc (centerX, centerY, radius, startAngle, endAngle);");
 		 System.out.println("context.lineWidth = " + width + ";");
 		 System.out.println("context.strokeStyle= " + color + ";");
 		 System.out.println("context.stroke();");
 		 System.out.println("context.fillStyle= " + colorbody + ";");
 		 System.out.println("context.fill();");
-		 System.out.println("context.closePath(); <br>");
+		 System.out.println("context.closePath();");
 		}
 	;
 
@@ -106,7 +107,7 @@ ellipse 	:	'ELLIPS:' ('NAME' n=TEXT {Name=$n.text;})? 'XCENTER' e1=FLOAT {float 
 		 	 System.out.println("context.stroke();");
 		 	 System.out.println("context.fillStyle= " + colorbody + ";");
 		 	 System.out.println("context.fill();");
-		 	 System.out.println("context.closePath(); <br>");
+		 	 System.out.println("context.closePath();");
 			}
 	;
 

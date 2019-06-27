@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<title> prova </title>
+<style> canvas {border: 1px #000 dotted;} </style>
+<script>
+window.onload = function () {
+
+	var canvas = document.getElementById('prova');
+	var context = canvas.getContext('2d'); 
+
+	//linea1
+	context.beginPath();
+	context.lineWidth = 0.0;
+	context.strokeStyle = null;
+	context.moveTo( 0.0, 0.0);
+	context.lineTo( 100.0, 100.0);
+	context.stroke();
+	context.closePath();
+
+	//linea2
+	context.beginPath();
+	context.lineWidth = 0.0;
+	context.strokeStyle = null;
+	context.moveTo( 0.0, 0.0);
+	context.lineTo( 100.0, 100.0);
+	context.stroke();
+	context.closePath();
+
+	//No name
+	context.beginPath();
+	context.lineWidth = 0.0;
+	context.strokeStyle = null;
+	context.moveTo(300.0, 300.0);
+	context.lineTo(300.0, 500.0);
+	context.lineTo(500.0, 500.0);
+	context.lineTo(300.0, 300.0);
+	context.stroke();
+	context.fillStyle= '#FFFFFF';
+	context.fill();
+	context.closePath();
+
+	//No name
+	context.beginPath();
+	context.lineWidth = 0.0;
+	context.strokeStyle = null;
+	context.rect( 600.0, 600.0, 200.0, 200.0);
+	context.stroke();
+	context.fillStyle= '#FFFFFF';
+	context.fill();
+	context.closePath();
+
+	//curva1
+	context.beginPath();
+	context.lineWidth = 0.0;
+	context.strokeStyle = null;
+	context.moveTo( 900.0, 900.0);
+	context.quadraticCurveTo( 800.0, 800.0, 100.0, 900.0);
+	context.stroke();
+	context.fillStyle = '#FFFFFF';
+	context.fill();
+	context.closePath();
+
+	//curva2
+	context.beginPath();
+	context.lineWidth = 0.0;
+	context.strokeStyle = null;
+	context.moveTo( 900.0, 900.0);
+	context.quadraticCurveTo( 800.0, 800.0, 100.0, 900.0);
+	context.stroke();
+	context.fillStyle = '#FFFFFF';
+	context.fill();
+	context.closePath();
+
+	//curva3
+	context.beginPath();
+	context.lineWidth = 0.0;
+	context.strokeStyle = null;
+	context.moveTo( 900.0, 900.0);
+	context.quadraticCurveTo( 800.0, 800.0, 100.0, 900.0);
+	context.stroke();
+	context.fillStyle = '#FFFFFF';
+	context.fill();
+	context.closePath();
+
+	//No name
+	context.beginPath();
+	var centerX = 250.0;
+	var centerY = 250.0;
+	var radius = 100.0;
+	var startAngle = 0.0* Math.PI/180;
+	var endAngle = 360.0* Math.PI/180;
+	context.arc (centerX, centerY, radius, startAngle, endAngle);
+	context.lineWidth = 5.0;
+	context.strokeStyle= null;
+	context.stroke();
+	context.fillStyle= '#FFFFFF';
+	context.fill();
+	context.closePath();
+
+	//ellisse
+	context.beginPath();
+	var centerX = 900.0;
+	var centerY = 100.0;
+	var radiusMax = 80.0;
+	var radiusMin= 40.0;
+	var rotation= 0.0*Math.PI/180;
+	var startAngle=0.0*Math.PI/180;
+	var endAngle=360.0*Math.PI/180;
+	context.ellipse(centerX, centerY, radiusMax, radiusMin, rotation, startAngle, endAngle);
+	context.lineWidth = 5.0;
+	context.strokeStyle= null;
+	context.stroke();
+	context.fillStyle= '#FFFFFF';
+	context.fill();
+	context.closePath();
+
+}
+</script>
+</head>
+<body>
+<canvas id='prova' width='1000.0' height='1000.0'></canvas>
+</body>
+</html><!doctype html>
+<html>
+<head>
+<title> prova </title>
+<style> canvas {border: 1px #000 dotted;} </style>
+<script>
+window.onload = function () {
+
+	var canvas = document.getElementById('prova');
+	var context = canvas.getContext('2d'); 
+
+	//linea1
+	context.beginPath();
+	context.lineWidth = 0.0;
+	context.strokeStyle = null;
+	context.moveTo( 0.0, 0.0);
+	context.lineTo( 100.0, 100.0);
+	context.stroke();
+	context.closePath();
+
+	//linea2
+	context.beginPath();
+	context.lineWidth = 0.0;
+	context.strokeStyle = null;
+	context.moveTo( 0.0, 0.0);
+	context.lineTo( 100.0, 100.0);
+	context.stroke();
+	context.closePath();
+
+	//No name
+	context.beginPath();
+	context.lineWidth = 0.0;
+	context.strokeStyle = null;
+	context.moveTo(300.0, 300.0);
+	context.lineTo(300.0, 500.0);
+	context.lineTo(500.0, 500.0);
+	context.lineTo(300.0, 300.0);
+	context.stroke();
+	context.fillStyle= '#FFFFFF';
+	context.fill();
+	context.closePath();
+
+	//No name
+	context.beginPath();
+	context.lineWidth = 0.0;
+	context.strokeStyle = null;
+	context.rect( 600.0, 600.0, 200.0, 200.0);
+	context.stroke();
+	context.fillStyle= '#FFFFFF';
+	context.fill();
+	context.closePath();
+
+	//curva1
+	context.beginPath();
+	context.lineWidth = 0.0;
+	context.strokeStyle = null;
+	context.moveTo( 900.0, 900.0);
+	context.quadraticCurveTo( 800.0, 800.0, 100.0, 900.0);
+	context.stroke();
+	context.fillStyle = '#FFFFFF';
+	context.fill();
+	context.closePath();
+
+	//curva2
+	context.beginPath();
+	context.lineWidth = 0.0;
+	context.strokeStyle = null;
+	context.moveTo( 900.0, 900.0);
+	context.quadraticCurveTo( 800.0, 800.0, 100.0, 900.0);
+	context.stroke();
+	context.fillStyle = '#FFFFFF';
+	context.fill();
+	context.closePath();
+

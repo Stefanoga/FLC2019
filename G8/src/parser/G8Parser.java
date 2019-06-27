@@ -5,15 +5,26 @@ package parser;
 import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
+import java.io.IOException;
 import java.util.ArrayList;
+import start.G8;
 
 @SuppressWarnings("all")
 public class G8Parser extends Parser {
 	
 	String Titolo;
-	String Name;
+	String Name="No Name";
 	float DrawspaceWidth;
 	float DrawspaceHeigth;
+	ArrayList<String> names = new ArrayList<String>();
+	
+	public class SameNameError extends Exception {
+
+		 SameNameError()
+		  {
+		    super("Attention, you have inserted the same name for more than one figure");
+		  }
+		}
 	
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "COMMENT", "FLOAT", "RGB", "ROTATION", 
@@ -88,7 +99,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "begin"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:3:1: begin : 'TITLE' b1= TEXT 'DRAWSPACE WIDTH' b2= FLOAT 'DRAWSPACE HEIGTH' b3= FLOAT ( list )* end ;
-	public final void begin() throws RecognitionException {
+	public final void begin() throws RecognitionException, IOException, SameNameError {
 		Token b1=null;
 		Token b2=null;
 		Token b3=null;
@@ -107,15 +118,15 @@ public class G8Parser extends Parser {
 			b3=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_begin30); 
 			DrawspaceHeigth=Float.valueOf((b3!=null?b3.getText():null));
 			
-					 System.out.println("<!doctype html>");
-					 System.out.println("<html>");
-					 System.out.println("<head>");
-					 System.out.println("<title> " + Titolo + " </title>");
-					 System.out.println("<style> canvas {border: 1px #000 dotted;} </style>");
-					 System.out.println("<script>");
-					 System.out.println("window.onload = function () {");
-			 		 System.out.println("var canvas = document.getElementById('" + Titolo + "');");
-					 System.out.println("var context = canvas.getContext('2d'); \n");
+			G8.writeFile("<!doctype html>");
+			G8.writeFile("<html>");
+			G8.writeFile("<head>");
+			G8.writeFile("<title> " + Titolo + " </title>");
+			G8.writeFile("<style> canvas {border: 1px #000 dotted;} </style>");
+			G8.writeFile("<script>");
+			G8.writeFile("window.onload = function () {\n");
+			G8.writeFile("	var canvas = document.getElementById('" + Titolo + "');");
+			G8.writeFile("	var context = canvas.getContext('2d'); \n");
 			
 			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:3:154: ( list )*
 			loop1:
@@ -163,7 +174,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "list"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:16:1: list : ( line | triangle | rectangle | curve | circle | ellipse );
-	public final void list() throws RecognitionException {
+	public final void list() throws RecognitionException, IOException, SameNameError {
 		try {
 			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:16:6: ( line | triangle | rectangle | curve | circle | ellipse )
 			int alt2=6;
@@ -275,7 +286,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "line"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:19:1: line : 'LINE:' ( 'NAME' n= TEXT )? 'XSTART' l1= FLOAT 'YSTART' l2= FLOAT 'XEND' l3= FLOAT 'YEND' l4= FLOAT ( 'COLOR' l5= RGB )? ( 'WIDTH' l6= FLOAT )? ;
-	public final void line() throws RecognitionException {
+	public final void line() throws RecognitionException, IOException, SameNameError {
 		Token n=null;
 		Token l1=null;
 		Token l2=null;
@@ -347,6 +358,7 @@ public class G8Parser extends Parser {
 			}
 			
 			float width = 0;
+			
 			switch (alt5) {
 				case 1 :
 					// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:19:258: 'WIDTH' l6= FLOAT
@@ -358,15 +370,24 @@ public class G8Parser extends Parser {
 					break;
 
 			}
-
-					 System.out.println("//" + Name);
-					 System.out.println("context.beginPath();");
-					 System.out.println("context.lineWidth = " + width + ";");
-					 System.out.println("context.strokeStyle = " + color + ";");
-					 System.out.println("context.moveTo( " + xstart + ", " + ystart + ");");
-					 System.out.println("context.lineTo( " + xend + ", " + yend + ");");
-					 System.out.println("context.stroke();");
-					 System.out.println("context.closePath();\n");
+				if (Name==null || Name=="No Name") {
+					Name="No name";
+				}else {
+					if(names.contains(Name)) {
+						throw new SameNameError();
+					}else {
+						names.add(Name);
+					}
+				}
+				G8.writeFile("	//" + Name);
+				G8.writeFile("	context.beginPath();");
+				G8.writeFile("	context.lineWidth = " + width + ";");
+				G8.writeFile("	context.strokeStyle = " + color + ";");
+				G8.writeFile("	context.moveTo( " + xstart + ", " + ystart + ");");
+				G8.writeFile("	context.lineTo( " + xend + ", " + yend + ");");
+				G8.writeFile("	context.stroke();");
+				G8.writeFile("	context.closePath();\n");
+				Name="No Name";
 					
 			}
 
@@ -385,7 +406,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "triangle"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:31:1: triangle : 'TRIANGLE:' ( 'NAME' n= TEXT )? 'XA' t1= FLOAT 'YA' t2= FLOAT 'XB' t3= FLOAT 'YB' t4= FLOAT 'XC' t5= FLOAT 'YC' t6= FLOAT ( 'COLOR' t7= RGB )? ( 'WIDTH' t8= FLOAT )? ( 'COLORBODY' t9= RGB )? ;
-	public final void triangle() throws RecognitionException {
+	public final void triangle() throws RecognitionException, IOException, SameNameError {
 		Token n=null;
 		Token t1=null;
 		Token t2=null;
@@ -498,17 +519,29 @@ public class G8Parser extends Parser {
 
 			}
 
-						 System.out.println("//" + Name);
-						 System.out.println("context.beginPath();");
-					 	 System.out.println("context.lineWidth = " + width + ";");
-					 	 System.out.println("context.strokeStyle = " + color + ";");
-					 	 System.out.println("context.moveTo(" + xa + ", " + ya + ");");
-					 	 System.out.println("context.lineTo(" + xb + ", " + yb + ");");
-						 System.out.println("context.lineTo(" + xc + ", " + yc + ");");
-						 System.out.println("context.stroke();");
-						 System.out.println("context.fillStyle= " + colorbody + ";");
-						 System.out.println("context.fill();");
-						 System.out.println("context.closePath();\n");
+				colorbody = "'#FFFFFF'";
+				if (Name==null || Name=="No Name") {
+					Name="No name";
+				}else {
+					if(names.contains(Name)) {
+						throw new SameNameError();
+					}else {
+						names.add(Name);
+					}
+				}
+				G8.writeFile("	//" + Name);
+				G8.writeFile("	context.beginPath();");
+				G8.writeFile("	context.lineWidth = " + width + ";");
+				G8.writeFile("	context.strokeStyle = " + color + ";");
+				G8.writeFile("	context.moveTo(" + xa + ", " + ya + ");");
+				G8.writeFile("	context.lineTo(" + xb + ", " + yb + ");");
+				G8.writeFile("	context.lineTo(" + xc + ", " + yc + ");");
+				G8.writeFile("	context.lineTo(" + xa + ", " + ya + ");");
+				G8.writeFile("	context.stroke();");
+				G8.writeFile("	context.fillStyle= " + colorbody + ";");
+				G8.writeFile("	context.fill();");
+				G8.writeFile("	context.closePath();\n");
+				Name="No Name";
 						
 			}
 
@@ -527,7 +560,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "rectangle"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:46:1: rectangle : 'RECT:' ( 'NAME' n= TEXT )? 'XSTART' r1= FLOAT 'YSTART' r2= FLOAT 'XEND' r3= FLOAT 'YEND' r4= FLOAT ( 'COLOR' r5= RGB )? ( 'WIDTH' r6= FLOAT )? ( 'COLORBODY' r7= RGB )? ;
-	public final void rectangle() throws RecognitionException {
+	public final void rectangle() throws RecognitionException, IOException, SameNameError {
 		Token n=null;
 		Token r1=null;
 		Token r2=null;
@@ -631,18 +664,30 @@ public class G8Parser extends Parser {
 					break;
 
 			}
-
-						 float heigth=yend-ystart;
-						 float breadth=xend-xstart;
-						 System.out.println("//" + Name);
-						 System.out.println("context.beginPath();");
-						 System.out.println("context.lineWidth = " + width + ";");
-						 System.out.println("context.strokeStyle = " + color + ";");
-						 System.out.println("context.rect( " + xstart + ", " + ystart + ", " + heigth + ", " + breadth + ");");
-						 System.out.println("context.stroke();");
-						 System.out.println("context.fillStyle= " + colorbody + ";");
-						 System.out.println("context.fill();");
-						 System.out.println("context.closePath();\n");
+				
+				colorbody = "'#FFFFFF'";
+				float heigth=yend-ystart;
+				float breadth=xend-xstart;
+				if (Name==null || Name=="No Name") {
+					Name="No name";
+				}else {
+					if(names.contains(Name)) {
+						throw new SameNameError();
+					}else {
+						names.add(Name);
+					}
+				}
+				
+				G8.writeFile("	//" + Name);
+				G8.writeFile("	context.beginPath();");
+				G8.writeFile("	context.lineWidth = " + width + ";");
+				G8.writeFile("	context.strokeStyle = " + color + ";");
+				G8.writeFile("	context.rect( " + xstart + ", " + ystart + ", " + heigth + ", " + breadth + ");");
+				G8.writeFile("	context.stroke();");
+				G8.writeFile("	context.fillStyle= " + colorbody + ";");
+				G8.writeFile("	context.fill();");
+				G8.writeFile("	context.closePath();\n");
+				Name="No Name";
 						
 			}
 
@@ -661,7 +706,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "curve"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:61:1: curve : 'CURV:' ( 'NAME' n= TEXT )? 'XSTART' cu1= FLOAT 'YSTART' cu2= FLOAT 'XMIDDLE' cu3= FLOAT 'YMIDDLE' cu4= FLOAT 'XEND' cu5= FLOAT 'YEND' cu6= FLOAT ( 'COLOR' cu7= RGB )? ( 'WIDTH' cu8= FLOAT )? ( 'COLORBODY' cu9= RGB )? ;
-	public final void curve() throws RecognitionException {
+	public final void curve() throws RecognitionException, IOException, SameNameError {
 		Token n=null;
 		Token cu1=null;
 		Token cu2=null;
@@ -773,17 +818,28 @@ public class G8Parser extends Parser {
 					break;
 
 			}
-
-					 System.out.println("//" + Name);
-					 System.out.println("context.beginPath();");
-					 System.out.println("context.lineWidth = " + width + ";");
-					 System.out.println("context.strokeStyle = " + color + ";");
-					 System.out.println("context.moveTo( " + xstart + ", " + ystart + ");");
-					 System.out.println("context.quadraticCurveTo( " + xmiddle + ", " + ymiddle + ", " + xend + ", " + yend + ");");
-					 System.out.println("context.stroke();");
-					 System.out.println("context.fillStyle = " + colorbody + ";");
-					 System.out.println("context.fill();");
-					 System.out.println("context.closePath();\n");
+				
+				colorbody = "'#FFFFFF'";
+				if (Name==null || Name=="No Name") {
+					Name="No name";
+				}else {
+					if(names.contains(Name)) {
+						throw new SameNameError();
+					}else {
+						names.add(Name);
+					}
+				}
+				G8.writeFile("	//" + Name);
+				G8.writeFile("	context.beginPath();");
+				G8.writeFile("	context.lineWidth = " + width + ";");
+				G8.writeFile("	context.strokeStyle = " + color + ";");
+				G8.writeFile("	context.moveTo( " + xstart + ", " + ystart + ");");
+				G8.writeFile("	context.quadraticCurveTo( " + xmiddle + ", " + ymiddle + ", " + xend + ", " + yend + ");");
+				G8.writeFile("	context.stroke();");
+				G8.writeFile("	context.fillStyle = " + colorbody + ";");
+				G8.writeFile("	context.fill();");
+				G8.writeFile("	context.closePath();\n");
+				Name="No Name";
 					
 			}
 
@@ -802,7 +858,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "circle"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:75:1: circle : 'CIRC:' ( 'NAME' n= TEXT )? 'XCENTER' ci1= FLOAT 'YCENTER' ci2= FLOAT 'RADIUS' ci3= FLOAT ( 'STARTANGLE' ci4= FLOAT )? ( 'ENDANGLE' ci5= FLOAT )? ( 'COLOR' ci6= RGB )? ( 'WIDTH' ci7= FLOAT )? ( 'COLORBODY' ci8= RGB )? ;
-	public final void circle() throws RecognitionException {
+	public final void circle() throws RecognitionException, IOException, SameNameError {
 		Token n=null;
 		Token ci1=null;
 		Token ci2=null;
@@ -944,21 +1000,35 @@ public class G8Parser extends Parser {
 					break;
 
 			}
-
-					 System.out.println("//" + Name);
-					 System.out.println("context.beginPath();");
-					 System.out.println("var centerX = " + xcenter + ";");
-					 System.out.println("var centerY = " + ycenter + ";");
-					 System.out.println("var radius = " + radius + ";");
-					 System.out.println("var startAngle = " + startangle + "* Math.PI;");
-					 System.out.println("var endAngle = " + endangle + "* Math.PI;");
-					 System.out.println("context.arc (centerX, centerY, radius, startAngle, endAngle);");
-					 System.out.println("context.lineWidth = " + width + ";");
-					 System.out.println("context.strokeStyle= " + color + ";");
-					 System.out.println("context.stroke();");
-					 System.out.println("context.fillStyle= " + colorbody + ";");
-					 System.out.println("context.fill();");
-					 System.out.println("context.closePath();\n");
+				
+				colorbody = "'#FFFFFF'";
+				if(endangle==0) {
+					endangle = 360;
+				}
+				if (Name==null || Name=="No Name" || Name=="No Name") {
+					Name="No name";
+				}else {
+					if(names.contains(Name)) {
+						throw new SameNameError();
+					}else {
+						names.add(Name);
+					}
+				}
+				G8.writeFile("	//" + Name);
+				G8.writeFile("	context.beginPath();");
+				G8.writeFile("	var centerX = " + xcenter + ";");
+				G8.writeFile("	var centerY = " + ycenter + ";");
+				G8.writeFile("	var radius = " + radius + ";");
+				G8.writeFile("	var startAngle = " + startangle + "* Math.PI/180;");
+				G8.writeFile("	var endAngle = " + endangle + "* Math.PI/180;");
+				G8.writeFile("	context.arc (centerX, centerY, radius, startAngle, endAngle);");
+				G8.writeFile("	context.lineWidth = " + width + ";");
+				G8.writeFile("	context.strokeStyle= " + color + ";");
+				G8.writeFile("	context.stroke();");
+				G8.writeFile("	context.fillStyle= " + colorbody + ";");
+				G8.writeFile("	context.fill();");
+				G8.writeFile("	context.closePath();\n");
+				Name="No Name";
 					
 			}
 
@@ -977,7 +1047,7 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "ellipse"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:93:1: ellipse : 'ELLIPS:' ( 'NAME' n= TEXT )? 'XCENTER' e1= FLOAT 'YCENTER' e2= FLOAT 'SEMIN' e3= FLOAT 'SEMAX' e4= FLOAT ( 'STARTANGLE' e5= FLOAT )? ( 'ENDANGLE' e6= FLOAT )? ( 'ROTATION' e7= ROTATION )? ( 'COLOR' e8= RGB )? ( 'WIDTH' e9= FLOAT )? ( 'COLORBODY' e10= RGB )? ;
-	public final void ellipse() throws RecognitionException {
+	public final void ellipse() throws RecognitionException, IOException, SameNameError {
 		Token n=null;
 		Token e1=null;
 		Token e2=null;
@@ -1144,23 +1214,38 @@ public class G8Parser extends Parser {
 					break;
 
 			}
-
-						 System.out.println("//" + Name);
-						 System.out.println("context.beginPath();");
-					 	 System.out.println("var centerX = " + xcenter + ";");
-					 	 System.out.println("var centerY = " + ycenter + ";");
-					 	 System.out.println("var radiusMax = " + semax + ";");
-					 	 System.out.println("var radiusMin= " + semin + ";");
-					 	 System.out.println("var rotation= " + rotation + "*Math.PI/180;");
-					 	 System.out.println("var startAngle=" + startangle +"*Math.PI/180;");
-					 	 System.out.println("var endAngle=" + endangle + "*Math.PI/180;");
-					 	 System.out.println("context.ellipse(centerX, centerY, radiusMax, radiusMin, rotation, startAngle, endAngle);");
-					 	 System.out.println("context.lineWidth = " + width + ";");
-					 	 System.out.println("context.strokeStyle= " + color + ";");
-					 	 System.out.println("context.stroke();");
-					 	 System.out.println("context.fillStyle= " + colorbody + ";");
-					 	 System.out.println("context.fill();");
-					 	 System.out.println("context.closePath();\n");
+				
+				colorbody = "'#FFFFFF'";
+				if(endangle==0) {
+					endangle = 360;
+				}
+				
+				if (Name==null || Name=="No Name") {
+					Name="No name";
+				}else {
+					if(names.contains(Name)) {
+						throw new SameNameError();
+					}else {
+						names.add(Name);
+					}
+				}
+				G8.writeFile("	//" + Name);
+				G8.writeFile("	context.beginPath();");
+				G8.writeFile("	var centerX = " + xcenter + ";");
+				G8.writeFile("	var centerY = " + ycenter + ";");
+				G8.writeFile("	var radiusMax = " + semax + ";");
+				G8.writeFile("	var radiusMin= " + semin + ";");
+				G8.writeFile("	var rotation= " + rotation + "*Math.PI/180;");
+				G8.writeFile("	var startAngle=" + startangle +"*Math.PI/180;");
+				G8.writeFile("	var endAngle=" + endangle + "*Math.PI/180;");
+				G8.writeFile("	context.ellipse(centerX, centerY, radiusMax, radiusMin, rotation, startAngle, endAngle);");
+				G8.writeFile("	context.lineWidth = " + width + ";");
+				G8.writeFile("	context.strokeStyle= " + color + ";");
+				G8.writeFile("	context.stroke();");
+				G8.writeFile("	context.fillStyle= " + colorbody + ";");
+				G8.writeFile("	context.fill();");
+				G8.writeFile("	context.closePath();\n");
+				Name="No Name";
 						
 			}
 
@@ -1179,19 +1264,22 @@ public class G8Parser extends Parser {
 
 	// $ANTLR start "end"
 	// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:113:1: end : 'END' ;
-	public final void end() throws RecognitionException {
+	public final void end() throws RecognitionException, IOException {
 		try {
 			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:113:5: ( 'END' )
 			// D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g:113:7: 'END'
 			{
 			match(input,17,FOLLOW_17_in_end712); 
-				 System.out.println("}");
-				 System.out.println("</script>");
-				 System.out.println("</head>");
-			 	 System.out.println("<body>");
-				 System.out.println("<canvas id='" + Titolo + "' width='" + DrawspaceWidth + "' height='" + DrawspaceHeigth + "'></canvas>");
-				 System.out.println("</body>");
-				 System.out.println("</html>");
+			if (Name==null || Name=="No Name") {
+				Name="No name";
+			}
+			G8.writeFile("}");
+			G8.writeFile("</script>");
+			G8.writeFile("</head>");
+			G8.writeFile("<body>");
+			G8.writeFile("<canvas id='" + Titolo + "' width='" + DrawspaceWidth + "' height='" + DrawspaceHeigth + "'></canvas>");
+			G8.writeFile("</body>");
+			G8.writeFile("</html>");
 				
 			}
 

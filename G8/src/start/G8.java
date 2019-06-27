@@ -13,12 +13,14 @@ import org.antlr.runtime.ANTLRStringStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 
+import gui.Ide;
 import lexer.G8Lexer;
 import parser.G8Parser;
+import parser.G8Parser.SameNameError;
 
 public class G8 {
 
-	public static void main(String[] args) throws RecognitionException, IOException {
+	public static void main(String[] args) throws RecognitionException, IOException, SameNameError {
 		
 		 String stringa = readFile();
 		 
@@ -44,6 +46,10 @@ public class G8 {
 	     CommonTokenStream tokens2 = new CommonTokenStream(lexer2);
 	     G8Parser parser2 = new G8Parser(tokens2);
 	     parser2.line();*/
+	     
+	     Ide window = new Ide();
+		 window.frame.setVisible(true);
+		 window.frame.setTitle("G8 IDE");
 
 	}
 	
@@ -58,7 +64,7 @@ public class G8 {
 		StringBuilder sb = new StringBuilder();
 		
 		while(line != null){
-			sb.append(line).append(""); 
+			sb.append(line).append(" "); 
 			line = buf.readLine(); 
 		} 
 		
@@ -71,12 +77,16 @@ public class G8 {
 	
 	public static void writeFile(String toWrite) throws IOException {
 		
-		File outputFile = new File("C:\\\\Users\\\\matte\\\\git\\\\FLC2019\\\\G8\\\\files\\\\input.g8");
+		File outputFile = new File("C:\\\\Users\\\\matte\\\\git\\\\FLC2019\\\\G8\\\\files\\\\output.html");
 		
 		FileWriter out = new FileWriter(outputFile, true);
 		BufferedWriter buf  = new BufferedWriter(out);
 		
 		out.append(toWrite);
+		
+		if(toWrite != "</html>") {
+			out.append("\n");
+		}
 		
 		out.close();
 		

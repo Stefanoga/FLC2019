@@ -543,9 +543,6 @@ public class G8Parser extends Parser {
 				if (color==null) {
 				color = "#000000";
 				}
-				if (colorbody==null) {
-				colorbody = "#FFFFFF";
-				}
 				if (Name==null || Name=="No Name") {
 					Name="No name";
 				}else {
@@ -569,8 +566,10 @@ public class G8Parser extends Parser {
 				G8.writeHTML("	context.lineTo(" + xc + ", " + yc + ");", name, dir);
 				G8.writeHTML("	context.lineTo(" + xa + ", " + ya + ");", name, dir);
 				G8.writeHTML("	context.stroke();", name, dir);
-				G8.writeHTML("	context.fillStyle= '" + colorbody + "';", name, dir);
-				G8.writeHTML("	context.fill();", name, dir);
+				if (colorbody!=null) {
+					G8.writeHTML("	context.fillStyle= '" + colorbody + "';", name, dir);
+					G8.writeHTML("	context.fill();", name, dir);
+					}
 				G8.writeHTML("	context.closePath();\n", name, dir);
 				Name="No Name";
 						
@@ -699,9 +698,6 @@ public class G8Parser extends Parser {
 				if (color==null) {
 				color = "#000000";
 				}
-				if (colorbody==null) {
-				colorbody = "#FFFFFF";
-				}
 				float heigth=yend-ystart;
 				float breadth=xend-xstart;
 				if (Name==null || Name=="No Name") {
@@ -724,8 +720,10 @@ public class G8Parser extends Parser {
 				G8.writeHTML("	context.strokeStyle = '" + color + "';", name, dir);
 				G8.writeHTML("	context.rect( " + xstart + ", " + ystart + ", " + heigth + ", " + breadth + ");", name, dir);
 				G8.writeHTML("	context.stroke();", name, dir);
-				G8.writeHTML("	context.fillStyle= '" + colorbody + "';", name, dir);
-				G8.writeHTML("	context.fill();", name, dir);
+				if (colorbody!=null) {
+					G8.writeHTML("	context.fillStyle= '" + colorbody + "';", name, dir);
+					G8.writeHTML("	context.fill();", name, dir);
+					}
 				G8.writeHTML("	context.closePath();\n", name, dir);
 				Name="No Name";
 						
@@ -862,9 +860,6 @@ public class G8Parser extends Parser {
 				if (color==null) {
 				color = "#000000";
 				}
-				if (colorbody==null) {
-				colorbody = "#FFFFFF";
-				}
 				if (Name==null || Name=="No Name") {
 					Name="No name";
 				}else {
@@ -886,8 +881,10 @@ public class G8Parser extends Parser {
 				G8.writeHTML("	context.moveTo( " + xstart + ", " + ystart + ");", name, dir);
 				G8.writeHTML("	context.quadraticCurveTo( " + xmiddle + ", " + ymiddle + ", " + xend + ", " + yend + ");", name, dir);
 				G8.writeHTML("	context.stroke();", name, dir);
-				G8.writeHTML("	context.fillStyle = '" + colorbody + "';", name, dir);
-				G8.writeHTML("	context.fill();", name, dir);
+				if (colorbody!=null) {
+					G8.writeHTML("	context.fillStyle= '" + colorbody + "';", name, dir);
+					G8.writeHTML("	context.fill();", name, dir);
+					}
 				G8.writeHTML("	context.closePath();\n", name, dir);
 				Name="No Name";
 					
@@ -1054,9 +1051,6 @@ public class G8Parser extends Parser {
 				if (color==null) {
 				color = "#000000";
 				}
-				if (colorbody==null) {
-				colorbody = "#FFFFFF";
-				}
 				if(endangle==0) {
 					endangle = 360;
 				}
@@ -1085,8 +1079,10 @@ public class G8Parser extends Parser {
 				G8.writeHTML("	context.lineWidth = " + width + ";", name, dir);
 				G8.writeHTML("	context.strokeStyle= '" + color + "';", name, dir);
 				G8.writeHTML("	context.stroke();", name, dir);
-				G8.writeHTML("	context.fillStyle= '" + colorbody + "';", name, dir);
-				G8.writeHTML("	context.fill();", name, dir);
+				if (colorbody!=null) {
+					G8.writeHTML("	context.fillStyle= '" + colorbody + "';", name, dir);
+					G8.writeHTML("	context.fill();", name, dir);
+					}
 				G8.writeHTML("	context.closePath();\n", name, dir);
 				Name="No Name";
 					
@@ -1278,9 +1274,6 @@ public class G8Parser extends Parser {
 				if (color==null) {
 				color = "#000000";
 				}
-				if (colorbody==null) {
-				colorbody = "#FFFFFF";
-				}
 				if(endangle==0) {
 					endangle = 360;
 				}
@@ -1312,8 +1305,10 @@ public class G8Parser extends Parser {
 				G8.writeHTML("	context.lineWidth = " + width + ";", name, dir);
 				G8.writeHTML("	context.strokeStyle= '" + color + "';", name, dir);
 				G8.writeHTML("	context.stroke();", name, dir);
-				G8.writeHTML("	context.fillStyle= '" + colorbody + "';", name, dir);
-				G8.writeHTML("	context.fill();", name, dir);
+				if (colorbody!=null) {
+					G8.writeHTML("	context.fillStyle= '" + colorbody + "';", name, dir);
+					G8.writeHTML("	context.fill();", name, dir);
+					}
 				G8.writeHTML("	context.closePath();\n", name, dir);
 				Name="No Name";
 						

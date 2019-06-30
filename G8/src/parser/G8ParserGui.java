@@ -382,7 +382,10 @@ public class G8ParserGui extends Parser {
 					break;
 
 			}
-				
+			
+			if (color==null) {
+			color = "#000000";
+			}
 			if (Name==null || Name=="No Name") {
 					Name="No name";
 				}else {
@@ -537,8 +540,11 @@ public class G8ParserGui extends Parser {
 
 			}
 
+				if (color==null) {
+				color = "#000000";
+				}
 				if (colorbody==null) {
-				colorbody = "'#FFFFFF'";
+				colorbody = "#FFFFFF";
 				}
 				if (Name==null || Name=="No Name") {
 					Name="No name";
@@ -690,10 +696,12 @@ public class G8ParserGui extends Parser {
 
 			}
 				
-				if (colorbody==null) {
-				colorbody = "'#FFFFFF'";
+				if (color==null) {
+				color = "#000000";
 				}
-				
+				if (colorbody==null) {
+				colorbody = "#FFFFFF";
+				}
 				float heigth=yend-ystart;
 				float breadth=xend-xstart;
 				if (Name==null || Name=="No Name") {
@@ -851,8 +859,11 @@ public class G8ParserGui extends Parser {
 
 			}
 				
+				if (color==null) {
+				color = "#000000";
+				}
 				if (colorbody==null) {
-				colorbody = "'#FFFFFF'";
+				colorbody = "#FFFFFF";
 				}
 				if (Name==null || Name=="No Name") {
 					Name="No name";
@@ -1040,8 +1051,11 @@ public class G8ParserGui extends Parser {
 
 			}
 				
+				if (color==null) {
+				color = "#000000";
+				}
 				if (colorbody==null) {
-				colorbody = "'#FFFFFF'";
+				colorbody = "#FFFFFF";
 				}
 				if(endangle==0) {
 					endangle = 360;
@@ -1261,8 +1275,11 @@ public class G8ParserGui extends Parser {
 
 			}
 				
+				if (color==null) {
+				color = "#000000";
+				}
 				if (colorbody==null) {
-				colorbody = "'#FFFFFF'";
+				colorbody = "#FFFFFF";
 				}
 				if(endangle==0) {
 					endangle = 360;

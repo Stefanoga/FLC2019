@@ -142,7 +142,7 @@ public class Ide {
 		JButton btnBegin = new JButton("BEGIN");
 		btnBegin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				console.setText(textArea.getText() + "BEGIN");
+				textArea.setText(textArea.getText() + "BEGIN");
 			}
 		});
 		btnBegin.setBounds(714, 36, 117, 34);
@@ -151,7 +151,7 @@ public class Ide {
 		JButton btnLine = new JButton("LINE");
 		btnLine.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				console.setText(textArea.getText() + "LINE");
+				textArea.setText(textArea.getText() + "LINE");
 			}
 		});
 		btnLine.setBounds(714, 106, 117, 34);
@@ -160,7 +160,7 @@ public class Ide {
 		JButton btnTriangle = new JButton("TRIANGLE");
 		btnTriangle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				console.setText(textArea.getText() + "TRIANGLE");
+				textArea.setText(textArea.getText() + "TRIANGLE");
 			}
 		});
 		btnTriangle.setBounds(714, 176, 117, 34);
@@ -169,7 +169,7 @@ public class Ide {
 		JButton btnRectangle = new JButton("RECTANGLE");
 		btnRectangle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				console.setText(textArea.getText() + "RECTANGLE");
+				textArea.setText(textArea.getText() + "RECTANGLE");
 			}
 		});
 		btnRectangle.setBounds(714, 246, 117, 34);
@@ -178,7 +178,7 @@ public class Ide {
 		JButton btnCurve = new JButton("CURVE");
 		btnCurve.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				console.setText(textArea.getText() + "CURVE");
+				textArea.setText(textArea.getText() + "CURVE");
 			}
 		});
 		btnCurve.setBounds(714, 316, 117, 34);
@@ -187,7 +187,7 @@ public class Ide {
 		JButton btnCircle = new JButton("CIRCLE");
 		btnCircle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				console.setText(textArea.getText() + "CIRCLE");
+				textArea.setText(textArea.getText() + "CIRCLE");
 			}
 		});
 		btnCircle.setBounds(714, 386, 117, 34);
@@ -196,7 +196,7 @@ public class Ide {
 		JButton btnEllipse = new JButton("ELLIPSE");
 		btnEllipse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				console.setText(textArea.getText() + "ELLIPSE");
+				textArea.setText(textArea.getText() + "ELLIPSE");
 			}
 		});
 		btnEllipse.setBounds(714, 456, 117, 34);
@@ -205,7 +205,7 @@ public class Ide {
 		JButton btnEnd = new JButton("END");
 		btnEnd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				console.setText(textArea.getText() + "END");
+				textArea.setText(textArea.getText() + "END");
 			}
 		});
 		btnEnd.setBounds(714, 526, 117, 34);

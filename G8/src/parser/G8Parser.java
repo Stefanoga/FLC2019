@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import start.G8;
 
 @SuppressWarnings("all")
-public class G8ParserGui extends Parser {
+public class G8Parser extends Parser {
 	
 	String Titolo;
 	String Name="No Name";
@@ -95,14 +95,14 @@ public class G8ParserGui extends Parser {
 	// delegators
 
 
-	public G8ParserGui(TokenStream input) {
+	public G8Parser(TokenStream input) {
 		this(input, new RecognizerSharedState());
 	}
-	public G8ParserGui(TokenStream input, RecognizerSharedState state) {
+	public G8Parser(TokenStream input, RecognizerSharedState state) {
 		super(input, state);
 	}
 
-	@Override public String[] getTokenNames() { return G8ParserGui.tokenNames; }
+	@Override public String[] getTokenNames() { return G8Parser.tokenNames; }
 	@Override public String getGrammarFileName() { return "D:\\Stefano\\Università\\Magistrale Bergamo\\Quinto Anno\\Linguaggi Formali e Compilatori\\Progetto\\G8new.g"; }
 
 

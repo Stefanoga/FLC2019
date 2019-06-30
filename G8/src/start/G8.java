@@ -12,9 +12,9 @@ import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import gui.Ide;
 import lexer.G8Lexer;
-import parser.G8ParserGui;
-import parser.G8ParserGui.SameNameError;
-import parser.G8ParserGui.ShapeLayoutError;
+import parser.G8Parser;
+import parser.G8Parser.SameNameError;
+import parser.G8Parser.ShapeLayoutError;
 
 public class G8 {
 
@@ -67,12 +67,12 @@ public class G8 {
 		
 	}
 
-	public static void draw(String nameFile, String dir, String code) throws IOException, RecognitionException, SameNameError, ShapeLayoutError, parser.G8ParserGui.SameNameError, parser.G8ParserGui.ShapeLayoutError {
+	public static void draw(String nameFile, String dir, String code) throws IOException, RecognitionException, SameNameError, ShapeLayoutError, parser.G8Parser.SameNameError, parser.G8Parser.ShapeLayoutError {
 		
 		ANTLRStringStream in = new ANTLRStringStream(code);
 	    G8Lexer lexer = new G8Lexer(in);
 	    CommonTokenStream tokens = new CommonTokenStream(lexer);
-	    G8ParserGui parser = new G8ParserGui(tokens);
+	    G8Parser parser = new G8Parser(tokens);
 	    parser.begin(nameFile, dir);
 	}
 	

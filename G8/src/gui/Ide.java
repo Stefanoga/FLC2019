@@ -119,7 +119,7 @@ public class Ide {
 						File htmlFile = new File(dir+"\\"+filename);
 						Desktop.getDesktop().browse(htmlFile.toURI());
 						
-					} catch (IOException | RecognitionException | parser.G8ParserGui.SameNameError | parser.G8ParserGui.ShapeLayoutError e) {
+					} catch (IOException | RecognitionException | parser.G8Parser.SameNameError | parser.G8Parser.ShapeLayoutError e) {
 						e.printStackTrace();
 					}
 			      }

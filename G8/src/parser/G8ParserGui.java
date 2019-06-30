@@ -1278,7 +1278,7 @@ public class G8ParserGui extends Parser {
 					}
 				}
 				
-				if ((semax==0)||(semin==0)||(semax<semin)||(startangle==endangle)) {
+				if ((semax==0)||(semin==0)||(startangle==endangle)) {
 					throw new ShapeLayoutError();
 				}
 				

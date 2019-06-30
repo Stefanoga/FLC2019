@@ -875,7 +875,7 @@ public class G8Parser extends Parser {
 					}
 				}
 				
-				if ((xstart==xmiddle && ystart==ymiddle)||(xmiddle==xend && ymiddle==yend)||(xstart==xend && ystart==yend)||(xstart==xmiddle && xmiddle==xend)||(ystart==ymiddle && ymiddle==yend)) {
+				if (xstart==xend && ystart==yend) {
 					throw new ShapeLayoutError();
 				}
 				

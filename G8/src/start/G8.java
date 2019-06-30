@@ -37,6 +37,8 @@ public class G8 {
 	     Ide window = new Ide();
 		 window.frame.setVisible(true);
 		 window.frame.setTitle("G8 IDE");
+		 window.frame.setResizable(false);
+		 window.frame.setLocationRelativeTo(null);
 
 	}
 	

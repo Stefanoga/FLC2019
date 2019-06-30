@@ -33,7 +33,7 @@ public class Ide {
 
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 692, 638);
+		frame.setBounds(100, 100, 885, 647);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -75,7 +75,7 @@ public class Ide {
 			      }
 			}
 		});
-		btnSalva.setBounds(46, 377, 99, 34);
+		btnSalva.setBounds(38, 375, 99, 34);
 		frame.getContentPane().add(btnSalva);
 		
 		JButton btnLoad = new JButton("Load");
@@ -100,7 +100,7 @@ public class Ide {
 				}
 			}
 		});
-		btnLoad.setBounds(288, 377, 99, 34);
+		btnLoad.setBounds(279, 375, 99, 34);
 		frame.getContentPane().add(btnLoad);
 		
 		JButton btnDraw = new JButton("Draw");
@@ -136,8 +136,80 @@ public class Ide {
 			      }
 			}
 		});
-		btnDraw.setBounds(541, 377, 99, 34);
+		btnDraw.setBounds(520, 375, 99, 34);
 		frame.getContentPane().add(btnDraw);
+		
+		JButton btnBegin = new JButton("BEGIN");
+		btnDraw.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				console.setText(textArea.getText() + "BEGIN");
+			}
+		});
+		btnBegin.setBounds(714, 36, 117, 34);
+		frame.getContentPane().add(btnBegin);
+		
+		JButton btnLine = new JButton("LINE");
+		btnDraw.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				console.setText(textArea.getText() + "LINE");
+			}
+		});
+		btnLine.setBounds(714, 106, 117, 34);
+		frame.getContentPane().add(btnLine);
+		
+		JButton btnTriangle = new JButton("TRIANGLE");
+		btnDraw.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				console.setText(textArea.getText() + "TRIANGLE");
+			}
+		});
+		btnTriangle.setBounds(714, 176, 117, 34);
+		frame.getContentPane().add(btnTriangle);
+		
+		JButton btnRectangle = new JButton("RECTANGLE");
+		btnDraw.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				console.setText(textArea.getText() + "RECTANGLE");
+			}
+		});
+		btnRectangle.setBounds(714, 246, 117, 34);
+		frame.getContentPane().add(btnRectangle);
+		
+		JButton btnCurve = new JButton("CURVE");
+		btnDraw.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				console.setText(textArea.getText() + "CURVE");
+			}
+		});
+		btnCurve.setBounds(714, 316, 117, 34);
+		frame.getContentPane().add(btnCurve);
+		
+		JButton btnCircle = new JButton("CIRCLE");
+		btnDraw.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				console.setText(textArea.getText() + "CIRCLE");
+			}
+		});
+		btnCircle.setBounds(714, 386, 117, 34);
+		frame.getContentPane().add(btnCircle);
+		
+		JButton btnEllipse = new JButton("ELLIPSE");
+		btnDraw.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				console.setText(textArea.getText() + "ELLIPSE");
+			}
+		});
+		btnEllipse.setBounds(714, 456, 117, 34);
+		frame.getContentPane().add(btnEllipse);
+		
+		JButton btnEnd = new JButton("END");
+		btnDraw.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				console.setText(textArea.getText() + "END");
+			}
+		});
+		btnEnd.setBounds(714, 526, 117, 34);
+		frame.getContentPane().add(btnEnd);
 		
 		
 		

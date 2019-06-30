@@ -2,22 +2,15 @@ package gui;
 
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
-
 import org.antlr.runtime.RecognitionException;
-
-import parser.G8Parser.SameNameError;
-import parser.G8Parser.ShapeLayoutError;
-
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
-
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.awt.Color;
 import java.awt.Desktop;
 import java.awt.event.ActionEvent;
-
 import start.G8;
 import javax.swing.JScrollPane;
 
@@ -126,7 +119,7 @@ public class Ide {
 						File htmlFile = new File(dir+"\\"+filename);
 						Desktop.getDesktop().browse(htmlFile.toURI());
 						
-					} catch (IOException | RecognitionException | SameNameError | ShapeLayoutError | parser.G8ParserGui.SameNameError | parser.G8ParserGui.ShapeLayoutError e) {
+					} catch (IOException | RecognitionException | parser.G8ParserGui.SameNameError | parser.G8ParserGui.ShapeLayoutError e) {
 						e.printStackTrace();
 					}
 			      }

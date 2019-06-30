@@ -140,7 +140,7 @@ public class Ide {
 		frame.getContentPane().add(btnDraw);
 		
 		JButton btnBegin = new JButton("BEGIN");
-		btnDraw.addActionListener(new ActionListener() {
+		btnBegin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				console.setText(textArea.getText() + "BEGIN");
 			}
@@ -149,7 +149,7 @@ public class Ide {
 		frame.getContentPane().add(btnBegin);
 		
 		JButton btnLine = new JButton("LINE");
-		btnDraw.addActionListener(new ActionListener() {
+		btnLine.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				console.setText(textArea.getText() + "LINE");
 			}
@@ -158,7 +158,7 @@ public class Ide {
 		frame.getContentPane().add(btnLine);
 		
 		JButton btnTriangle = new JButton("TRIANGLE");
-		btnDraw.addActionListener(new ActionListener() {
+		btnTriangle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				console.setText(textArea.getText() + "TRIANGLE");
 			}
@@ -167,7 +167,7 @@ public class Ide {
 		frame.getContentPane().add(btnTriangle);
 		
 		JButton btnRectangle = new JButton("RECTANGLE");
-		btnDraw.addActionListener(new ActionListener() {
+		btnRectangle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				console.setText(textArea.getText() + "RECTANGLE");
 			}
@@ -176,7 +176,7 @@ public class Ide {
 		frame.getContentPane().add(btnRectangle);
 		
 		JButton btnCurve = new JButton("CURVE");
-		btnDraw.addActionListener(new ActionListener() {
+		btnCurve.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				console.setText(textArea.getText() + "CURVE");
 			}
@@ -185,7 +185,7 @@ public class Ide {
 		frame.getContentPane().add(btnCurve);
 		
 		JButton btnCircle = new JButton("CIRCLE");
-		btnDraw.addActionListener(new ActionListener() {
+		btnCircle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				console.setText(textArea.getText() + "CIRCLE");
 			}
@@ -194,7 +194,7 @@ public class Ide {
 		frame.getContentPane().add(btnCircle);
 		
 		JButton btnEllipse = new JButton("ELLIPSE");
-		btnDraw.addActionListener(new ActionListener() {
+		btnEllipse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				console.setText(textArea.getText() + "ELLIPSE");
 			}
@@ -203,7 +203,7 @@ public class Ide {
 		frame.getContentPane().add(btnEllipse);
 		
 		JButton btnEnd = new JButton("END");
-		btnDraw.addActionListener(new ActionListener() {
+		btnEnd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				console.setText(textArea.getText() + "END");
 			}

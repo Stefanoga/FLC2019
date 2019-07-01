@@ -135,64 +135,64 @@ public class Ide {
 		JButton btnBegin = new JButton("BEGIN");
 		btnBegin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textArea.setText(textArea.getText() + "BEGIN");
+				textArea.setText(textArea.getText() + "TITLE Example DRAWSPACE WIDTH 500 DRAWSPACE HEIGTH 500\n");
 			}
 		});
-		btnBegin.setBounds(714, 36, 117, 34);
+		btnBegin.setBounds(714, 92, 117, 34);
 		frame.getContentPane().add(btnBegin);
 		
 		JButton btnLine = new JButton("LINE");
 		btnLine.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textArea.setText(textArea.getText() + "LINE");
+				textArea.setText(textArea.getText() + "LINE: NAME Line1 XSTART 1 YSTART 1 XEND 2 YEND 2 COLOR #000000 WIDTH 1\n");
 			}
 		});
-		btnLine.setBounds(714, 106, 117, 34);
+		btnLine.setBounds(714, 155, 117, 34);
 		frame.getContentPane().add(btnLine);
 		
 		JButton btnTriangle = new JButton("TRIANGLE");
 		btnTriangle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textArea.setText(textArea.getText() + "TRIANGLE");
+				textArea.setText(textArea.getText() + "TRIANGLE: NAME Triangle1 XA 1 YA 1 XB 2 YB 2 XC 3 YC 3 COLOR #000000 WIDTH 1 COLORBODY #FFFFFF\n");
 			}
 		});
-		btnTriangle.setBounds(714, 176, 117, 34);
+		btnTriangle.setBounds(714, 218, 117, 34);
 		frame.getContentPane().add(btnTriangle);
 		
 		JButton btnRectangle = new JButton("RECTANGLE");
 		btnRectangle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textArea.setText(textArea.getText() + "RECTANGLE");
+				textArea.setText(textArea.getText() + "RECT: NAME Rectangle1 XSTART 1 YSTART 1 XEND 2 YEND 2 COLOR #000000 WIDTH 1 COLORBODY #FFFFFF\n");
 			}
 		});
-		btnRectangle.setBounds(714, 246, 117, 34);
+		btnRectangle.setBounds(714, 281, 117, 34);
 		frame.getContentPane().add(btnRectangle);
 		
 		JButton btnCurve = new JButton("CURVE");
 		btnCurve.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textArea.setText(textArea.getText() + "CURVE");
+				textArea.setText(textArea.getText() + "CURV: NAME Curve1 XSTART 1 YSTART 1 XMIDDLE 2 YMIDDLE 2 XEND 3 YEND 3 COLOR #000000 WIDTH 1 COLORBODY #FFFFFF\n");
 			}
 		});
-		btnCurve.setBounds(714, 316, 117, 34);
+		btnCurve.setBounds(714, 344, 117, 34);
 		frame.getContentPane().add(btnCurve);
 		
 		JButton btnCircle = new JButton("CIRCLE");
 		btnCircle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textArea.setText(textArea.getText() + "CIRCLE");
+				textArea.setText(textArea.getText() + "CIRC: NAME Circle1 XCENTER 10 YCENTER 10 RADIUS 1 STARTANGLE 0 ENDANGLE 360 COLOR #000000 WIDTH 1 COLORBODY #FFFFFF\n");
 			}
 		});
-		btnCircle.setBounds(714, 386, 117, 34);
+		btnCircle.setBounds(714, 407, 117, 34);
 		frame.getContentPane().add(btnCircle);
 		
 		JButton btnEllipse = new JButton("ELLIPSE");
 		btnEllipse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textArea.setText(textArea.getText() + "ELLIPSE");
+				textArea.setText(textArea.getText() + "ELLIPS: NAME Ellipse1 XCENTER 10 YCENTER 10 SEMIN 5 SEMAX 10 STARTANGLE 0 ENDANGLE 360 ROTATION +0 COLOR #000000 WIDTH 1 COLORBODY #FFFFFF\n");
 			}
 		});
-		btnEllipse.setBounds(714, 456, 117, 34);
+		btnEllipse.setBounds(714, 470, 117, 34);
 		frame.getContentPane().add(btnEllipse);
 		
 		JButton btnEnd = new JButton("END");
@@ -201,8 +201,17 @@ public class Ide {
 				textArea.setText(textArea.getText() + "END");
 			}
 		});
-		btnEnd.setBounds(714, 526, 117, 34);
+		btnEnd.setBounds(714, 533, 117, 34);
 		frame.getContentPane().add(btnEnd);
+		
+		JButton btnExample = new JButton("EXAMPLE");
+		btnExample.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				textArea.setText(textArea.getText() + "TITLE Example DRAWSPACE WIDTH 500 DRAWSPACE HEIGTH 500\nLINE: NAME Line1 XSTART 1 YSTART 1 XEND 2 YEND 2 COLOR #000000 WIDTH 1\nTRIANGLE: NAME Triangle1 XA 1 YA 1 XB 2 YB 2 XC 3 YC 3 COLOR #000000 WIDTH 1 COLORBODY #FFFFFF\nRECT: NAME Rectangle1 XSTART 1 YSTART 1 XEND 2 YEND 2 COLOR #000000 WIDTH 1 COLORBODY #FFFFFF\nCURV: NAME Curve1 XSTART 1 YSTART 1 XMIDDLE 2 YMIDDLE 2 XEND 3 YEND 3 COLOR #000000 WIDTH 1 COLORBODY #FFFFFF\nCIRC: NAME Circle1 XCENTER 10 YCENTER 10 RADIUS 1 STARTANGLE 0 ENDANGLE 360 COLOR #000000 WIDTH 1 COLORBODY #FFFFFF\nELLIPS: NAME Ellipse1 XCENTER 10 YCENTER 10 SEMIN 5 SEMAX 10 STARTANGLE 0 ENDANGLE 360 ROTATION +0 COLOR #000000 WIDTH 1 COLORBODY #FFFFFF\nEND");
+			}
+		});
+		btnExample.setBounds(714, 29, 117, 34);
+		frame.getContentPane().add(btnExample);
 		
 		
 		

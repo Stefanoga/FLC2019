@@ -2,7 +2,7 @@
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[italian]{babel}
+\usepackage[english]{babel}
 \usepackage{url} % per scrivere gli indirizzi url
 \usepackage{booktabs}
 \usepackage{graphicx}
@@ -47,8 +47,13 @@ stringstyle=\color{blue}    % string literal style
 
 \begin{center}
 \begin{Huge}
-Manuale linguaggio di programmazione G8
+G8 practical manual
 \end{Huge}
+\end{center}
+\begin{center}
+\begin{Large}
+From the basics to a complete example
+\end{Large}
 \end{center}
 
 \includegraphics[scale=1]{UniBG.png}
@@ -63,25 +68,18 @@ Matteo Zambelli, Matricola 1055560
 \end{Large}
 
 \newpage
-\begin{LARGE}
-\textbf{Indice}
-\end{LARGE}
+\tableofcontents
+\newpage
+
+\section{Introduction}
 
 \newpage
 
-\section{Introduzione}
+\section{Development tools}
 
 \newpage
 
-\section{Strumenti di sviluppo}
-
-\newpage
-
-\section{Struttura}
-
-\newpage
-
-\section{Grammatica G8}
+\section{G8 Grammar}
 La grammatica creata ha, come obiettivo, quello di riprodurre il Canvas HTML5, uno strumento utilizzato per rappresentare graficamente figure geometriche più o meno complesse all’interno di un’area di disegno appositamente realizzata.
 \\
 \\
@@ -137,19 +135,23 @@ END
 
 \newpage
 
-\section{Traduzione}
+\section{Translation}
 
-\subsection{Vincoli semantici}
+\subsection{Semantic constraints}
 
 \newpage
 
-\section{Esempio pratico}
+\section{G8 Structure}
+
+\newpage
+
+\section{Complete example}
 Come esempio pratico abbiamo realizzato una rappresentazione del viso di Topolino, personaggio realizzato nel 1928 da Walter Elias Disney e oggi simbolo della multinazionale The Walt Disney Company.
 \\
 \\
 Di seguito mostreremo il codice necessario per realizzare il logo in Canvas HTML5, successivamente il codice nel nostro linguaggio G8 e infine il risultato grafico.
 
-\subsection{Versione Canvas HTML5}
+\subsection{Canvas-HTML5 Version}
 \begin{verbatim}
 <!doctype html>
 <html>
@@ -576,7 +578,7 @@ window.onload = function () {
 
 \newpage
 
-\subsection{Versione G8}
+\subsection{G8 version}
 \begin{verbatim}
 TITLE Topolino DRAWSPACE WIDTH 1700 DRAWSPACE HEIGTH 900
 CIRC: NAME CirconferenzaViso XCENTER 850 YCENTER 550 RADIUS 300 COLORBODY #000000
@@ -635,7 +637,7 @@ END
 
 \newpage
 
-\subsection{Risultato grafico}
+\subsection{Result}
 \includegraphics[scale=0.76]{Topolino.JPG} 
 
 \end{document}

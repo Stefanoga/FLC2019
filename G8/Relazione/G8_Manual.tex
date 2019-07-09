@@ -186,54 +186,71 @@ The "EXAMPLE" button inserts an example for all the figures.\\
 \section{G8 structure}
 
 First the user must initialize the project and enter the title of his work, the width of the drawing area and the height of the same. The syntax is as follows:
+\vspace{1\baselineskip}
 \begin{verbatim}
 TITLE titleText DRAWSPACE WIDTH widthFloat DRAWSPACE HEIGTH heigthFloat
 \end{verbatim}
-The user can draw a figure between: line, triangle, rectangle, curve, circle and ellipse. Every figure has mandatory values for the measurements that will go from (0, 0), top left corner of the screen, to the maximum value chosen for the drawing area and optional values, related to color, thickness, filling , rotation, etc. It is also possible to name the figure as desired: in case a name is not given it will be set to the default value "no name".
+\vspace{1\baselineskip}
+The user can draw a figure between: line, triangle, rectangle, curve, circle and ellipse. Every figure has mandatory values for the measurements that will go from (0, 0), top left corner of the screen, to the maximum value chosen for the drawing area and optional values, related to color, thickness, filling, rotation, etc. It is also possible to name the figure as desired: in case a name is not given it will be set to the default value "no name".
+\vspace{1\baselineskip}
 \begin{itemize}
 \item \textbf{line}: mandatory entry of departure and arrival coordinates is required. The user can also insert, optionally, the color and thickness of the line: in case they are not entered manually, the default values (black color, thickness 1) will be used. The syntax is as follows:
+\vspace{1\baselineskip}
 \begin{verbatim}
 LINE: (NAME nameText) XSTART startAbscissaFloat YSTART startOrdinateFloat XEND endAbscissaFloat 
 YEND endOrdinateFloat (COLOR colorRGB WIDTH thicknessFloat)
 \end{verbatim}
+\vspace{1\baselineskip}
 \item \textbf{triangle}: mandatory entry of the coordinates of the three vertices is required. The user can also insert, optionally, the color of the border, the thickness of the border and the filling of the figure: in case they are not entered manually, the default values (black border color, thickness 1, transparent fill color) will be used. The syntax is as follows:
+\vspace{1\baselineskip}
 \begin{verbatim}
 TRIANGLE: (NAME nameText) XA OneAbscissaFloat YA oneOrdinateFloat XB twoAbscissaFloat YB 
 twoOrdinateFloat XC threeAbscissaFloat YC threeOrdinateFloat (COLOR
 colorBorderRGB WIDTH thicknessFloat COLORBODY colorBodyRGB)
 \end{verbatim}
+\vspace{1\baselineskip}
 \item \textbf{rectangle}: it is mandatory to enter the coordinates of the two opposite vertices. The user can also insert, optionally, the color of the border, the thickness of the border and the filling of the figure: in case they are not entered manually, the default values (black border color, thickness 1, transparent fill color) will be used. The syntax is as follows:
+\vspace{1\baselineskip}
 \begin{verbatim}
-RECT: (NAME nameText) XSTART OneAbscissaFloat YSTART oneOrdinateFloat XEND twoAbscissaFloat YEND 
+RECT: (NAME nameText) XSTART oneAbscissaFloat YSTART oneOrdinateFloat XEND twoAbscissaFloat YEND 
 twoOrdinateFloat (COLOR colorBorderRGB WIDTH thicknessFloat COLORBODY colorBodyRGB)
 \end{verbatim}
+\vspace{1\baselineskip}
 \item \textbf{curve}: 
 it is mandatory to enter the coordinates of the starting point, the arrival point and the curve point. The user can also insert, optionally, the color of the border, the thickness of the border and the filling of the figure: in case they are not entered manually, the default values (black border color, thickness 1, transparent fill color) will be used. The syntax is as follows:
+\vspace{1\baselineskip}
 \begin{verbatim}
 CURV: (NAME nameText) XSTART OneAbscissaFloat YSTART oneOrdinateFloat XMIDDLE
- curvatureAbscissaFloat YMIDDLE curvatureOrdinateFloat XEND twoAbscissaFloat YEND 
- twoOrdinateFloat (COLOR colorBorderRGB WIDTH thicknessFloat 
+curvatureAbscissaFloat YMIDDLE curvatureOrdinateFloat XEND twoAbscissaFloat YEND 
+twoOrdinateFloat (COLOR colorBorderRGB WIDTH thicknessFloat 
 COLORBODY colorBodyRGB)
 \end{verbatim}
+\vspace{1\baselineskip}
 \item \textbf{circle}: 
-it is mandatory to enter the center and radius coordinates. The user can also insert, optionally, the color of the border, the thickness of the border and the filling of the figure: in case they are not entered manually, the default values (black border color, thickness 1, transparent fill color) will be used. Another optional element to enter is relative to the starting and ending angle: it is in fact possible to create partial circumferences or semicircles, inserting limits for the angle to be represented; if they are not entered manually, the default values (0 as start angle and 360 as end angle) will be used, developing the entire circumference. The syntax is as follows:
+it is mandatory to insert the center and radius coordinates. The user can also insert, optionally, the color of the border, the thickness of the border and the filling of the figure: in case they are not entered manually, the default values (black border color, thickness 1, transparent fill color) will be used. Another optional element to enter is relative to the starting and ending angle: it is in fact possible to create partial circumferences or semicircles, inserting limits for the angle to be represented; if they are not entered manually, the default values (0 as start angle and 360 as end angle) will be used, developing the entire circumference. The syntax is as follows:
+\vspace{1\baselineskip}
 \begin{verbatim}
 CIRC: (NAME nameText) XCENTER centerAbscissaFloat YCENTER centerOrdinateFloat RADIUS radiusFloat
-(STARTANGLE angleFloat ENDANGLE angleFloat COLOR colorRGB  WIDTH thicknessFloat 
+STARTANGLE angleFloat ENDANGLE angleFloat COLOR colorRGB  WIDTH thicknessFloat 
 COLORBODY colorBodyRGB)
 \end{verbatim}
+\vspace{1\baselineskip}
 \item \textbf{ellipse}: it is mandatory to enter the coordinates of the center, of the semi-major axis and of the semi-minor axis. The user can also insert, optionally, the color of the border, the thickness of the border and the filling of the figure: in case they are not entered manually, the default values (black border color, thickness 1, transparent fill color) will be used. Another optional element to be inserted is relative to the starting and ending angle: it is in fact possible to create partial or semi-circumferential circles, inserting limits for the angle to be represented; if they are not entered manually, the default values (0 as start angle and 360 as end angle) will be used, realizing the entire circumference. It is also possible to assign a value of rotation of the ellipse around its origin, by rotating a positive or negative value of degrees; if it is not entered manually the default value will be used which does not assign any rotation (0 as angle of rotation). The syntax is as follows:
+\vspace{1\baselineskip}
 \begin{verbatim}
 ELLIPS: (NAME nameText) XCENTER centerAbscissaFloat YCENTER centerOrdinateFloat 
 SEMIN minAxisFloat SEMAX maxAxisFloat (STARTANGLE angleFloat ENDANGLE angleFloat ROTATION
 rotationDegree COLOR colorBorderRGB WIDTH thicknessFloat 
 COLORBODY colorBodyFloat)
 \end{verbatim}
+\vspace{1\baselineskip}
 \end{itemize}
 At the end of the code the user must write "END" :
 \begin{verbatim}
 END
 \end{verbatim}
+
+\newpage
 
 \section{A first basic example}
 

@@ -97,7 +97,7 @@ Matteo Zambelli, Matricola 1055560
 \section{G8 Grammar}
 
 
-The grammar of the defined language is available in full at the following link[\ref{grammar}] or below:
+The grammar of the defined language is available entirely at the following link[\ref{grammar}] or below:
 
 \begin{verbatim}
 
@@ -281,9 +281,11 @@ of symbols (terminal and  non-terminal, namely other parsing
 rules).
 Rules must start with lowercase letter and can't be recursive.
 
-The main parser rule is called "begin" and allows you to recognize the project title, the size of the drawing area and the different figures entered by the user (via the "list" rule).
+The first parser rule is called "begin" and allows you to recognize the project title, the size of the drawing area and the different figures entered by the user (via the "list" rule).
 
 The "list" rule recognizes the digit entered by the user among those recognized by the "line", "triangle", "rectangle", "curve", "circle" and "ellipse" rules.
+
+The "end" rule simply recognize the end of code.
 
 The content of the recognized code is therefore constituted by an initialization line of the drawing area, figures recognized by the relative rules, comments and the termination of the project area.
 

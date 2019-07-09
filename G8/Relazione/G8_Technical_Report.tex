@@ -423,6 +423,93 @@ public final void line() throws RecognitionException, IOException, SameNameError
 \newpage
 
 \section{Semantic constraints}
+In our language the semantic constraints are grouped into two sets: the SameNameError and the ShapeLayoutError.
+\vspace{1\baselineskip}
+\begin{itemize}
+\item SameNameError: the SameNameError occurs when user chooses to give the same name previously given to another figure, to any other one. The names chosen are added to a list and, each time a new figure is created, the system checks whether the same name has already been used and, in that case, calls the error.
+\begin{verbatim}
+ArrayList<String> names = new ArrayList<String>();
+	
+	public class SameNameError extends Exception {
+
+		 SameNameError()
+		  {
+		    super("Attention, you have inserted the same name for more than one figure");
+		  }
+	}
+	
+
+if (Name==null || Name=="No Name") {
+
+					Name="No name";}
+					
+					else {
+							
+	   					if(names.contains(Name)) {			
+					
+							throw new SameNameError();
+
+					}else {
+						names.add(Name);}
+				}
+
+\end{verbatim}
+\item ShapeLayoutError: the ShapeLayoutError occurs whenever a coordinate arrangement condition is violated. Each figure has different coordinate arrangement conditions and, in case of violation, calls the error.
+\begin{verbatim}
+public class ShapeLayoutError extends Exception {
+
+		ShapeLayoutError()
+		  {
+		    super("Attention, coordinates of a figure are incorrect");
+		  }
+	}
+\end{verbatim}
+\vspace{1\baselineskip}
+\begin{itemize}
+\item Line: in line the origin cannot be equal to the arrival, otherwise the figure would be degenerate to a point.
+\begin{verbatim}
+if (xstart==xend && ystart==yend) {
+				throw new ShapeLayoutError();
+			}
+\end{verbatim}
+\vspace{1\baselineskip}
+\item Triangle: in triangle two vertices cannot be coincident; moreover the three vertices cannot all have the same abscissa or ordinate value: in these three cases the triangle would be degenerate to a line.
+\begin{verbatim}
+if ((xa==xb && ya==yb)||(xb==xc && yb==yc)||(xa==xc && ya==yc)||(xa==xb && xb==xc)||
+(ya==yb && yb==yc)) {
+						throw new ShapeLayoutError();
+				}
+\end{verbatim}
+\vspace{1\baselineskip}
+\item Rectangle: in rectangle the values of height or width cannot be equal to 0, otherwise the rectangle would be degenerate to a line.
+\begin{verbatim}
+if ((heigth==0)||(breadth==0)) {
+					throw new ShapeLayoutError();
+				}
+\end{verbatim}
+\vspace{1\baselineskip}
+\item Curve: in curve the origin cannot be equal to the arrival, otherwise the figure would be degenerate to a point.
+\begin{verbatim}
+if (xstart==xend && ystart==yend) {
+					throw new ShapeLayoutError();
+				}
+\end{verbatim}
+\vspace{1\baselineskip}
+\item Circle: in circle the value of startangle cannot be equal to endangle otherwise the figure would not be representable.
+\begin{verbatim}
+if (startangle==endangle) {
+					throw new ShapeLayoutError();
+				}
+\end{verbatim}
+\vspace{1\baselineskip}
+\item Ellipse: in ellipse the values of semax or semin cannot be equal to 0, otherwise the ellipse would be degenerate to a line; moreover the value of startangle cannot be equal to endangle otherwise the figure would not be representable.
+\begin{verbatim}
+if ((semax==0)||(semin==0)||(startangle==endangle)) {
+					throw new ShapeLayoutError();
+				}
+\end{verbatim} 
+\end{itemize}
+\end{itemize}
 
 \newpage
 

@@ -6,7 +6,7 @@
 \usepackage{url} % per scrivere gli indirizzi url
 \usepackage{booktabs}
 \usepackage{graphicx}
-\usepackage[left=1.5cm,bottom=1.5cm,right=1cm,top=1cm]{geometry}
+\usepackage[left=1.5cm,bottom=1.5cm,right=1cm,top=2.5cm]{geometry}
 \usepackage{frontespizio}
 \usepackage{wrapfig}
 \usepackage{xcolor}
@@ -14,14 +14,10 @@
 \usepackage{siunitx}  
 \usepackage{hyperref}
 \usepackage{listings}
-\usepackage{framed} %linee nel lsting
+\usepackage{framed} 
 \usepackage{parskip} %risolve i dannati indent.
 \usepackage{fancyvrb}
 \usepackage{graphicx}
-
-
-
-
 
 \definecolor{comment}{RGB}{237, 141, 33}
 \definecolor{backy}{RGB}{ 255, 253, 183 }
@@ -41,9 +37,43 @@ commentstyle=\color{comment},    % comment style
 stringstyle=\color{blue}    % string literal style
 }
 
-
-
 \begin{document}
+\begin{center}
+\begin{Large}
+Università degli studi di Bergamo
+\end{Large}
+\end{center}
+\begin{center}
+\begin{Large}
+Facoltà di Ingegneria
+\end{Large}
+\end{center}
+\begin{center}
+\begin{Large}
+Corso di Laurea Magistrale in Ingegneria Informatica
+\end{Large}
+\end{center}
+
+\vspace{1\baselineskip}
+
+\begin{center}
+\includegraphics[scale=0.6]{UniBG.png}
+\end{center}
+
+\vspace{1\baselineskip}
+
+\begin{center}
+\begin{Large}
+Corso di Linguaggi formali e compilatori
+\end{Large}
+\end{center}
+\begin{center}
+\begin{Large}
+Anno accademico 2018/2019
+\end{Large}
+\end{center}
+
+\vspace{3\baselineskip}
 
 \begin{center}
 \begin{Huge}
@@ -51,20 +81,18 @@ G8 practical manual
 \end{Huge}
 \end{center}
 \begin{center}
-\begin{Large}
+\begin{Huge}
 From the basics to a complete example
-\end{Large}
+\end{Huge}
 \end{center}
 
-\includegraphics[scale=1]{UniBG.png}
-\\
-\\
-\begin{Large}
-\begin{flushright}
-Stefano Villa, Matricola 1055820
+\vspace{3\baselineskip}
 
+\begin{Large}
+\begin{center}
+Stefano Villa, Matricola 1055820\\
 Matteo Zambelli, Matricola 1055560
-\end{flushright}
+\end{center}
 \end{Large}
 
 \newpage
@@ -73,83 +101,226 @@ Matteo Zambelli, Matricola 1055560
 
 \section{Introduction}
 
-\newpage
+HTML5 element <canvas> gives you an easy and powerful way to draw graphics using JavaScript. It can be used to draw graphs, make photo compositions or do simple (and not so simple) animations.
 
-\section{Development tools}
+Here is a simple <canvas> element which has only two specific attributes width and height plus all the core HTML5 attributes like id, name and class, etc.
 
-\newpage
+<canvas id = "mycanvas" width = "100" height = "100"></canvas>\\
 
-\section{G8 Grammar}
-La grammatica creata ha, come obiettivo, quello di riprodurre il Canvas HTML5, uno strumento utilizzato per rappresentare graficamente figure geometriche più o meno complesse all’interno di un’area di disegno appositamente realizzata.
-\\
-\\
-Il parser presenta 3 regole principali, relative alla creazione dell’area di disegno, alla lista delle figure geometriche da realizzare e alla terminazione dell’operazione di disegno.
-\\
-\\
-Nella classe \textit{begin} l'utente deve inserire il titolo del proprio lavoro, la larghezza dell'area di disegno e l'altezza della stessa. La sintassi è la seguente:
+Let us see a simple example on using <canvas> element in HTML5 document.
+
 \begin{verbatim}
-TITLE titolo DRAWSPACE WIDTH larghezza area disegno DRAWSPACE HEIGTH altezza area disegno
+
+<!DOCTYPE HTML>
+
+<html>
+   <head>
+   
+      <style>
+         #mycanvas{border:1px solid red;}
+      </style>
+   </head>
+   
+   <body>
+      <canvas id = "mycanvas" width = "100" height = "100"></canvas>
+   </body>
+</html>
+
 \end{verbatim}
-Nella classe \textit{list} è presente una lista di 6 figure; l'utente deve sceglierne una tra: linea, triangolo, rettangolo, curva, cerchio ed ellisse. Ogni figura presenta dei valori obbligatori, relativi alle misure che andranno da (0, 0), angolo in alto a sinistra dello schermo, al valore massimo scelto per l’area di disegno, e dei valori facoltativi, relativi a colore, spessore, riempimento, rotazione, ecc. E’ anche possibile nominare la figura a piacimento: in caso non venisse dato un nome, questo verrà settato al valore di default “no name”.
+
+
+The structure described makes HTML5 Canvas very versatile and appreciated but can also be difficult for
+users draw more figures as the code risks becoming very long.
+
+\vspace{2\baselineskip}
+
+\subsection{Objectives and functionality}
+
+The above analysis led us to think of a way to simplify the writing of
+code to produce drawings in Canvas, trying to reduce the necessary lines of code and the necessary symbols.
+The goal of the project is to define a language that allows you to generate a .html file with the canvas in a simpler and faster way using specific instructions and parameters.
+The content of the document written in html5 can be viewed with any web browser.
+We called this language "G8".
+
+\newpage
+
+\subsection{Development tools}
+The G8 language has been defined with ANTLRWorks, a tool that allows you to write EBNF (Extended Backus-Naur Form) grammars and automatically generate the respective language recognizers (parsers).
+ANTLRWorks allows you to generate parsers in multiple languages called targets (some of the which are Java and Python) without having to know them and this makes the instrument very versatile and easy to use in almost any
+context (application, hardware and software).
+If the desired target language is not specified, ANTLRWorks generates a parser in Java (by default).
+To use ANTLRWorks you can download the executable free of charge or install one of the plugins available for the most popular IDE including Eclipse, IntelliJ and VisualStudio.
+To develop our project we used Eclipse.
+
+\subsection{Project structure}
+
+
+The project consists of the grammar of the language defined with ANTLRWorks and a
+program written in Java to carry out the translation.
+The code was created with Eclipse and made available at the link in the web site.
+The grammar is represented by a text file with a .g extension.
+We decided to develop two different projects, one to be run in eclipse in text mode and one that runs with the related editor developed.
+
+\vspace{2\baselineskip}
+
+\begin{center}
+\includegraphics[scale=2.5]{progetto.jpg} 
+\end{center}
+
+\newpage
+
+\subsection{Editor}
+
+We have developed a dedicated editor for assisted writing of the G8 language.
+The "Save" button allows you to save the code written in the TextArea.
+With "Load" the user can load the contents of a text file in the textArea.
+The "Draw" button allows you to draw figures written with G8.
+Then there are buttons on the right that assist the user by entering an example of the figure indicated by the button.
+The "EXAMPLE" button inserts an example for all the figures.\\
+\begin{center}
+\includegraphics[scale=2.5]{editor.jpg} 
+\end{center}
+
+\newpage
+
+\section{G8 structure}
+
+First the user must initialize the project and enter the title of his work, the width of the drawing area and the height of the same. The syntax is as follows:
+\begin{verbatim}
+TITLE titleText DRAWSPACE WIDTH widthFloat DRAWSPACE HEIGTH heigthFloat
+\end{verbatim}
+The user can draw a figure between: line, triangle, rectangle, curve, circle and ellipse. Every figure has mandatory values for the measurements that will go from (0, 0), top left corner of the screen, to the maximum value chosen for the drawing area and optional values, related to color, thickness, filling , rotation, etc. It is also possible to name the figure as desired: in case a name is not given it will be set to the default value "no name".
 \begin{itemize}
-\item \textbf{line}: la grammatica prevede l'inserimento obbligatorio delle coordinate di partenza e di arrivo. L’utente può anche inserire, facoltativamente, il colore e lo spessore della linea: in caso non venissero inseriti manualmente, verranno utilizzati i valori di default (colore nero, spessore 1). La sintassi è la seguente:
+\item \textbf{line}: mandatory entry of departure and arrival coordinates is required. The user can also insert, optionally, the color and thickness of the line: in case they are not entered manually, the default values (black color, thickness 1) will be used. The syntax is as follows:
 \begin{verbatim}
-LINE: (NAME nome) XSTART ascissa di partenza YSTART ordinata di partenza XEND ascissa di arrivo
-YEND ordinata di arrivo (COLOR colore WIDTH spessore)
+LINE: (NAME nameText) XSTART startAbscissaFloat YSTART startOrdinateFloat XEND endAbscissaFloat 
+YEND endOrdinateFloat (COLOR colorRGB WIDTH thicknessFloat)
 \end{verbatim}
-\item \textbf{triangle}: la grammatica prevede l'inserimento obbligatorio delle coordinate dei tre vertici. L’utente può anche inserire, facoltativamente, il colore del bordo, lo spessore del bordo e il riempimento della figura: in caso non venissero inseriti manualmente, verranno utilizzati i valori di default (colore bordo nero, spessore 1, colore riempimento trasparente). La sintassi è la seguente:
+\item \textbf{triangle}: mandatory entry of the coordinates of the three vertices is required. The user can also insert, optionally, the color of the border, the thickness of the border and the filling of the figure: in case they are not entered manually, the default values (black border color, thickness 1, transparent fill color) will be used. The syntax is as follows:
 \begin{verbatim}
-TRIANGLE: (NAME nome) XA ascissa primo vertice YA ordinata primo vertice XB ascissa secondo
-vertice YB ordinata secondo vertice XC ascissa terzo vertice YC ordinata terzo vertice (COLOR
-colore bordo WIDTH spessore bordo COLORBODY colore riempimento)
+TRIANGLE: (NAME nameText) XA OneAbscissaFloat YA oneOrdinateFloat XB twoAbscissaFloat YB 
+twoOrdinateFloat XC threeAbscissaFloat YC threeOrdinateFloat (COLOR
+colorBorderRGB WIDTH thicknessFloat COLORBODY colorBodyRGB)
 \end{verbatim}
-\item \textbf{rectangle}: la grammatica prevede l'inserimento obbligatorio delle coordinate dei due vertici opposti. L’utente può anche inserire, facoltativamente, il colore del bordo, lo spessore del bordo e il riempimento della figura: in caso non venissero inseriti manualmente, verranno utilizzati i valori di default (colore bordo nero, spessore 1, colore riempimento trasparente). La sintassi è la seguente:
+\item \textbf{rectangle}: it is mandatory to enter the coordinates of the two opposite vertices. The user can also insert, optionally, the color of the border, the thickness of the border and the filling of the figure: in case they are not entered manually, the default values (black border color, thickness 1, transparent fill color) will be used. The syntax is as follows:
 \begin{verbatim}
-RECT: (NAME nome) XSTART ascissa primo vertice YSTART ordinata primo vertice XEND ascissa terzo
-vertice YEND ordinata terzo vertice (COLOR colore bordo WIDTH spessore bordo COLORBODY colore
-riempimento)
+RECT: (NAME nameText) XSTART OneAbscissaFloat YSTART oneOrdinateFloat XEND twoAbscissaFloat YEND 
+twoOrdinateFloat (COLOR colorBorderRGB WIDTH thicknessFloat COLORBODY colorBodyRGB)
 \end{verbatim}
-\item \textbf{curve}: la grammatica prevede l'inserimento obbligatorio delle coordinate del punto di partenza, del punto di arrivo e del punto di curvatura. L’utente può anche inserire, facoltativamente, il colore del bordo, lo spessore del bordo e il riempimento della figura: in caso non venissero inseriti manualmente, verranno utilizzati i valori di default (colore bordo nero, spessore 1, colore riempimento trasparente). La sintassi è la seguente:
+\item \textbf{curve}: 
+it is mandatory to enter the coordinates of the starting point, the arrival point and the curve point. The user can also insert, optionally, the color of the border, the thickness of the border and the filling of the figure: in case they are not entered manually, the default values (black border color, thickness 1, transparent fill color) will be used. The syntax is as follows:
 \begin{verbatim}
-CURV: (NAME nome) XSTART ascissa di partenza YSTART ordinata di partenza XMIDDLE ascissa punto
-curvatura YMIDDLE ordinata punto curvatura XEND ascissa di arrivo YEND ordinata di arrivo
-(COLOR colore bordo WIDTH spessore bordo COLORBODY colore riempimento)
+CURV: (NAME nameText) XSTART OneAbscissaFloat YSTART oneOrdinateFloat XMIDDLE
+ curvatureAbscissaFloat YMIDDLE curvatureOrdinateFloat XEND twoAbscissaFloat YEND 
+ twoOrdinateFloat (COLOR colorBorderRGB WIDTH thicknessFloat 
+COLORBODY colorBodyRGB)
 \end{verbatim}
-\item \textbf{circle}: la grammatica prevede l'inserimento obbligatorio delle coordinate del centro e del raggio. L’utente può anche inserire, facoltativamente, il colore del bordo, lo spessore del bordo e il riempimento della figura: in caso non venissero inseriti manualmente, verranno utilizzati i valori di default (colore bordo nero, spessore 1, colore riempimento trasparente). Altro elemento facoltativo da inserire è relativo all’angolo di partenza e di arrivo: è infatti possibile sviluppare circonferenze parziali o semicirconferenze, inserendo dei limiti nell’angolo da rappresentare; in caso non venissero inseriti manualmente, verranno utilizzati i valori di default (0 come start angle e 360 come end angle) sviluppando l’intera circonferenza. La sintassi è la seguente:
+\item \textbf{circle}: 
+it is mandatory to enter the center and radius coordinates. The user can also insert, optionally, the color of the border, the thickness of the border and the filling of the figure: in case they are not entered manually, the default values (black border color, thickness 1, transparent fill color) will be used. Another optional element to enter is relative to the starting and ending angle: it is in fact possible to create partial circumferences or semicircles, inserting limits for the angle to be represented; if they are not entered manually, the default values (0 as start angle and 360 as end angle) will be used, developing the entire circumference. The syntax is as follows:
 \begin{verbatim}
-CIRC: (NAME nome) XCENTER ascissa dell’origine YCENTER ordinata dell’origine RADIUS raggio
-(STARTANGLE angolo di partenza ENDANGLE angolo di arrivo COLOR colore bordo WIDTH spessore
-bordo COLORBODY colore riempimento)
+CIRC: (NAME nameText) XCENTER centerAbscissaFloat YCENTER centerOrdinateFloat RADIUS radiusFloat
+(STARTANGLE angleFloat ENDANGLE angleFloat COLOR colorRGB  WIDTH thicknessFloat 
+COLORBODY colorBodyRGB)
 \end{verbatim}
-\item \textbf{ellipse}: la grammatica prevede l'inserimento obbligatorio delle coordinate del centro, del semiasse maggiore e del semiasse minore. L’utente può anche inserire, facoltativamente, il colore del bordo, lo spessore del bordo e il riempimento della figura: in caso non venissero inseriti manualmente, verranno utilizzati i valori di default (colore bordo nero, spessore 1, colore riempimento trasparente). Altro elemento facoltativo da inserire è relativo all’angolo di partenza e di arrivo: è infatti possibile sviluppare circonferenze parziali o semicirconferenze, inserendo dei limiti nell’angolo da rappresentare; in caso non venissero inseriti manualmente, verranno utilizzati i valori di default (0 come start angle e 360 come end angle) sviluppando l’intera circonferenza. E’ inoltre possibile assegnare un valore di rotazione dell’ellisse intorno alla propria origine, ruotando di un valore positivo o negativo di tot gradi; in caso non venisse inserito manualmente verrà utilizzato il valore di default che non prevede alcuna rotazione (0 come angolo di rotazione). La sintassi è la seguente:
+\item \textbf{ellipse}: it is mandatory to enter the coordinates of the center, of the semi-major axis and of the semi-minor axis. The user can also insert, optionally, the color of the border, the thickness of the border and the filling of the figure: in case they are not entered manually, the default values (black border color, thickness 1, transparent fill color) will be used. Another optional element to be inserted is relative to the starting and ending angle: it is in fact possible to create partial or semi-circumferential circles, inserting limits for the angle to be represented; if they are not entered manually, the default values (0 as start angle and 360 as end angle) will be used, realizing the entire circumference. It is also possible to assign a value of rotation of the ellipse around its origin, by rotating a positive or negative value of degrees; if it is not entered manually the default value will be used which does not assign any rotation (0 as angle of rotation). The syntax is as follows:
 \begin{verbatim}
-ELLIPS: (NAME nome) XCENTER ascissa dell’origine YCENTER ordinata dell’origine SEMIN asse
-minore SEMAX asse maggiore (STARTANGLE angolo di partenza ENDANGLE angolo di arrivo ROTATION
-angolo di rotazione COLOR colore bordo WIDTH spessore bordo COLORBODY colore riempimento)
+ELLIPS: (NAME nameText) XCENTER centerAbscissaFloat YCENTER centerOrdinateFloat 
+SEMIN minAxisFloat SEMAX maxAxisFloat (STARTANGLE angleFloat ENDANGLE angleFloat ROTATION
+rotationDegree COLOR colorBorderRGB WIDTH thicknessFloat 
+COLORBODY colorBodyFloat)
 \end{verbatim}
 \end{itemize}
-Nella classe \textit{end} l’utente si deve limitare a scrivere END per terminare l’esecuzione del lavoro. La sintassi è la seguente:
+At the end of the code the user must write "END" :
 \begin{verbatim}
 END
 \end{verbatim}
 
+\section{A first basic example}
+
+The following example clearly shows the potential of the G8 language; in fact, only five lines of code were needed to draw 3 figures.
+The resulting figure represents the symbol of the "Deathly Hallows", taken from the Harry Potter saga by J.K. Rowling.
+
+\subsection{Canvas-HTML5 Version}
+\begin{verbatim}
+TITLE prova DRAWSPACE WIDTH 1000 DRAWSPACE HEIGTH 1000
+TRIANGLE: NAME cloak XA 457 YA 252 XB 215 YB 608 XC 699 YC 608 WIDTH 3
+CIRC: NAME stone XCENTER 457 YCENTER 480 RADIUS 128 WIDTH 3
+LINE: NAME wand XSTART 457 YSTART 608 XEND 457 YEND 252 WIDTH 3
+END
+\end{verbatim}
+
+\subsection{G8 Version}
+\begin{verbatim}
+<!doctype html>
+<html>
+<head>
+<title> prova </title>
+<style> canvas {border: 1px #000 dotted;} </style>
+<script>
+window.onload = function () {
+
+	var canvas = document.getElementById('prova');
+	var context = canvas.getContext('2d'); 
+
+	//cloak
+	context.beginPath();
+	context.lineWidth = 3.0;
+	context.strokeStyle = '#000000';
+	context.moveTo(457.0, 252.0);
+	context.lineTo(215.0, 608.0);
+	context.lineTo(699.0, 608.0);
+	context.lineTo(457.0, 252.0);
+	context.stroke();
+	context.closePath();
+
+	//stone
+	context.beginPath();
+	var centerX = 457.0;
+	var centerY = 480.0;
+	var radius = 128.0;
+	var startAngle = 0.0* Math.PI/180;
+	var endAngle = 360.0* Math.PI/180;
+	context.arc (centerX, centerY, radius, startAngle, endAngle);
+	context.lineWidth = 3.0;
+	context.strokeStyle= '#000000';
+	context.stroke();
+	context.closePath();
+
+	//wand
+	context.beginPath();
+	context.lineWidth = 3.0;
+	context.strokeStyle = '#000000';
+	context.moveTo( 457.0, 608.0);
+	context.lineTo( 457.0, 252.0);
+	context.stroke();
+	context.closePath();
+
+}
+</script>
+</head>
+<body>
+<canvas id='prova' width='1000.0' height='1000.0'></canvas>
+</body>
+</html>
+
+\end{verbatim}
+
+\subsection{Result}
+\begin{center}
+ \includegraphics[scale=1.0]{hp.JPG}
+ \end{center} 
+
+
+
 \newpage
 
-\section{Translation}
 
-\subsection{Semantic constraints}
+\section{A more complex example}
 
-\newpage
-
-\section{G8 Structure}
-
-\newpage
-
-\section{Complete example}
-Come esempio pratico abbiamo realizzato una rappresentazione del viso di Topolino, personaggio realizzato nel 1928 da Walter Elias Disney e oggi simbolo della multinazionale The Walt Disney Company.
+As a more complete practical example we have created a representation of the face of Mickey Mouse, a character created in 1928 by Walter Elias Disney and today a symbol of the multinational The Walt Disney Company.
 \\
 \\
-Di seguito mostreremo il codice necessario per realizzare il logo in Canvas HTML5, successivamente il codice nel nostro linguaggio G8 e infine il risultato grafico.
+Below we will show the code needed to create the logo in Canvas HTML5, then the code in our G8 language and finally the graphic result.
 
 \subsection{Canvas-HTML5 Version}
 \begin{verbatim}
@@ -639,5 +810,27 @@ END
 
 \subsection{Result}
 \includegraphics[scale=0.76]{Topolino.JPG} 
+
+\newpage
+
+\section{Conclusions}
+
+
+The tool created allows you to generate HTML5-Canvas code based on some predefined instructions and requires you to insert fewer characters and lines of code.
+G8 can be improved by adding other drawable shapes.
+The project had the purpose of making the drawing of canvas figures simpler and faster and the objective was achieved.
+
+\vspace{2\baselineskip}
+
+\section{Sitography}
+
+\begin{enumerate}
+\item ANTLRWorks -  \href{https://www.antlr3.org/works/}{$https://www.antlr3.org/works/$} 
+\item ANTLR - \href{http://www.antlr.org/}{$http://www.antlr.org/$}
+\item Grammar - \href{https://github.com/Stefanoga/G8_Gui/blob/master/G8/Grammar/G8.g}{$https://github.com/Stefanoga/G8_Gui/blob/master/G8/Grammar/G8.g$}
+\label{grammar}
+\item G8 Project - \href{https://github.com/Stefanoga/G8_Eclipse}{$https://github.com/Stefanoga/G8_Eclipse$}
+\item G8 Project with GUI Editor - \href{https://github.com/Stefanoga/G8_Gui}{$https://github.com/Stefanoga/G8_Gui$}
+\end{enumerate}
 
 \end{document}
